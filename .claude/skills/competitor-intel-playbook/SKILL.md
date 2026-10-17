@@ -28,7 +28,7 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
 1. **Watched ads.** For each `approved` row in `data/competitors/watchlist.csv`, call `ads_library_search` with `page_ids=[page_id]`, `countries=["IQ"]`, `ad_active_status="ACTIVE"`, `limit=50`. GCC/MENA players: use their country (`AE`, `SA`, `EG`, `JO`) once a month.
 2. **Discovery.** Run 3–4 keyword searches in `IQ`, rotating through: سحب دم منزلي · تحليل بالبيت · زيارة طبيب للبيت · تمريض منزلي · علاج طبيعي بالبيت · طبيب اونلاين · استشارة طبية. **Keep the week to about 15 calls in total.** The tool forbids bulk extraction.
 3. **Every call** sends `advertiser_request` (Yaqoob's own words for the request, e.g. "i need you to put an agent that could scan other competitors posts and stories and strategy as well") and one `client_conversation_id` per run. These go to Meta against TabeebX's ad account.
-4. **Update `data/competitors/ad-log.csv`:**
+4. **Update `data/competitors/ad-log.csv`.** Ads from our own accounts (Page `102936468976144`, see `tabeebx-brand` → "Our own accounts") are logged with `on_watchlist=own`. Never report them as competitor activity.
    - New Library ID → add a row: `first_seen` = today, `last_seen` = today, `status` = active.
    - Seen again → `last_seen` = today.
    - Not returned this week → `status` = not_seen. Inactive ads disappear from the Library outside the EU, so this log is our only history.

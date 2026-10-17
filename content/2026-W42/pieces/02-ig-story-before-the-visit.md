@@ -29,7 +29,7 @@ text: وإذا تريد تحجز زيارة هسه: / *دزلنا رسالة و�
 
 sticker: احجز بالواتساب
 
-link: [wa.me link]
+link: [AT POSTING: wa.me link]
 
 ## Caption
 

@@ -13,6 +13,8 @@ This skill exists because generic "Arabic" from a model drifts toward Gulf, Leva
 
 If a rule here and a correction in the CSV disagree, follow the CSV and flag the conflict in your output so the rule can be fixed.
 
+The voice notes in `tabeebx-brand` (e.g. «يعلّك», «فتشي عامية وبروفشنل») are background only. They rank below all three sources above. Two of their examples have no agreed meaning yet (open question in `docs/decisions.md`), so don't imitate them.
+
 ## Where dialect applies
 
 | Content | Register |
@@ -101,7 +103,10 @@ Fear hooks are out: «ما تدري», «فوات الأوان», «قبل لا 
 
 1. Read `data/dialect-corrections.csv`, then skim `references/approved-lines.md` for the closest piece type (story question, carousel, reel hook).
 2. Draft in dialect directly. Do not write MSA and "translate" it; translated copy keeps MSA word order.
-3. Run the checker on your file: `node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file>`. Fix every error; justify or fix every warning.
+3. Run the checker on your file: `node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file>`. Fix every error; fix every warning, or justify it under `## Copy check`.
+   - In piece files it checks only `## Copy` (per `### Frame`), `## Caption`, `## Variant hook` and fenced JSON specs, so notes elsewhere can quote Arabic freely.
+   - Text inside `[brackets]` is ignored. Open `[PENDING …]` placeholders are counted on the last line and mean the piece isn't ready.
+   - The checker has tests: `node --test .claude/skills/iraqi-dialect/scripts/lint-copy.test.mjs`. Run them after changing the checker.
 4. Next to each piece, list any word you were unsure is Baghdadi, under **"Dialect doubts"**. Yaqoob's answer becomes a correction-log row. Never hide a doubt.
 
 ## The correction log

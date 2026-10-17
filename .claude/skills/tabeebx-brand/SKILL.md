@@ -28,7 +28,24 @@ Strategic positioning: TabeebX is building toward the **unified B2B corporate he
 - **B2C**: Baghdad families and young professionals who are tired of clinic queues; entry via teleconsultation and home services, upsell to Health 360 family plans.
 - **Insurers/TPAs**: GlobeMed relationship is the template for future payer partnerships.
 
+## Our own accounts (recorded 2026-10-17)
+
+| What | Value | Source |
+|---|---|---|
+| Facebook Page "Tabeebx" | Page ID `102936468976144` | Confirmed as ours by Yaqoob, 2026-10-17 |
+| Instagram | @tabeebx.iq, IG user ID `17841447680118496` | Meta Ads connector (`ads_get_ig_accounts`), 2026-10-17 |
+| Meta ad account linked to that Instagram | `1904494880402733` (one of 3 active ad accounts on the login; which one is primary is unconfirmed) | Meta Ads connector, 2026-10-17 |
+
+Ads from these accounts are ours. Competitor intel logs them with `on_watchlist=own` and never counts them as competitor activity.
+
 ## Brand identity — non-negotiable in every design
+
+> **Colour values, recorded 2026-10-17.** The hex codes below are the ones in production: the approved trust campaign's `marketing/motion/src/brand.css` (EMR repo) uses #181943, #EE396B and #1B9CCE, taken from the campaign's Design guideline. The RGB numbers in this table **don't match** those hex codes:
+> - Pink #EE396B is RGB 238,57,107, not 238,83,107
+> - Blue #1B9CCE is RGB 27,156,206, not 29,157,208
+> - Navy #181943 is RGB 24,25,67, not 24,25,68
+>
+> **Use the hex codes.** Treat the RGB numbers as unverified until Yaqoob confirms which is right. The same mismatch is in the `tabeebx-context` skill on his Claude account.
 
 | Element | Value |
 |---|---|

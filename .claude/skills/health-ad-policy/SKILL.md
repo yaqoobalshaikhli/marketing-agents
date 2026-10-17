@@ -11,8 +11,9 @@ Platforms reject health ads for wording, not intent, and a rejected ad can restr
 
 These hold even when a platform would allow more.
 
-1. **No fabricated testimonials, reviews, patient stories or "results" presented as real.** A testimonial needs a real person who agreed in writing to its use. Illustrative scenarios must say so on screen.
-2. **AI-generated people are labeled as AI on the piece** («صورة توضيحية بالذكاء الاصطناعي» or similar approved wording). An AI clinician never gets a real doctor's name, face, licence number or credentials.
+1. **No fabricated testimonials, reviews, patient stories or "results" presented as real.** A testimonial needs a real person who agreed in writing to its use, recorded in `data/consents.csv`. Illustrative scenarios must say so on screen.
+2. **Any AI-generated image or video showing people is labeled as AI on the piece** (visual styles B and C). The exact Arabic label wording is still to be approved by Yaqoob; use `[PENDING: AI label wording]` until then. An AI clinician never gets a real doctor's name, face, licence number or credentials.
+2a. **Real people on camera need consent.** Everyone filmed (staff, family, patient) has a row in `data/consents.csv` covering the use, organic or paid. The signed forms stay offline, never in this repo; the CSV holds only a reference. The on-screen label must match who appears: «الأشخاص من فريق TabeebX» is approved for staff only, and staff + family needs a label Yaqoob approves.
 3. **No cure claims and no guaranteed outcomes** (the checker blocks «يشفي», «علاج نهائي», «مضمون»).
 4. **No fear hooks.** Inform and invite.
 5. **Emergencies go to emergency services, not to TabeebX.** Any piece that names a symptom of a possible emergency (chest pain, stroke signs, severe breathing trouble) says to call emergency services and not to message us. The approved model is the heart carousel: «لا تفتح تطبيق، ولا تدزلنا رسالة. اتصل بالطوارئ ٩١١ فوراً، ولا تسوق بنفسك.» Use the number Yaqoob approved there unless he changes it.
@@ -44,9 +45,11 @@ For each piece, write `PASS`, or `FAIL: <rule>` with the fix:
 - [ ] `lint-copy.mjs` exits 0 (no errors); every warning is fixed or justified in one line.
 - [ ] No implied personal health attribute, in copy or in the visual's text.
 - [ ] No cure claim, guarantee, superlative without proof, or price.
-- [ ] Any person shown is either real and consented (name the consent record) or labeled AI.
-- [ ] No testimonial or review unless a consent record exists in `data/` (none exist yet).
+- [ ] Any person shown is either real and consented (its `consent_id` is in the piece's `consents:` and in `data/consents.csv`, with a scope that covers this use) or labeled AI.
+- [ ] The who-is-on-screen label matches who actually appears (style D).
+- [ ] No testimonial or review unless a consent record covers it.
 - [ ] Emergency symptoms → emergency-services line present.
-- [ ] Facts match `tabeebx-brand` (services, areas, licence wording). No facts invented.
+- [ ] Facts match `tabeebx-brand` (services, areas). No facts invented. The licence line «مرخّصين من وزارة الصحة العراقية» is used only once Yaqoob confirms it (open question in `docs/decisions.md`).
+- [ ] No `[PENDING …]` placeholders left. The checker's last line reports them; `[AT POSTING: …]` is fine.
 - [ ] Platform fit: if destined for a TikTok **ad**, not teleconsultation; if a Meta ad, audience names are clean.
 - [ ] Dialect doubts listed (or "none").

@@ -35,8 +35,28 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 27 | Iraqi dialect sources: **Yaqoob's approved copy + the existing checker + a correction log** | No usable high-quality open Iraqi corpus found; the best lexicons (LDC, MADAR) are research-only |
 | 28 | Copywriter model: **opus, provisional** until the blind test (opus vs sonnet) | `copywriter-blind-test` skill |
 
+## 2026-10-17: first test run and fixes
+
+| # | Decision | Notes / source |
+|---|---|---|
+| 29 | Repo is **yaqoobalshaikhli/marketing-agents** (not EMR) | Yaqoob; the EMR repo is no longer touched for marketing work |
+| 30 | First test: 6 agents on a 4-piece pack | Results: `docs/test-runs/2026-10-17-first-test.md` |
+| 31 | Facebook Page "Tabeebx" (`102936468976144`) **is ours** | Yaqoob. Recorded in `tabeebx-brand` → "Our own accounts"; logged as `own` in the ad log |
+| 32 | Fix the 15 problems the test found | Yaqoob. Fixed in the commit after this table |
+| 33 | Brand colours: the **hex codes are used** (they're what the approved trust campaign's code uses); the RGB numbers in the brand file don't match and are marked unverified | Yaqoob was not sure; evidence: EMR `marketing/motion/src/brand.css`. Final call still his |
+| 34 | AI label applies to **any AI image with people** (styles B and C) | Resolves a conflict between `health-ad-policy` and `content-system` |
+| 35 | Consent references go in `data/consents.csv` (initials, scope, where the form is kept); **signed forms never in the repo** | |
+| 36 | Until Yaqoob decides about the logo: **no logo on frames** | Interim rule |
+
 ## Open questions for Yaqoob
 
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
 - **Competitor Instagram/TikTok handles.** The watch list has Page IDs but no handles yet; Coupler and Metricool need handles.
 - **Visit counts.** Corporate packages list visits per year in the table but "monthly" on two detail pages (noted in `tabeebx-brand`). Which is correct?
+- **Brand colours.** Confirm the hex codes (in use) or the RGB numbers. Fix the account skill `tabeebx-context` either way.
+- **Logo.** Does the logo's pink figure count as the one pink element per frame?
+- **Licence line.** May consumer posts state «مرخّصين من وزارة الصحة العراقية» as a fact?
+- **Two labels need approved Arabic wording:** the AI label, and the who-is-on-screen label for staff + family.
+- **Saleem.** Approve, keep as proposed, or reject as a watched competitor.
+- **Week 42 brief.** Its 7 questions are in `content/2026-W42/brief.md`.
+- **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

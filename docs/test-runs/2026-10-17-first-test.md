@@ -17,9 +17,9 @@
 
 **Usage:** about 1.0M sub-agent tokens for this 4-piece test (per-agent: 134k, 148k, 186k, 199k, 205k, 125k). What share of the Pro allowance that is isn't visible from here; check `/usage` in Claude Code. A full 10+ piece week will cost more, so trimming what each agent reads (below) matters.
 
-## Problems found in the system (to fix)
+## Problems found in the system: all 15 fixed in the follow-up commit
 
-| # | Problem | Found by | Proposed fix |
+| # | Problem | Found by | Fix (done) |
 |---|---|---|---|
 | 1 | Checker lints every Arabic line, including English notes, so it raises false warnings | copywriter | Lint only the `## Copy` and `## Caption` sections and fenced JSON specs |
 | 2 | Checker counts words and pink groups per line; the rules are per frame | copywriter, guard | Count per frame (each `###` block) |
@@ -30,12 +30,12 @@
 | 7 | Vendored English skills contradict the approved voice (they ban contrast reveals, negation lists, short broken lines) | copywriter | Add a "known overrides" list to `copywriter.md` |
 | 8 | Copywriter doesn't preload `health-ad-policy` | copywriter | Add it |
 | 9 | AI-label rule is inconsistent: `health-ad-policy` labels all AI people; `content-system` labels style C only (style B has AI families too) | guard | Label any AI image with people (B and C) |
-| 10 | Style D label «الأشخاص من فريق TabeebX» can be untrue if a family member appears | guard | Two approved label variants: staff-only / staff + family |
+| 10 | Style D label «الأشخاص من فريق TabeebX» can be untrue if a family member appears | guard | Staff-only label stays (approved); a staff + family label is `[PENDING]` for Yaqoob; Guard checks the label matches |
 | 11 | No consent-record format or location; checklist says `data/`, brief says keep forms out of the repo | guard | `data/consents.csv` with reference IDs only; forms stored offline |
 | 12 | "PASS with note" has no status mapping | guard | Map to `guard-pass` |
-| 13 | Logo vs the one-pink-element rule unclear | creative, guard | Yaqoob decides (question below) |
+| 13 | Logo vs the one-pink-element rule unclear | creative, guard | Interim rule: no logo on frames; Yaqoob decides (question below) |
 | 14 | Creative Producer can't see `campaign.json` field shapes (in the EMR repo) or safe zones | creative | Copy the template field shapes and safe zones into `content-system` |
-| 15 | TabeebX's own Facebook Page ID isn't recorded, so our own ads can't be told apart from competitors' | competitor-intel, analyst | Record our Page ID and IG id (`17841447680118496`) in the brand files |
+| 15 | TabeebX's own Facebook Page ID isn't recorded, so our own ads can't be told apart from competitors' | competitor-intel, analyst | Recorded: Page `102936468976144` (confirmed ours), IG `17841447680118496`; own ads logged as `own` |
 
 ## Decisions only Yaqoob can make
 
@@ -51,3 +51,9 @@
 - **Licence line:** may we use «مرخّصين من وزارة الصحة العراقية» as a fact? It isn't in the brand file.
 - **Logo:** does the logo's pink figure count as the one pink element?
 - **Dialect notes:** judge the Guard's notes, e.g. «تحب تعرفه» (Levantine-leaning; «تريد» is Baghdadi). Your answers become the first rows of `data/dialect-corrections.csv`.
+
+## Verification after the fixes
+
+- **Copy checker tests:** `node --test .claude/skills/iraqi-dialect/scripts/lint-copy.test.mjs` → 15 of 15 pass.
+- **Approved lines:** the 129 approved lines still pass with no errors.
+- **Re-check of the 4 test pieces:** all pass. The checker now reports the open `[PENDING]` placeholders that keep 01, 03 and 04 from review, matching the Guard's verdicts.

@@ -4,9 +4,17 @@
 //
 //   node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file.md|file.txt|file.json> [...]
 //
-// Checks every line (or JSON string) that contains Arabic. Errors exit 1; warnings print.
-// Skipped in Markdown: fenced code blocks, blockquotes (">"), and lines after a
-// "Dialect doubts" heading until the next heading, so doubts can quote the words in question.
+// Piece files (Markdown with a "## Copy" section) are checked frame by frame:
+//   - only the "## Copy…", "## Caption" and "## Variant hook" sections, plus any ```json spec, are linted;
+//     notes, briefs and other sections are ignored, so English notes may quote Arabic freely;
+//   - inside "## Copy…", each "### …" heading starts a frame (or, with no ### headings, each
+//     blank-line-separated block); word and pink-group limits apply per frame;
+//   - text inside [square brackets] is a placeholder and is ignored by every rule.
+//     [PENDING …] (or any other bracket) means "needs Yaqoob" and blocks review; [AT POSTING: …]
+//     marks a value filled in when posting (a link, a time) and does not block.
+//   - frames whose ### heading says voice-over / VO / spoken are exempt from the 20-word on-screen limit.
+// Any other Markdown/text file is checked line by line (fences, blockquotes and "Dialect doubts" skipped).
+// JSON files are checked string by string. Errors exit 1; warnings print.
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -35,11 +43,24 @@ const FEAR = ['ما تدري', 'فوات الأوان', 'قبل لا يفوت'];
 // Heuristic only: Guard makes the final call.
 const YOU_HAVE = /(عندك|عندچ|تعاني من|تعانين من|مصاب ب|مصابة ب|انت مريض|إنت مريض|انتي مريضة)/;
 const CONDITIONS = /(سكر|سكري|ضغط|كآبة|اكتئاب|قلق|سمنة|وزن زايد|سرطان|عقم|بواسير|صلع|ربو|غدة|كولسترول|كوليسترول|إدمان|ادمان)/;
-const HOOK_LINE = /^\s*(hook|kicker|هوك)\s*[:：]/i;
+const HOOK_KEYS = new Set(['hook', 'kicker']);
+const LATIN_OK_KEYS = new Set(['phone', 'whatsapp', 'handle', 'url', 'link', 'figure', 'template', 'id', 'when', 'icon', 'sfx']);
+const LINT_SECTIONS = /^(copy\b(?!\s*check)|caption|variant hook)/i;
+const MAX_FRAME_WORDS = 20, MAX_HOOK_WORDS = 5;
 
-const tokens = (s) => s.replace(/[*~]/g, '').split(/[\s،,.:؛;!؟?()«»"'…\-–—/]+/).filter(Boolean);
+const stripPlaceholders = (s) => s.replace(/\[[^\]]*\](?!\()/g, ' ');
+// Blocking placeholders on a line: [..] that isn't a Markdown link and isn't [AT POSTING: ..].
+const countPlaceholders = (s) => (s.match(/\[[^\]\n]*\](?!\()/g) || []).filter((m) => !/^\[\s*AT POSTING/i.test(m)).length;
+const SPOKEN = /voice-?over|\bVO\b|spoken|صوت/i;
+const tokens = (s) => s.replace(/[*~]/g, '').split(/[\s،,.:؛;!؟?()«»"'…\-–—/·•|]+/).filter(Boolean);
 const hasArabic = (s) => /[؀-ۿ]/.test(s);
 const looksLikeContact = (s) => /(\+?\d[\d\s-]{6,}|@\w|https?:\/\/|wa\.me)/.test(s);
+// "key: text", "- `key` text", "**key**: text" → [key, text]. Plain "key:" must be a Latin identifier.
+const KEYED = /^\s*(?:[-*]\s+)?(?:`([A-Za-z_][\w-]*)`\s*:?|\*\*([A-Za-z_][\w-]*)\*\*\s*:?|([A-Za-z_][\w-]*)\s*:)\s*(.*)$/;
+const splitKey = (line) => {
+  const m = line.match(KEYED);
+  return m ? [(m[1] || m[2] || m[3]).toLowerCase(), m[4]] : ['', line];
+};
 
 function parseCsv(text) {
   const rows = []; let row = [], cell = '', q = false;
@@ -73,8 +94,10 @@ export function loadCorrections(repoRoot) {
   return map;
 }
 
-export function lintLine(s, where, corrections = {}) {
+// Rules that apply to every line of copy, whatever frame it is in.
+export function lintLine(raw, where, corrections = {}, key = '') {
   const errors = [], warnings = [];
+  const s = stripPlaceholders(raw);
   const toks = tokens(s);
   const has = (tk, dict) => dict[tk] ?? (tk.startsWith('و') ? dict[tk.slice(1)] : undefined);
   for (const [word, why] of BANNED) if (s.includes(word)) errors.push(`${where}: ${why}`);
@@ -87,34 +110,117 @@ export function lintLine(s, where, corrections = {}) {
   for (const w of PROOF) if (toks.includes(w)) warnings.push(`${where}: "${w}" needs proof beside it (a name, a number or a picture)`);
   for (const f of FEAR) if (s.includes(f)) warnings.push(`${where}: sounds like a fear hook ("${f}"); inform and invite instead`);
   if (YOU_HAVE.test(s) && CONDITIONS.test(s)) warnings.push(`${where}: may imply the reader has a health condition (Meta personal-attributes rule); Guard must review`);
-  if (/[0-9]/.test(s) && !looksLikeContact(s)) errors.push(`${where}: Western digits in Arabic copy; use ٠١٢٣٤٥٦٧٨٩ (phone numbers and handles only are Western)`);
-  const pinks = (s.match(/\*[^*]+\*/g) || []).length;
-  if (pinks > 1) errors.push(`${where}: ${pinks} pink groups; exactly one element per frame is pink`);
-  if (HOOK_LINE.test(s) && tokens(s.replace(HOOK_LINE, '')).length > 5) warnings.push(`${where}: hook has more than 5 words`);
-  if (toks.length > 20) warnings.push(`${where}: ${toks.length} words; keep on-screen text to 20 per frame (captions may run longer)`);
+  if (/[0-9]/.test(s) && !looksLikeContact(s) && !LATIN_OK_KEYS.has(key)) errors.push(`${where}: Western digits in Arabic copy; use ٠١٢٣٤٥٦٧٨٩ (phone numbers and handles only are Western)`);
+  if (HOOK_KEYS.has(key) && toks.length > MAX_HOOK_WORDS) warnings.push(`${where}: hook has ${toks.length} words; keep it to ${MAX_HOOK_WORDS}`);
   return { errors, warnings };
 }
 
-function linesOf(file, text) {
-  if (file.endsWith('.json')) {
-    const out = [];
-    const walk = (v, kp) => {
-      if (typeof v === 'string') out.push([kp.join('.'), v]);
-      else if (Array.isArray(v)) v.forEach((x, i) => walk(x, [...kp, i]));
-      else if (v && typeof v === 'object') for (const k of Object.keys(v)) walk(v[k], [...kp, k]);
-    };
-    walk(JSON.parse(text), []);
-    return out;
-  }
-  const out = []; let fence = false, doubts = false;
-  text.split('\n').forEach((line, i) => {
-    if (/^\s*```/.test(line)) { fence = !fence; return; }
-    if (fence) return;
-    if (/^\s*#/.test(line)) doubts = /dialect doubts|شكوك اللهجة/i.test(line);
-    if (doubts || /^\s*>/.test(line)) return;
-    out.push([`line ${i + 1}`, line]);
-  });
+// Rules that apply to a whole frame: one pink group, at most 20 words on screen.
+export function lintFrame(lines, where, { spoken = false } = {}) {
+  const errors = [], warnings = [];
+  const text = lines.map((l) => stripPlaceholders(l)).join(' \n ');
+  const pinks = (text.match(/\*[^*\n]+\*/g) || []).length;
+  if (pinks > 1) errors.push(`${where}: ${pinks} pink groups; exactly one element per frame is pink`);
+  const words = tokens(text).length;
+  if (!spoken && words > MAX_FRAME_WORDS) warnings.push(`${where}: ${words} words in this frame; keep on-screen text to ${MAX_FRAME_WORDS}`);
+  return { errors, warnings };
+}
+
+function lintJsonValue(value, where, corrections) {
+  const out = { errors: [], warnings: [], lines: 0 };
+  const walk = (v, kp) => {
+    if (typeof v === 'string') {
+      if (!hasArabic(v)) return;
+      out.lines++;
+      out.placeholders = (out.placeholders || 0) + countPlaceholders(v);
+      const key = [...kp].reverse().find((k) => typeof k === 'string') || '';
+      const w = `${where} → ${kp.join('.')}`;
+      const a = lintLine(v, w, corrections, key.toLowerCase());
+      const b = lintFrame([v], w);
+      out.errors.push(...a.errors, ...b.errors); out.warnings.push(...a.warnings, ...b.warnings);
+    } else if (Array.isArray(v)) v.forEach((x, i) => walk(x, [...kp, i]));
+    else if (v && typeof v === 'object') for (const k of Object.keys(v)) walk(v[k], [...kp, k]);
+  };
+  walk(value, []);
   return out;
+}
+
+// Lint one file's text. Returns { errors, warnings, lines, placeholders, mode }.
+export function lintText(file, text, corrections = {}) {
+  const res = { errors: [], warnings: [], lines: 0, placeholders: 0, mode: 'lines' };
+  const add = (r) => { res.errors.push(...r.errors); res.warnings.push(...r.warnings); };
+  if (file.endsWith('.json')) {
+    const r = lintJsonValue(JSON.parse(text), file, corrections);
+    add(r); res.lines = r.lines; res.placeholders = r.placeholders || 0; res.mode = 'json';
+    return res;
+  }
+  const all = text.split('\n');
+  // Fenced JSON specs are linted in every Markdown mode.
+  let fence = null, buf = [], fenceStart = 0;
+  all.forEach((line, i) => {
+    const m = line.match(/^\s*```\s*(\w*)/);
+    if (m && fence === null) { fence = m[1].toLowerCase(); buf = []; fenceStart = i + 1; return; }
+    if (/^\s*```/.test(line) && fence !== null) {
+      if (fence === 'json') {
+        try {
+          const r = lintJsonValue(JSON.parse(buf.join('\n')), `${file} → json@line ${fenceStart}`, corrections);
+          add(r); res.lines += r.lines; res.placeholders += r.placeholders || 0;
+        } catch (e) { res.errors.push(`${file} → json@line ${fenceStart}: invalid JSON (${e.message})`); }
+      }
+      fence = null; return;
+    }
+    if (fence !== null) buf.push(line);
+  });
+
+  const isPiece = all.some((l) => /^##\s+copy\b(?!\s*check)/i.test(l));
+  res.mode = isPiece ? 'piece' : 'lines';
+  let inFence = false, section = '', doubts = false;
+  // Frames: collected only inside "## Copy…" sections.
+  let frame = [], frameName = '', frameStart = 0, framesUseHeadings = false;
+  const flushFrame = () => {
+    if (frame.length) add(lintFrame(frame.map((f) => f.text), `${file} → ${frameName || `frame@line ${frameStart}`}`, { spoken: SPOKEN.test(frameName) }));
+    frame = [];
+  };
+  if (isPiece) {
+    // Does any Copy section use ### frame headings?
+    let sec = '';
+    for (const l of all) {
+      const h2 = l.match(/^##\s+(.*)$/); if (h2) { sec = h2[1]; continue; }
+      if (/^###\s+/.test(l) && /^copy\b(?!\s*check)/i.test(sec)) framesUseHeadings = true;
+    }
+  }
+  all.forEach((line, i) => {
+    const where = `${file} → line ${i + 1}`;
+    if (/^\s*```/.test(line)) { inFence = !inFence; return; }
+    if (inFence) return;
+    const h2 = line.match(/^##\s+(.*)$/);
+    const h3 = line.match(/^###\s+(.*)$/);
+    if (/^\s*#/.test(line)) doubts = /dialect doubts|شكوك اللهجة/i.test(line);
+    if (h2) { flushFrame(); section = h2[1].trim(); return; }
+    if (isPiece) {
+      const inCopy = /^copy\b(?!\s*check)/i.test(section);
+      if (!LINT_SECTIONS.test(section)) return;
+      if (h3) { flushFrame(); frameName = h3[1].trim(); frameStart = i + 1; return; }
+      if (/^\s*>/.test(line) || /^\s*<!--/.test(line)) return;
+      res.placeholders += countPlaceholders(line);
+      if (!line.trim()) { if (inCopy && !framesUseHeadings) flushFrame(); return; }
+      if (!hasArabic(line)) return;
+      const [key, rest] = splitKey(line);
+      res.lines++;
+      add(lintLine(rest, where, corrections, key));
+      if (inCopy) { if (!frame.length && !framesUseHeadings) { frameName = ''; frameStart = i + 1; } frame.push({ text: rest }); }
+      // Captions and variant hooks aren't on-screen frames: pink rule per line, no 20-word limit.
+      else { const f = lintFrame([rest], where); add({ errors: f.errors, warnings: [] }); }
+      return;
+    }
+    if (doubts || /^\s*>/.test(line) || !hasArabic(line)) return;
+    const [key, rest] = splitKey(line);
+    res.lines++;
+    add(lintLine(rest, where, corrections, key));
+    add(lintFrame([rest], where));
+  });
+  flushFrame();
+  return res;
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
@@ -122,19 +228,16 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   if (!files.length) { console.error('usage: lint-copy.mjs <file> [...]'); process.exit(2); }
   const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../..');
   const corrections = loadCorrections(repoRoot);
-  let errors = [], warnings = [], checked = 0;
+  let errors = [], warnings = [], checked = 0, placeholders = 0;
   for (const f of files) {
-    for (const [where, s] of linesOf(f, readFileSync(f, 'utf8'))) {
-      if (!hasArabic(s)) continue;
-      checked++;
-      const r = lintLine(s, `${f} → ${where}`, corrections);
-      errors.push(...r.errors); warnings.push(...r.warnings);
-    }
+    const r = lintText(f, readFileSync(f, 'utf8'), corrections);
+    errors.push(...r.errors); warnings.push(...r.warnings); checked += r.lines; placeholders += r.placeholders;
   }
   for (const w of warnings) console.log('⚠', w);
   for (const e of errors) console.log('✖', e);
+  const ph = placeholders ? ` ${placeholders} [placeholder](s) still open: not ready for review.` : '';
   console.log(errors.length
-    ? `\n${errors.length} error(s), ${warnings.length} warning(s) in ${checked} Arabic line(s): fix errors before review.`
-    : `\nCopy check passed: ${checked} Arabic line(s), ${warnings.length} warning(s), ${Object.keys(corrections).length} correction(s) loaded.`);
+    ? `\n${errors.length} error(s), ${warnings.length} warning(s) in ${checked} Arabic line(s): fix errors before review.${ph}`
+    : `\nCopy check passed: ${checked} Arabic line(s), ${warnings.length} warning(s), ${Object.keys(corrections).length} correction(s) loaded.${ph}`);
   process.exit(errors.length ? 1 : 0);
 }

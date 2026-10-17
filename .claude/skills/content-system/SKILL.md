@@ -34,10 +34,18 @@ Decided 2026-10-08: test all four styles, organic first, then put paid budget be
 
 | Style | Tool | Rule |
 |---|---|---|
-| A. Motion graphics / illustration | Code-rendered motion system in `marketing/motion` of `yaqoobalshaikhli/EMR`; Canva Free templates | Free, unlimited |
-| B. AI lifestyle scenes (families, homes, Baghdad streets), no clinicians | Canva AI image generator (Canva Free: limited monthly allowance, about 20 premium AI uses per Canva's pricing page; check the counter in Canva) | Budget about 4–5 AI images a week |
+| A. Motion graphics / illustration | Code-rendered motion system in `marketing/motion` of `yaqoobalshaikhli/EMR` (field shapes and safe zones: `references/motion-templates.md`); Canva Free templates | Free, unlimited |
+| B. AI lifestyle scenes (families, homes, Baghdad streets), no clinicians | Canva AI image generator (Canva Free: limited monthly allowance, about 20 premium AI uses per Canva's pricing page; check the counter in Canva) | Budget about 4–5 AI images a week. **Any AI image showing people is labeled AI**, same as C |
 | C. AI people including clinicians | Canva AI | **Always labeled AI** on the piece; never a real doctor's name or credentials |
-| D. Real-shoot plan | Shot list and brief for a phone shoot with real TabeebX staff and consenting families | Produces a plan, not images, until footage exists |
+| D. Real shoot | Shot list and brief for a phone shoot with real TabeebX staff and consenting families | Produces a plan, not images, until footage exists. Everyone on camera needs a row in `data/consents.csv` |
+
+### Rules that apply to every style
+
+- **AI label:** any AI-generated image or video that shows people (style B or C) carries the AI label from `health-ad-policy`.
+- **Who-is-on-screen label (style D)** must match who actually appears:
+  - Staff only: «الأشخاص من فريق TabeebX». This is approved; it was used in the trust campaign.
+  - Staff + a consenting family: `[PENDING: label wording for staff + family, Yaqoob to approve]`. Until he approves a wording, a shoot that includes family members can't pass Guard.
+- **Logo:** whether the logo's pink figure counts as the "one pink element" is undecided (open question in `docs/decisions.md`). Until Yaqoob decides, **no logo on frames**. The profile picture carries the brand.
 
 **Weeks 1–3:** every style appears at least twice a week. Tag every piece with its style letter. The Analyst compares reach, saves, shares and watch time per style, adjusted for channel and format; with this little data the comparison is directional, not statistically significant.
 
@@ -60,31 +68,58 @@ content/2026-W42/
 ```markdown
 ---
 id: 2026-W42-01
-channel: instagram-carousel   # instagram-reel | instagram-story | tiktok | facebook | whatsapp-broadcast | whatsapp-reply
-style: A                      # A B C D (visual test)
-goal: bookings                # bookings | awareness | trust | share
+channel: [instagram-carousel, facebook]   # one or more: instagram-carousel | instagram-reel | instagram-story | tiktok | facebook | whatsapp-broadcast | whatsapp-reply
+style: A                                  # A B C D (visual test)
+goal: [bookings]                          # one or more: bookings | awareness | trust | share
 publish: Sun 18 Oct 20:30
-status: draft                 # draft → guard-pass → approved | changes
+status: draft                             # draft → guard-pass → approved | changes
+consents: []                              # consent_ids from data/consents.csv for everyone on camera (style D)
 ---
+Needs Yaqoob: <every [PENDING …] in this file, in one line; or "none">
+Psychology: <the one marketing-psychology principle used, and where>
+
 ## Copy (Iraqi dialect)
-<on-screen text per frame / slide, one block per frame>
+### Frame 1
+key: <on-screen text>
+### Frame 2
+...
+### Voice-over (spoken)
+<spoken lines; exempt from the 20-word on-screen limit>
 
 ## Caption
 <caption>
 
+## Variant hook
+<one alternative hook, for feed pieces (Instagram feed carousel, reel, TikTok, Facebook post); omit for stories and WhatsApp>
+
+## Copy check
+<the checker's last line, plus one line per warning: fixed, or why it stays>
+
 ## Visual brief
-<per-slide: layout, colours (Navy #181943, Pink #EE396B one element, Blue #1B9CCE), Cairo font, imagery, AI label if style B/C>
+<per-frame: layout, colours (Navy #181943, Pink #EE396B one element, Blue #1B9CCE), Cairo font, imagery, AI label if style B/C, who-is-on-screen label if D>
 
 ## Production
-<tool: motion job spec | Canva template | Canva AI prompt | shoot plan>
+<tool: motion job spec in a ```json fence | Canva template | Canva AI prompt | shoot plan>
 
 ## Dialect doubts
 <words the Copywriter was unsure of, or "none">
 ```
 
+### Conventions the checker understands
+
+- `### Frame N` headings in `## Copy` mark frames. The 20-word and one-pink limits apply per frame. A frame whose heading says *voice-over*, *VO* or *spoken* is exempt from the word limit.
+- **Placeholders:**
+  - `[PENDING Q2-a: …]` (or any `[…]`) means the piece needs Yaqoob and isn't ready for review.
+  - `[AT POSTING: wa.me link]` marks a value filled in when posting and doesn't block.
+  - Text in brackets is ignored by every copy rule, so labels like `Q2-a` are safe inside them.
+- Only `## Copy`, `## Caption`, `## Variant hook` and fenced ```json specs are checked. Notes elsewhere may quote Arabic freely.
+
 ## Thursday review (Phase 0: Markdown; Phase 1: review page)
 
-1. The Director assembles `review.md`: every piece in posting order, with Guard's verdict and a checkbox: `[ ] approve  [ ] change: ___`.
+1. The Director assembles `review.md`: every piece in posting order, with Guard's verdict and a checkbox: `[ ] approve  [ ] change: ___`. Guard's verdicts map to `status:` like this:
+   - `PASS` → `guard-pass`
+   - `PASS with note` → `guard-pass` (the note goes into `review.md`)
+   - `FAIL` → stays `draft`
 2. Yaqoob marks it, either in GitHub (edit the file in the browser or phone app) or by replying in a Claude session.
 3. For each change Yaqoob makes to the wording, the session that processes the review appends a row to `data/dialect-corrections.csv` (`kind` word, phrase or style) and updates the piece's status.
 4. Approved pieces become the posting list in `review.md`. Posting is manual until a publishing tool is chosen (Postiz decision pending).

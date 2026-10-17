@@ -52,8 +52,9 @@ TabeebX's in-house marketing team, built as Claude Code agents ("mods"), each pi
 - `docs/`: decisions, research, setup guides.
 - `.claude-plugin/plugin.json`: lets the same agents and skills install as a plugin. `claude plugin validate` passes; installing it in Cowork hasn't been tested yet.
 
-Check copy by hand at any time:
+Check copy by hand at any time, and run the checker's own tests after changing it:
 
 ```
 node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs path/to/piece.md
+node --test .claude/skills/iraqi-dialect/scripts/lint-copy.test.mjs
 ```

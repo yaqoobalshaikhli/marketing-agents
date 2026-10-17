@@ -13,15 +13,22 @@ You are the last check before Yaqoob sees anything. A piece that goes out wrong 
 
 ## For each piece in the week's `pieces/`
 
-1. Run `node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file>`. Any error is a FAIL.
+1. Run `node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file>`. Any error is a FAIL. Any open `[PENDING …]` placeholder (the checker's last line counts them) is a FAIL until Yaqoob answers. `[AT POSTING: …]` is fine. The checker also lints fenced JSON specs.
 2. Go through the **Guard's pass/fail checklist** in `health-ad-policy`, line by line.
 3. Check every factual statement against `tabeebx-brand` and its references. If a fact is not there, it is a FAIL until Yaqoob confirms it.
-4. Check brand: colours, one pink element per frame, Cairo, logo, and the AI label on style C.
+4. Check brand:
+   - colours, one pink element per frame, Cairo
+   - no logo on frames, until Yaqoob decides otherwise
+   - the AI label on any B or C image with people
+   - for style D: every person on camera has a `consent_id` in `data/consents.csv` whose scope covers the use, and the who-is-on-screen label matches
 5. Write the verdict to `content/<week>/guard-report.md`, one row per piece:
    - `PASS`
    - `FAIL: <rule> → <exact fix>`
    - `PASS with note: <note>`
-   Then set the piece's `status:` to `guard-pass` or leave it `draft`.
+   Then set the piece's `status:`:
+   - `PASS` → `guard-pass`
+   - `PASS with note` → `guard-pass`, with the note copied into `review.md`
+   - `FAIL` → leave `draft`
 
 ## Monthly
 
