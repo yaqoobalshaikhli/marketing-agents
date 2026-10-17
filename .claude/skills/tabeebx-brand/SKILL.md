@@ -16,7 +16,7 @@ TabeebX (legal entity: **Baru Medical Ltd**, Baghdad) is an Iraqi digital health
 1. **Consumer app** (in development): teleconsultation with any specialist, personal medical records, e-prescriptions with medicine delivery. Arabic-first with an Iraqi-dialect AI voice agent.
 2. **Home healthcare services**: specialist doctor home/worksite visits, nursing visits, home lab blood draws (631 tests, 18 categories), mobile X-ray, ultrasound, 12-lead ECG, and home physiotherapy — delivered across Baghdad, Iraq-wide as the network grows.
 3. **In-house B2B corporate packages** (primary commercial engine, sold directly — no insurer): four tiers per employee per month — Economy 18,000 / Essential 25,000 / Standard 30,000 / Premium 50,000 IQD — combining unlimited teleconsultation, doctor + nursing visits, labs, and PAYG corporate discounts. Full details in `references/corporate-packages.md`. An admin-fee model (~25,000 IQD/user/YEAR, teleconsult only + discounted PAYG) is under internal study — not yet launched.
-4. **Health 360 insurance program**: individual + family health insurance administered with **GlobeMed Iraq** as TPA; TabeebX sits inside GlobeMed's provider network. In-hospital coverage runs through GlobeMed's Class A private hospital network. Details in `references/health360.md`.
+4. **Health 360 insurance program**: individual + family health insurance. TabeebX has signed with an insurance company `[insurer name: not yet recorded]`, a TPA (**GlobeMed Iraq**) and an insurance broker platform, inana (spelling as Yaqoob wrote it), whose API TabeebX has (Yaqoob, 2026-10-17). Consumer copy may call it «تأمين». Administered with **GlobeMed Iraq** as TPA; TabeebX sits inside GlobeMed's provider network. In-hospital coverage runs through GlobeMed's Class A private hospital network. Details in `references/health360.md`.
 
 The in-house packages and Health 360 are **separate offerings — never mix them in one quote**.
 
@@ -52,6 +52,21 @@ Ads from these accounts are ours. Competitor intel logs them with `on_watchlist=
 | White | `#FFFEFF` — clean space; use generously |
 | Font | **Cairo** (Bold for headlines, Medium for body) — both Arabic and Latin |
 | Logo | Abstract human figure with raised arms (pink head/torso + blue arms/base) above the "TabeebX" wordmark in navy. Never recolor, stretch, or place on clashing backgrounds |
+
+**Official brand guide** (image Yaqoob sent on 2026-10-17). Values exactly as printed:
+
+| Colour | HEX | RGB | CMYK (print) | LAB |
+|---|---|---|---|---|
+| Navy | 18 19 43 | 24 25 68 | 99 96 41 45 | 11 11 -28 |
+| Pink | ee 39 6b | 238 53 107 | 0 92 38 0 | 55 69 16 |
+| Blue | 1b 9c ce | 29 157 208 | 75 22 5 0 | 60 -21 -36 |
+| White | ff fe ff | 255 255 255 | 0 0 0 0 | 100 0 0 |
+
+> The guide's own HEX and RGB columns don't match exactly: its RGB values convert to #181944, #EE356B and #1D9DD0 (1–4 points off per channel, too small to see on screen). Until Yaqoob picks one, the HEX codes above stay the screen master (decision #37) and the guide's CMYK is used for print.
+
+- **Logo lockups in the guide:** horizontal (figure left of the wordmark), stacked large, stacked small.
+- **Fonts in the guide:** Cairo Bold and Cairo Medium.
+- **Instagram highlights in the guide:** navy circles with a dashed blue ring and a line icon, named رؤيتنا واهدافنا · فريقنا · تجارب الزبائن · اشتراكاتنا · خدماتنا · من نحن.
 
 Design language: rounded, human, optimistic, medical-but-not-clinical. Instagram highlight icons use navy circles with dashed borders. Avoid stock-photo sterility; prefer warm lifestyle imagery of Iraqi families and real doctors.
 

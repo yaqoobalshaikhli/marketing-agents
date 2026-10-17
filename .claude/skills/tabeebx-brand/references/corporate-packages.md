@@ -20,7 +20,7 @@ PAYG = pay-as-you-go at corporate discounted rates. All prices IQD, per employee
 | ECG | PAYG | PAYG | Included (12-lead, instant digital report) | Included |
 | Emergency coordination | — | — | Dedicated line + response protocol | Dedicated line + response protocol |
 
-⚠️ Known inconsistency in the source deck: the comparison table lists doctor/nursing visits **annually**, while the Essential/Standard detail pages say "شهرياً" (monthly). Confirm with Yaqoob before quoting — default to the annual reading.
+Doctor and nursing visit counts are **per year** (confirmed by Yaqoob 2026-10-17). The Essential/Standard detail pages of the source deck say "شهرياً" (monthly); that wording is wrong. Never quote the visits as monthly.
 
 Example totals from the proposal (25 employees): Economy 2,880,000 · Essential 4,000,000 · Standard 4,800,000 · Premium 8,000,000 IQD/month.
 

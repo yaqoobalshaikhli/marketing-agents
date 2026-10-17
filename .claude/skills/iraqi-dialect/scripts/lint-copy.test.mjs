@@ -66,9 +66,14 @@ test('fenced JSON specs are linted', () => {
 });
 
 test('banned words, cure claims and implied conditions are caught in copy', () => {
-  const r = lintText('p.md', piece('### Frame 1\ntext: تأمين مضمون يشفي\n### Frame 2\nquestion: عندك سكري؟'));
-  for (const re of [/تأمين/, /مضمون/, /cure claim/]) assert.ok(r.errors.some((e) => re.test(e)), re + '\n' + r.errors.join('\n'));
+  const r = lintText('p.md', piece('### Frame 1\ntext: مضمون يشفي\n### Frame 2\nquestion: عندك سكري؟'));
+  for (const re of [/مضمون/, /cure claim/]) assert.ok(r.errors.some((e) => re.test(e)), re + '\n' + r.errors.join('\n'));
   assert.ok(r.warnings.some((w) => /personal-attributes/.test(w)), r.warnings.join('\n'));
+});
+
+test('«تأمين» is allowed (Health 360, decided 2026-10-17)', () => {
+  const r = lintText('p.md', piece('### Frame 1\ntext: تأمين صحي للعائلة'));
+  assert.equal(r.errors.length, 0, r.errors.join('\n'));
 });
 
 test('the middle dot is not counted as a word', () => {

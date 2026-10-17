@@ -20,7 +20,6 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const BANNED = [
-  ['تأمين', 'never "تأمين" in consumer content (Health 360 naming is an open question for Yaqoob)'],
   ['الأفضل', 'never "الأفضل": replace the adjective with a name, a number or a picture'],
   ['مضمون', 'never "مضمون"'],
   ['علاج نهائي', 'never "علاج نهائي"'],

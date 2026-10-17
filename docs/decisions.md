@@ -59,14 +59,16 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 46 | **Multi-agent runs for every real task in this session**, accepting the Pro-limit cost (CLAUDE.md rule 7 otherwise says not to fan out agents for small tasks; the rule text is unchanged) | Yaqoob, multiple-choice answer |
 | 47 | **Saleem: keep the newest-50 sample.** No paging through its ads (it probably runs about 120 in Iraq, about 70% confidence). Its totals are reported as estimates, and its older ads that a capped call doesn't reach are logged `beyond_sample`, not `not_seen` | Yaqoob, multiple-choice answer |
 | 48 | **Saleem gets its own Ad Library call every week** (still the newest 50), so its batches can't crowd the labs' and Healder's ads out of a shared 50-ad call. Costs 1 extra call a week | Yaqoob, multiple-choice answer |
+| 49 | **«تأمين» is allowed in consumer copy when it refers to Health 360.** TabeebX has signed with an insurance company, a TPA (GlobeMed Iraq) and an insurance broker platform, inana, whose API it has. The insurer's name isn't recorded yet. The copy checker no longer blocks the word | Yaqoob |
+| 50 | **Corporate-package visit counts are per year.** The "شهرياً" on two detail pages of the source deck is wrong | Yaqoob |
+| 51 | **Brand guide recorded** in `tabeebx-brand`: HEX, RGB, CMYK and LAB for navy, pink, blue and white; 3 logo lockups; Cairo Bold and Medium; 6 highlight covers. The guide's own HEX and RGB differ by 1–4 points per channel; HEX stays the screen master until Yaqoob picks | Yaqoob's brand-guide image |
 
 ## Open questions for Yaqoob
 
-- **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
-- **Visit counts.** Corporate packages list visits per year in the table but "monthly" on two detail pages (noted in `tabeebx-brand`). Which is correct?
-- **Account skill.** Fix the RGB numbers in your Claude account skill `tabeebx-context` to match the hex codes (#37).
-- **Two labels need approved Arabic wording:** the AI label, and the who-is-on-screen label for staff + family.
-- **Week 42 brief.** Its 7 questions are in `content/2026-W42/brief.md`.
+- **Colour master and account skill.** The brand guide's HEX and RGB disagree slightly (#51). Which is the master? Your account skill `tabeebx-context` matches the guide's RGB except pink (it says 238,83,107; the guide says 238,53,107).
+- **AI label:** Yaqoob said on 2026-10-17 not to label AI images. Pending: which platform rules (TikTok, Meta) still require a label; research running.
+- **Staff + family label:** the who-is-on-screen label for a shoot with staff and a consenting family still needs approved Arabic wording.
+- **Week 42 brief.** Q1 (Saleem) and Q7 (Tabeebx page) are answered (#38, #31). Q2–Q6 are open in `content/2026-W42/brief.md`.
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

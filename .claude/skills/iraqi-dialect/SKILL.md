@@ -88,7 +88,6 @@ Again from the approved lines:
 
 From the campaign copy rules (errors stop a piece):
 
-- «تأمين» in consumer content
 - «الأفضل». Replace the adjective with a name, a number or a picture.
 - «مضمون», «علاج نهائي»
 - Any price: «دينار», «د.ع», «IQD»
@@ -97,7 +96,7 @@ Warnings (allowed only with proof beside them): «أفضل», «أسرع», «م
 
 Fear hooks are out: «ما تدري», «فوات الأوان», «قبل لا يفوت». Inform and invite instead.
 
-> Open question for Yaqoob, recorded 2026-10-08: «تأمين» is banned in consumer copy, but Health 360 is an insurance product. Health 360 consumer posts need an approved way to name it before the Copywriter writes any.
+> «تأمين» is **allowed** when it refers to Health 360 (Yaqoob, 2026-10-17; it was banned until then). TabeebX has signed with an insurance company, a TPA (GlobeMed Iraq) and an insurance broker platform. Every coverage detail must come from `tabeebx-brand` → `references/health360.md`; never describe a benefit that isn't there.
 
 ## How to write a piece
 
