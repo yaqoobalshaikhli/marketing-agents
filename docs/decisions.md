@@ -56,6 +56,7 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 43 | One-time exception: resolve 4 Facebook share links by redirect only. The first try was blocked (proxy 403). **Done after Yaqoob changed the environment's network setting**: only the redirect headers were read, each ended at Facebook's login page, and no page content was read | Yaqoob approved the exception |
 | 44 | Facebook pages: Sehty = facebook.com/sehtynet, Healder = facebook.com/healdernet, Saleem = facebook.com/saleemapp.iq, Hayat = facebook.com/Hayatdhs. Their share-link profile IDs return **0 ads** in the Ad Library, while Healder's and Saleem's Ad Library page IDs do return ads, so both IDs are queried weekly | Redirects + one read-only Ad Library call |
 | 45 | **دليل صحتي** stays on the watch list with **no ads check** (no Facebook link). Weekly reports list it as not covered and don't ask for the link again | Yaqoob |
+| 46 | **Multi-agent runs for every real task in this session**, accepting the Pro-limit cost (CLAUDE.md rule 7 otherwise says not to fan out agents for small tasks; the rule text is unchanged) | Yaqoob, multiple-choice answer |
 
 ## Open questions for Yaqoob
 
