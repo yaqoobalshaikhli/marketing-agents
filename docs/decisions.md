@@ -51,10 +51,12 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 38 | **Saleem** (Page `105161715872501`) is an approved, watched competitor | Yaqoob |
 | 39 | The logo's pink figure **doesn't count** as the frame's one pink element | Yaqoob |
 | 40 | «مرخّصين من وزارة الصحة العراقية» is a **confirmed fact**, usable in consumer posts | Yaqoob |
+| 41 | New watched competitors: **Hayat** (IG @hayatdhs, FB "Hayat platform"), **Healder** (FB + IG; Page `792564193937642`), **Sehty** (IG @sehty_net), **دليل صحتي** (FB) | Yaqoob. Hayat and دليل صحتي Page IDs, and Healder's Instagram handle, still needed |
 
 ## Open questions for Yaqoob
 
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
+- **Missing competitor identifiers:** Facebook Page IDs or links for Hayat platform and دليل صحتي, and Healder's Instagram handle.
 - **Competitor Instagram/TikTok handles.** The watch list has Page IDs but no handles yet; Coupler and Metricool need handles.
 - **Visit counts.** Corporate packages list visits per year in the table but "monthly" on two detail pages (noted in `tabeebx-brand`). Which is correct?
 - **Account skill.** Fix the RGB numbers in your Claude account skill `tabeebx-context` to match the hex codes (#37).

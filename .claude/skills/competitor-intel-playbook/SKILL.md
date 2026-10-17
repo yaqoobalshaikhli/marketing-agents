@@ -25,7 +25,9 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
 
 ## Weekly run (Tuesday)
 
-1. **Watched ads.** For each `approved` row in `data/competitors/watchlist.csv`, call `ads_library_search` with `page_ids=[page_id]`, `countries=["IQ"]`, `ad_active_status="ACTIVE"`, `limit=50`. GCC/MENA players: use their country (`AE`, `SA`, `EG`, `JO`) once a month.
+1. **Watched ads.** For each `approved` row in `data/competitors/watchlist.csv`, call `ads_library_search` with `page_ids=[page_id]`, `countries=["IQ"]`, `ad_active_status="ACTIVE"`, `limit=50`. Several page IDs can go in one call. GCC/MENA players: use their country (`AE`, `SA`, `EG`, `JO`) once a month.
+   - **Rows without a `page_id`** (e.g. Instagram-only competitors) are skipped for ads. List them under "Sources and limits" as not covered, and ask Yaqoob for the Page ID or link.
+   - **Don't look up a page by name with `search_terms`.** It matches words in the ad text, not page names. A name like "Hayat" returned unrelated advertisers on 2026-10-17. Only an exact `page_name` match in the results counts as identifying a page.
 2. **Discovery.** Run 3–4 keyword searches in `IQ`, rotating through: سحب دم منزلي · تحليل بالبيت · زيارة طبيب للبيت · تمريض منزلي · علاج طبيعي بالبيت · طبيب اونلاين · استشارة طبية. **Keep the week to about 15 calls in total.** The tool forbids bulk extraction.
 3. **Every call** sends `advertiser_request` (Yaqoob's own words for the request, e.g. "i need you to put an agent that could scan other competitors posts and stories and strategy as well") and one `client_conversation_id` per run. These go to Meta against TabeebX's ad account.
 4. **Update `data/competitors/ad-log.csv`.** Ads from our own accounts (Page `102936468976144`, see `tabeebx-brand` → "Our own accounts") are logged with `on_watchlist=own`. Never report them as competitor activity.
