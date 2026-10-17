@@ -60,6 +60,7 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 
 ## Open questions for Yaqoob
 
+- **Saleem's ad volume.** Saleem probably runs about 120 active ads in Iraq (estimate, about 70% confidence; see the W42 re-check). One 50-ad call sees only its newest 50. Should the weekly run spend about 3 calls on Saleem alone, or keep the newest-50 sample?
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
