@@ -36,22 +36,19 @@ Strategic positioning: TabeebX is building toward the **unified B2B corporate he
 | Instagram | @tabeebx.iq, IG user ID `17841447680118496` | Meta Ads connector (`ads_get_ig_accounts`), 2026-10-17 |
 | Meta ad account linked to that Instagram | `1904494880402733` (one of 3 active ad accounts on the login; which one is primary is unconfirmed) | Meta Ads connector, 2026-10-17 |
 
+**Licence:** TabeebX is licensed by the Iraqi Ministry of Health. Consumer wording: «مرخّصين من وزارة الصحة العراقية». Confirmed by Yaqoob as a fact on 2026-10-17, and usable in consumer posts.
+
 Ads from these accounts are ours. Competitor intel logs them with `on_watchlist=own` and never counts them as competitor activity.
 
 ## Brand identity — non-negotiable in every design
 
-> **Colour values, recorded 2026-10-17.** The hex codes below are the ones in production: the approved trust campaign's `marketing/motion/src/brand.css` (EMR repo) uses #181943, #EE396B and #1B9CCE, taken from the campaign's Design guideline. The RGB numbers in this table **don't match** those hex codes:
-> - Pink #EE396B is RGB 238,57,107, not 238,83,107
-> - Blue #1B9CCE is RGB 27,156,206, not 29,157,208
-> - Navy #181943 is RGB 24,25,67, not 24,25,68
->
-> **Use the hex codes.** Treat the RGB numbers as unverified until Yaqoob confirms which is right. The same mismatch is in the `tabeebx-context` skill on his Claude account.
+> **Colour values confirmed by Yaqoob on 2026-10-17: the hex codes are correct**, matching the trust campaign's `brand.css`. The RGB numbers below were corrected that day to match the hex codes. The account skill `tabeebx-context` still has the old, wrong RGB numbers until Yaqoob updates it.
 
 | Element | Value |
 |---|---|
-| Navy (primary dark) | `#181943` — RGB 24,25,68. Backgrounds, wordmark text |
-| Pink (accent) | `#EE396B` — RGB 238,83,107. CTAs, highlights, logo figure |
-| Blue (secondary) | `#1B9CCE` — RGB 29,157,208. Supporting graphics, icons |
+| Navy (primary dark) | `#181943` — RGB 24,25,67. Backgrounds, wordmark text |
+| Pink (accent) | `#EE396B` — RGB 238,57,107. CTAs, highlights, logo figure |
+| Blue (secondary) | `#1B9CCE` — RGB 27,156,206. Supporting graphics, icons |
 | White | `#FFFEFF` — clean space; use generously |
 | Font | **Cairo** (Bold for headlines, Medium for body) — both Arabic and Latin |
 | Logo | Abstract human figure with raised arms (pink head/torso + blue arms/base) above the "TabeebX" wordmark in navy. Never recolor, stretch, or place on clashing backgrounds |

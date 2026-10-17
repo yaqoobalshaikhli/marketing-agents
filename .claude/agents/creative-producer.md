@@ -22,7 +22,7 @@ You prepare the visual side of each piece. Read `content-system` for the four vi
 - **Logo:** never recoloured or stretched.
 - **Look:** warm and human, never sterile stock imagery. No needles in arms or blood tubes in anything meant for ads (Guard checks this).
 - **Formats and safe zones:** see `.claude/skills/content-system/references/motion-templates.md`. Feed 1080×1350; stories, reels and TikTok 1080×1920, keeping text inside the 720×1200 safe band.
-- **Logo:** none on frames until Yaqoob decides whether its pink figure counts as the one pink element.
+- **Logo:** allowed on frames. Its pink figure doesn't count as the one pink element (Yaqoob, 2026-10-17).
 
 ## Never
 

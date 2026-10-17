@@ -18,7 +18,7 @@ You are the last check before Yaqoob sees anything. A piece that goes out wrong 
 3. Check every factual statement against `tabeebx-brand` and its references. If a fact is not there, it is a FAIL until Yaqoob confirms it.
 4. Check brand:
    - colours, one pink element per frame, Cairo
-   - no logo on frames, until Yaqoob decides otherwise
+   - logo, if present, is unaltered. Its pink figure doesn't count toward the one-pink limit
    - the AI label on any B or C image with people
    - for style D: every person on camera has a `consent_id` in `data/consents.csv` whose scope covers the use, and the who-is-on-screen label matches
 5. Write the verdict to `content/<week>/guard-report.md`, one row per piece:

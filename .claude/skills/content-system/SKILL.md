@@ -45,7 +45,7 @@ Decided 2026-10-08: test all four styles, organic first, then put paid budget be
 - **Who-is-on-screen label (style D)** must match who actually appears:
   - Staff only: «الأشخاص من فريق TabeebX». This is approved; it was used in the trust campaign.
   - Staff + a consenting family: `[PENDING: label wording for staff + family, Yaqoob to approve]`. Until he approves a wording, a shoot that includes family members can't pass Guard.
-- **Logo:** whether the logo's pink figure counts as the "one pink element" is undecided (open question in `docs/decisions.md`). Until Yaqoob decides, **no logo on frames**. The profile picture carries the brand.
+- **Logo:** may appear on frames. Its pink figure **does not count** as the frame's one pink element (Yaqoob, 2026-10-17), so a frame may carry the logo plus one pink highlight. Never recolour, stretch or crop the logo.
 
 **Weeks 1–3:** every style appears at least twice a week. Tag every piece with its style letter. The Analyst compares reach, saves, shares and watch time per style, adjusted for channel and format; with this little data the comparison is directional, not statistically significant.
 

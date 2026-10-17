@@ -46,17 +46,18 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 33 | Brand colours: the **hex codes are used** (they're what the approved trust campaign's code uses); the RGB numbers in the brand file don't match and are marked unverified | Yaqoob was not sure; evidence: EMR `marketing/motion/src/brand.css`. Final call still his |
 | 34 | AI label applies to **any AI image with people** (styles B and C) | Resolves a conflict between `health-ad-policy` and `content-system` |
 | 35 | Consent references go in `data/consents.csv` (initials, scope, where the form is kept); **signed forms never in the repo** | |
-| 36 | Until Yaqoob decides about the logo: **no logo on frames** | Interim rule |
+| 36 | ~~Until Yaqoob decides about the logo: no logo on frames~~ (replaced by #39) | Interim rule |
+| 37 | Brand colours: **the hex codes are correct** (#181943, #EE396B, #1B9CCE); RGB numbers corrected to match | Yaqoob. The account skill `tabeebx-context` still needs the same fix |
+| 38 | **Saleem** (Page `105161715872501`) is an approved, watched competitor | Yaqoob |
+| 39 | The logo's pink figure **doesn't count** as the frame's one pink element | Yaqoob |
+| 40 | «مرخّصين من وزارة الصحة العراقية» is a **confirmed fact**, usable in consumer posts | Yaqoob |
 
 ## Open questions for Yaqoob
 
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
 - **Competitor Instagram/TikTok handles.** The watch list has Page IDs but no handles yet; Coupler and Metricool need handles.
 - **Visit counts.** Corporate packages list visits per year in the table but "monthly" on two detail pages (noted in `tabeebx-brand`). Which is correct?
-- **Brand colours.** Confirm the hex codes (in use) or the RGB numbers. Fix the account skill `tabeebx-context` either way.
-- **Logo.** Does the logo's pink figure count as the one pink element per frame?
-- **Licence line.** May consumer posts state «مرخّصين من وزارة الصحة العراقية» as a fact?
+- **Account skill.** Fix the RGB numbers in your Claude account skill `tabeebx-context` to match the hex codes (#37).
 - **Two labels need approved Arabic wording:** the AI label, and the who-is-on-screen label for staff + family.
-- **Saleem.** Approve, keep as proposed, or reject as a watched competitor.
 - **Week 42 brief.** Its 7 questions are in `content/2026-W42/brief.md`.
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

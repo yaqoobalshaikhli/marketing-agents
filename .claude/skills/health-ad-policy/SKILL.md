@@ -49,7 +49,7 @@ For each piece, write `PASS`, or `FAIL: <rule>` with the fix:
 - [ ] The who-is-on-screen label matches who actually appears (style D).
 - [ ] No testimonial or review unless a consent record covers it.
 - [ ] Emergency symptoms → emergency-services line present.
-- [ ] Facts match `tabeebx-brand` (services, areas). No facts invented. The licence line «مرخّصين من وزارة الصحة العراقية» is used only once Yaqoob confirms it (open question in `docs/decisions.md`).
+- [ ] Facts match `tabeebx-brand` (services, areas, the licence line «مرخّصين من وزارة الصحة العراقية», confirmed 2026-10-17). No facts invented.
 - [ ] No `[PENDING …]` placeholders left. The checker's last line reports them; `[AT POSTING: …]` is fine.
 - [ ] Platform fit: if destined for a TikTok **ad**, not teleconsultation; if a Meta ad, audience names are clean.
 - [ ] Dialect doubts listed (or "none").
