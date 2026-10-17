@@ -55,11 +55,11 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 42 | Instagram handles recorded: Healder @healder.ai, Saleem @saleem.app, Sehty @sehty_net, Hayat @hayatdhs | Yaqoob's links, tracking parameters removed |
 | 43 | One-time exception: resolve 4 Facebook share links by redirect only. The first try was blocked (proxy 403). **Done after Yaqoob changed the environment's network setting**: only the redirect headers were read, each ended at Facebook's login page, and no page content was read | Yaqoob approved the exception |
 | 44 | Facebook pages: Sehty = facebook.com/sehtynet, Healder = facebook.com/healdernet, Saleem = facebook.com/saleemapp.iq, Hayat = facebook.com/Hayatdhs. Their share-link profile IDs return **0 ads** in the Ad Library, while Healder's and Saleem's Ad Library page IDs do return ads, so both IDs are queried weekly | Redirects + one read-only Ad Library call |
+| 45 | **دليل صحتي** stays on the watch list with **no ads check** (no Facebook link). Weekly reports list it as not covered and don't ask for the link again | Yaqoob |
 
 ## Open questions for Yaqoob
 
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
-- **دليل صحتي:** no link was among the four. Send its Facebook link to add its page.
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
 - **Visit counts.** Corporate packages list visits per year in the table but "monthly" on two detail pages (noted in `tabeebx-brand`). Which is correct?
