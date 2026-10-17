@@ -58,6 +58,7 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 45 | **دليل صحتي** stays on the watch list with **no ads check** (no Facebook link). Weekly reports list it as not covered and don't ask for the link again | Yaqoob |
 | 46 | **Multi-agent runs for every real task in this session**, accepting the Pro-limit cost (CLAUDE.md rule 7 otherwise says not to fan out agents for small tasks; the rule text is unchanged) | Yaqoob, multiple-choice answer |
 | 47 | **Saleem: keep the newest-50 sample.** No paging through its ads (it probably runs about 120 in Iraq, about 70% confidence). Its totals are reported as estimates, and its older ads that a capped call doesn't reach are logged `beyond_sample`, not `not_seen` | Yaqoob, multiple-choice answer |
+| 48 | **Saleem gets its own Ad Library call every week** (still the newest 50), so its batches can't crowd the labs' and Healder's ads out of a shared 50-ad call. Costs 1 extra call a week | Yaqoob, multiple-choice answer |
 
 ## Open questions for Yaqoob
 
