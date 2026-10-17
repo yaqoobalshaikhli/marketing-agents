@@ -28,6 +28,7 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
 1. **Watched ads.** For each `approved` row in `data/competitors/watchlist.csv`, call `ads_library_search` with `page_ids=[page_id]`, `countries=["IQ"]`, `ad_active_status="ACTIVE"`, `limit=50`. Several page IDs can go in one call. GCC/MENA players: use their country (`AE`, `SA`, `EG`, `JO`) once a month.
    - **Include each row's `facebook_profile_id` in the same call.** That's the ID a Facebook share link resolves to; on 2026-10-17 it returned no ads while the Ad Library's own `page_id` did, so we query both until we know which one Meta uses. If an ad comes back under a profile ID, note it in the brief.
    - **Rows with neither ID** (e.g. Instagram-only competitors) are skipped for ads. List them under "Sources and limits" as not covered, and ask Yaqoob for the Page ID or link, unless the row's notes say not to ask.
+   - **Capped calls.** A call that returns its `limit` while `estimated_total_count` is higher was cut off. Results come newest-created first, across all pages in the call. Don't page through (decision #47: Saleem stays a newest-50 sample). Report that page's counts as lower bounds. If a page's ads that were active last week are missing and the cut-off could explain it, say so in the brief rather than calling them stopped.
    - **Don't look up a page by name with `search_terms`.** It matches words in the ad text, not page names. A name like "Hayat" returned unrelated advertisers on 2026-10-17. Only an exact `page_name` match in the results counts as identifying a page.
 2. **Discovery.** Run 3–4 keyword searches in `IQ`, rotating through: سحب دم منزلي · تحليل بالبيت · زيارة طبيب للبيت · تمريض منزلي · علاج طبيعي بالبيت · طبيب اونلاين · استشارة طبية. **Keep the week to about 15 calls in total.** The tool forbids bulk extraction.
 3. **Every call** sends `advertiser_request` (Yaqoob's own words for the request, e.g. "i need you to put an agent that could scan other competitors posts and stories and strategy as well") and one `client_conversation_id` per run. These go to Meta against TabeebX's ad account.
@@ -35,6 +36,7 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
    - New Library ID → add a row: `first_seen` = today, `last_seen` = today, `status` = active.
    - Seen again → `last_seen` = today.
    - Not returned this week → `status` = not_seen. Inactive ads disappear from the Library outside the EU, so this log is our only history.
+   - **Exception for capped calls:** not returned, but created before the oldest ad a capped call returned → `status` = beyond_sample (we can't tell whether it still runs). Keep `last_seen` as it was.
 5. **Longevity, a heuristic and never proof.** Days running = today − `ad_start_date`.
    - Under 14 days: **test**
    - 14–59 days: **running**

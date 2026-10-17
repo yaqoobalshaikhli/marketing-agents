@@ -57,10 +57,10 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 44 | Facebook pages: Sehty = facebook.com/sehtynet, Healder = facebook.com/healdernet, Saleem = facebook.com/saleemapp.iq, Hayat = facebook.com/Hayatdhs. Their share-link profile IDs return **0 ads** in the Ad Library, while Healder's and Saleem's Ad Library page IDs do return ads, so both IDs are queried weekly | Redirects + one read-only Ad Library call |
 | 45 | **دليل صحتي** stays on the watch list with **no ads check** (no Facebook link). Weekly reports list it as not covered and don't ask for the link again | Yaqoob |
 | 46 | **Multi-agent runs for every real task in this session**, accepting the Pro-limit cost (CLAUDE.md rule 7 otherwise says not to fan out agents for small tasks; the rule text is unchanged) | Yaqoob, multiple-choice answer |
+| 47 | **Saleem: keep the newest-50 sample.** No paging through its ads (it probably runs about 120 in Iraq, about 70% confidence). Its totals are reported as estimates, and its older ads that a capped call doesn't reach are logged `beyond_sample`, not `not_seen` | Yaqoob, multiple-choice answer |
 
 ## Open questions for Yaqoob
 
-- **Saleem's ad volume.** Saleem probably runs about 120 active ads in Iraq (estimate, about 70% confidence; see the W42 re-check). One 50-ad call sees only its newest 50. Should the weekly run spend about 3 calls on Saleem alone, or keep the newest-50 sample?
 - **Health 360 in consumer copy.** «تأمين» is banned in consumer content by the campaign copy rules, but Health 360 is insurance. How should consumer posts name it?
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
