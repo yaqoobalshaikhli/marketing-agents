@@ -62,6 +62,11 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 49 | **«تأمين» is allowed in consumer copy when it refers to Health 360.** TabeebX has signed with an insurance company, a TPA (GlobeMed Iraq) and an insurance broker platform, inana, whose API it has. The insurer's name isn't recorded yet. The copy checker no longer blocks the word | Yaqoob |
 | 50 | **Corporate-package visit counts are per year.** The "شهرياً" on two detail pages of the source deck is wrong | Yaqoob |
 | 51 | **Brand guide recorded** in `tabeebx-brand`: HEX, RGB, CMYK and LAB for navy, pink, blue and white; 3 logo lockups; Cairo Bold and Medium; 6 highlight covers. The guide's own HEX and RGB differ by 1–4 points per channel; HEX stays the screen master until Yaqoob picks | Yaqoob's brand-guide image |
+| 52 | **W42 brief Q2 (facts):** true today for home bookings: (b) a follow-up call within ٢٤ ساعة after the visit, and (c) male and female nurses in all Baghdad districts. (a) name and photo before the visit and (d) a doctor approving home-lab requests online were not ticked, so pieces can't state them (meaning still to confirm). (e) how lab results reach the family wasn't asked yet | Yaqoob, multiple-choice answer |
+| 53 | **W42 brief Q3:** the «شوف بعينك» trust campaign is still running in W43. Fold the pieces into it (20:30 slots, its sign-off and series names) | Yaqoob, multiple-choice answer |
+| 54 | **W42 brief Q4:** an opted-in broadcast list exists on the TabeebX WhatsApp Business number. Piece 04 goes to it; Yaqoob sends it and the list never leaves the phone | Yaqoob, multiple-choice answer |
+| 55 | **W42 brief Q5:** piece 03 is **not** a real shoot. It becomes an animated video: strong on-screen words, hooks that keep viewers watching, in/out transitions and fades, and an elaborate narrative | Yaqoob, in his words |
+| 56 | **Design quality:** Yaqoob judged the test designs poor. He wants Photoshop (Adobe), Claude Design and Canva used, and a professional design agent that scores work with critique lenses drawn from 10 of the world's best designers and learns from researched reference designs. The Adobe plugin isn't installed yet | Yaqoob |
 
 ## Open questions for Yaqoob
 
@@ -70,5 +75,5 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 - **Colour master and account skill.** The brand guide's HEX and RGB disagree slightly (#51). Which is the master? Your account skill `tabeebx-context` matches the guide's RGB except pink (it says 238,83,107; the guide says 238,53,107).
 - **AI label:** Yaqoob said on 2026-10-17 not to label AI images. Pending: which platform rules (TikTok, Meta) still require a label; research running.
 - **Staff + family label:** the who-is-on-screen label for a shoot with staff and a consenting family still needs approved Arabic wording.
-- **Week 42 brief.** Q1 (Saleem) and Q7 (Tabeebx page) are answered (#38, #31). Q2–Q6 are open in `content/2026-W42/brief.md`.
+- **Week 42 brief.** Q1–Q5 and Q7 are answered (#38, #52–55, #31). Open: Q6 (review day), what unticked Q2 (a) and (d) mean, Q2 (e) how lab results reach the family.
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?
