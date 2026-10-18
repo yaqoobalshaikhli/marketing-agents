@@ -9,7 +9,8 @@ TabeebX's in-house marketing team, built as Claude Code agents ("mods"), each pi
 | `competitor-intel` | Sonnet | Logs competitors' active Meta ads in Iraq; reads competitor posts once Coupler or Metricool is connected; writes the weekly intel brief | Tuesday |
 | `director` | Opus | Weekly brief: themes, 10+ pieces, visual-style allocation; assembles the Thursday review | Wednesday, Thursday |
 | `copywriter` | Opus (provisional) | Baghdadi-dialect copy for posts, reels, stories, captions, WhatsApp | Wednesday |
-| `creative-producer` | Sonnet | Visual briefs: motion-graphics specs, Canva templates, Canva AI prompts, shoot plans | Wednesday |
+| `designer` | Opus | Finished, rendered designs (PNG, MP4) in code-rendered HTML, Claude Design, Canva, Adobe | Wednesday |
+| `design-critic` | Opus | Scores each design on 10 lenses from 7 world and 3 Arabic designers' published principles; pass at avg ≥ 8, none < 6 | Wednesday |
 | `brand-policy-guard` | Opus | Runs the copy checker and health-ad checklist; PASS/FAIL with fixes | Before review |
 | `analyst` | Sonnet | Weekly results, the 4-style test, WhatsApp bookings | End of week |
 | `ads-manager` | Sonnet | Paid Meta tests after approval; creates everything **paused** | From week 4 |
@@ -20,7 +21,7 @@ TabeebX's in-house marketing team, built as Claude Code agents ("mods"), each pi
 1. Open a Claude Code session on this repo: claude.ai/code (pick `tabeebx-marketing`), the desktop app's Code tab, or `claude` in a terminal inside the repo.
 2. Ask in plain words, naming the mod:
    - **Tuesday:** "Run competitor-intel for this week."
-   - **Wednesday:** "Director: write this week's brief. Then copywriter and creative-producer produce the pieces, and brand-policy-guard checks them."
+   - **Wednesday:** "Director: write this week's brief. Then copywriter writes, designer renders, design-critic scores (up to 3 rounds), and brand-policy-guard checks them."
    - **Thursday:** open `content/<week>/review.md`, tick approve or write your change, then say "Process my review." Your wording fixes go into the dialect correction log automatically.
    - **Any time:** "Analyst: how did this week do?"
 3. **Week 1 only:** run the Copywriter blind test ("Run the copywriter blind test"). It decides Opus vs Sonnet for copy using your scores.

@@ -72,13 +72,17 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 59 | **Not true today:** (a) the family sees the visitor's name and photo before the visit; (d) a doctor approves home-lab requests online. Posts must not state them. ⚠️ (a) is the trust campaign's approved promise «تعرف اسم وصورة اللي جايك قبل لا يدگ الباب»; it is now flagged in `approved-lines.md` | Yaqoob, multiple-choice answer |
 | 60 | **Home-lab results** reach the family on WhatsApp (PDF or photo) and in the TabeebX app, and a doctor explains them | Yaqoob, multiple-choice answer |
 | 61 | **Piece 03 animation: 15–20 seconds** | Yaqoob, multiple-choice answer |
+| 62 | **HEX is the colour master:** #181943, #EE396B, #1B9CCE (#37 stands). Yaqoob's account skill `tabeebx-context` should use RGB 24,25,67 / 238,57,107 / 27,156,206 | Yaqoob, multiple-choice answer |
+| 63 | **Name-and-photo promise:** Yaqoob says TabeebX never made it. The line is in the trust campaign's `09-sun04-promise-reel` job (`approved-lines.md`), so whether it was posted is unconfirmed; it stays blocked. **New, in progress:** contracting many doctors as service providers, and clinic-appointment booking in the app alongside home services | Yaqoob, in his words |
+| 64 | **W42 pack review: Monday 19 Oct** (the earlier slots in the brief) | Yaqoob, multiple-choice answer |
+| 65 | **Design team built:** `designer` and `design-critic` agents (Opus), `design-studio` (code-rendered HTML → PNG/MP4 with vendored Cairo) and `design-critique` (10 lenses) skills. The Creative Producer is removed. The fact-checks on the designer research run afterwards | Yaqoob chose "build now, check after" |
 
 ## Open questions for Yaqoob
 
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
-- **Colour master and account skill.** The brand guide's HEX and RGB disagree slightly (#51). Which is the master? Your account skill `tabeebx-context` matches the guide's RGB except pink (it says 238,83,107; the guide says 238,53,107).
+- **Account skill (#62):** update your Claude account skill `tabeebx-context` to RGB 24,25,67 / 238,57,107 / 27,156,206. Only you can edit it.
+- **Logo files:** send the official logo (SVG or high-resolution PNG, the colour version plus any approved white or one-colour version). The Designer won't use a redrawn logo. The only brand image in the EMR motion system, `figure-white.png`, is a different mark from the brand-guide logo.
+- **Clinic booking in the app (#63):** is it live now, or coming soon? Posts can mention it only once it's live.
 - **Staff + family label:** the who-is-on-screen label for a shoot with staff and a consenting family still needs approved Arabic wording.
-- **Week 42 brief.** Only Q6 (review day) is open; the rest are answered (#31, #38, #52–55, #59–61).
-- **Trust campaign promise.** «تعرف اسم وصورة اللي جايك قبل لا يدگ الباب» is not true today (#59), but the trust campaign (still running) promised it. Should the campaign's remaining posts that make this promise be pulled or changed?
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

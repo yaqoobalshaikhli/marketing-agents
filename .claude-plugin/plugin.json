@@ -2,7 +2,7 @@
   "name": "tabeebx-marketing",
   "displayName": "TabeebX Marketing Mods",
   "version": "0.1.0",
-  "description": "TabeebX in-house marketing team: director, competitor intel, Iraqi-dialect copywriter, creative producer, brand & policy guard, ads manager, ads pulse, analyst — plus brand, dialect, health-ad-policy and content skills.",
+  "description": "TabeebX in-house marketing team: director, competitor intel, Iraqi-dialect copywriter, designer, design critic, brand & policy guard, ads manager, ads pulse, analyst — plus brand, dialect, health-ad-policy and content skills.",
   "author": {
     "name": "TabeebX (Baru Medical Ltd)"
   },
@@ -22,7 +22,8 @@
     "./.claude/agents/brand-policy-guard.md",
     "./.claude/agents/competitor-intel.md",
     "./.claude/agents/copywriter.md",
-    "./.claude/agents/creative-producer.md",
+    "./.claude/agents/design-critic.md",
+    "./.claude/agents/designer.md",
     "./.claude/agents/director.md"
   ]
 }

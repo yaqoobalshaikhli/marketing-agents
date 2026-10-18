@@ -1,0 +1,126 @@
+# Reference library and craft rules
+
+From the 2026-10-18 research (not yet fact-checked). Study a reference **before** designing a format you have not done before, and say in the piece which one you learned from and what you took. Open these URLs in a browser; never fetch facebook.com, instagram.com or tiktok.com.
+
+## References
+
+- **Vaseline Verified** (Health & wellness campaign (social-first, creator-native)): https://www.ogilvy.com/work/vaseline-verified
+  - A repeatable verdict device (a 'Verified' seal for hacks that held up, a public debunk for those that failed) turns myth-vs-fact into a recognisable series. A TabeebX equivalent is one fixed verdict frame for myth/fact carousels and reels, used only when a real TabeebX clinician has checked the claim (health-ad-policy).
+  - The face is a real brand scientist in lab-style videos. Credibility comes from a real expert, never an actor, which matches TabeebX's no-fake-doctor rule.
+  - It answers inside the platform's own grammar (replies to creators on their channels) instead of polished TV-style ads. Design for the feed, not for a showreel.
+  - Debunk the claim without shaming the person. Tone matters in health myth-busting.
+  - Jury framing: health misinformation as the brief. That is a natural content pillar for a telehealth brand.
+- **Ruby Blooms: a sensory period guidebook for autistic girls** (MENA healthcare campaign / information design): https://lbbonline.com/news/this-sensory-guidebook-explains-periods-for-autistic-girls
+  - For health topics that carry anxiety, design to reduce surprise: a gradual reveal, a soothing tested palette, simplified illustration. That suits TabeebX pieces on blood tests at home, elderly care and symptoms.
+  - Content was tested and refined with a specialist (Dr Rama Kanj). Clinical review is part of the design process, not a final stamp.
+  - A taboo topic in the Gulf handled with dignity and care, without sensationalism. That is a model for culturally sensitive Iraqi health content.
+- **Strangers (organ donation film)** (MENA healthcare film / Arabic-market storytelling): https://lbbonline.com/news/this-film-opens-up-a-quiet-powerful-conversation-on-organ-donation
+  - It tackles a cultural and religious misperception about a health decision respectfully, inside Arabic culture, without lecturing.
+  - Structure built on human connection (one donor, eight lives) rather than statistics. Use one human thread per TabeebX story.
+  - A restrained, quiet tone can hold attention for nearly four minutes. Calm is not the same as boring when the story is specific.
+- **Missing Type** (Healthcare campaign built on one typographic device): https://www.designweek.co.uk/why-waterstones-odeon-and-10-downing-street-are-dropping-letters-from-their-logos/
+  - One typographic gesture (removing the letters A, O and B from logos and signs) carries the whole health message and reads at a glance in a feed.
+  - The idea let partners take part through their own logos, so a typographic system can scale through participation.
+  - For TabeebX: find one ownable typographic or graphic gesture (for example the raised-arms figure used as a glyph or punctuation) instead of adding decoration.
+- **Zocdoc identity** (Healthcare brand identity): https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_zocdoc_by_wolff_olins.php
+  - Break healthcare's clinical blue-and-green cliché. Zocdoc went yellow-led to feel human. TabeebX's pink accent can play that role.
+  - The logo became a face ('Zee') that can change expression across touchpoints. TabeebX's raised-arms figure can likewise become an animated character in motion pieces.
+  - It moved away from generic stock toward true-to-life imagery.
+- **Headspace 2024 identity refresh** (Health brand identity (mental health)): https://www.itsnicethat.com/articles/italic-studio-headspace-graphic-design-project-250424
+  - The illustration style was widened to show a fuller emotional range of characters, so heavier health topics can be shown honestly without becoming cute.
+  - Animation is kept specifically to 'help simplify complex ideas' (It's Nice That; search-result excerpt). Motion should explain, not decorate.
+  - A proprietary typeface gives the brand a consistent voice across every surface.
+- **Headspace brand film** (Motion-graphics explainer): https://buck.co/work/headspace
+  - It explains the benefit of a health practice through a cast of simple shapes in a narrative world, with no literal medical clichés.
+  - Characters and shapes come from brand assets. Build TabeebX motion from the logo figure, the palette and Cairo, not from stock icons.
+- **Galileo telehealth identity** (Telehealth brand identity): https://www.designweek.co.uk/issues/17-23-january-2022/galileo-identity/
+  - An app-based doctor-consultation brand that uses humanist type details, handwriting and hand-drawn annotations to feel personal.
+  - The illustrations are described as 'mature, precise and realistic' (search-result excerpt). Telehealth illustration should feel precise and adult, not childish.
+  - Carrying the same illustrations from the identity into the app gives a 'through-line'. Keep social and app visuals one system.
+- **Mind rebrand** (Health charity brand identity): https://www.creativereview.co.uk/mind-rebrand-designstudio/
+  - Accessibility and inclusivity were part of the typography brief, not added later.
+  - Squiggly punctuation hand-drawn from Mind's existing symbol: extend an asset the brand already owns rather than inventing new ornaments.
+  - A brighter palette moved a health brand away from somber cues.
+- **Bless You: Saudi telehealth app branding** (MENA telehealth identity / RTL product design (agency case study)): https://shakuro.com/works/bless-you
+  - A telehealth identity 'completely adapted for Arabic-speaking countries, including special fonts, careful placement of the elements, and RTL reading' (search-result excerpt).
+  - Useful for checking how RTL layout, Arabic type and health UI patterns sit together in a regional product.
+- **Inside the design of Spotify Wrapped 2024** (Vertical story-format typography and motion system): https://www.itsnicethat.com/features/spotify-wrapped-2024-graphic-design-041224
+  - Typography becomes the main graphic element, looped and transformed across a 9:16 canvas. That is the closest analogue to TabeebX kinetic-type reels and stories.
+  - It is built as a toolkit that many teams can execute (2023 feature). The Designer agent should work from a template system, not one-off layouts.
+  - Bold colour combinations stay inside a system. One brand voice survives hundreds of variations.
+- **4 ways 'Don't Blink' is a masterclass of type and rhythm** (Kinetic typography analysis): https://motionographer.com/2016/09/14/4-ways-dont-blink-is-a-masterclass-of-type-and-rhythm/
+  - Words animate into their own meaning (the word becomes the thing), which makes key messages memorable.
+  - Time is a storytelling tool: slow down for the key word, cut abruptly for the punchline.
+  - It stays on a flat 2D plane, with a single move into depth for effect. Restraint makes the one exception land.
+  - Type, image and percussive sound are locked together. Edit kinetic type to the beat.
+  - Most words are held about 5–7 frames (per the search summary of the article). That pace suits one- to three-word emphasis beats, never information the viewer must read in Arabic.
+- **Hibrayer: Animating Arabic Typography** (Arabic kinetic typography (Behance)): https://www.behance.net/gallery/93073375/Hibrayer-Animating-Arabic-Typography
+  - Each Arabic word gets a motion that echoes its meaning or feeling. It is a source of Arabic-native motion ideas instead of Latin kinetic templates.
+  - It shows how Arabic letterform features (dots, horizontal extension, baseline) can be animated while words stay joined.
+- **How The Economist designs charts for Instagram** (Social information-design guidelines): https://www.niemanlab.org/reading/how-the-economist-designs-charts-for-instagram/
+  - The team wrote a 'loose set of guidelines' because users 'can quickly scroll past anything that fails to catch their attention' (search-result excerpt). Codify platform rules rather than improvising each post.
+  - When a TabeebX post shows a number (a time, a count, a step), design it as a single-glance figure or chart, not as a sentence.
+- **The New York Times uses Instagram slides to make stories digestible** (Carousel design practice (news)): https://www.niemanlab.org/2021/07/the-new-york-times-is-using-instagram-slides-and-twitter-cards-to-make-stories-more-digestible/
+  - Slides work best for complicated stories that need context. Use carousels for explanation (how a home visit works, what a test means).
+  - Platforms without carousels get single cards. For WhatsApp, make one self-contained image rather than a cut-down carousel slide.
+- **Design Doha Biennial 2026 identity** (Bilingual Arabic/English identity (MENA)): https://www.pentagram.com/work/design-doha-biennial
+  - Arabic and English get parity, 'united in a shared typographic composition rather than separate elements' (search-result excerpt of the Pentagram page).
+  - One device (exaggerated, extended strokes) links elements across layouts, which shows how a single gesture makes a system recognisable.
+  - A weightier variant marks a sub-event while staying in the family, which could serve TabeebX sub-series.
+- **Li3ib bilingual identity** (Gulf consumer-app identity with a character system): https://www.creativereview.co.uk/kuwaiti-sports-app-li3ib-bilingual-identity/
+  - The logo is built to read in both Arabic and English.
+  - The logo's strokes bend into mascots and carry short taglines. A logo can become an animated character system across social, as TabeebX's figure could.
+  - Rolled out across app, web, social and ads as one system.
+- **NAAR identity: Arabic and Latin don't have to mimic each other** (Arabic/Latin typography approach): https://www.itsnicethat.com/articles/montasser-drissi-naar-graphic-design-170719
+  - The two scripts 'shouldn't have to mimic each other to create harmony' (search-result paraphrase). Don't force Arabic to copy Latin contrast or weight.
+  - An abstracted Arabic word stands on the baseline beside its Latin counterpart, so each script keeps its nature and the pair still sits together.
+- **Dubai Font** (Arabic/Latin screen typeface (case study)): https://www.monotype.com/resources/case-studies/dubai
+  - Arabic and Latin were designed at the same time, not Latin first with Arabic added after.
+  - To harmonise the scripts, more verticality went into the Arabic and more horizontality into the Latin.
+  - The brief demanded text legibility. Chahine's research field is eye-movement legibility of Arabic, Latin and Chinese.
+- **Khatt Font Project: the design brief (Typographic Matchmaking)** (Bilingual type-pairing methodology): https://www.khtt.net/en/page/1714/the-design-brief
+  - Companion Arabic and Latin fonts were to look the same visual size at the same point size and share stem weight, contrast and stroke endings.
+  - Related Khatt projects (Fedra Arabic) kept the Latin baseline, ascender and descender but defined separate Arabic middle heights, because there is no true Arabic x-height.
+- **CEER bilingual identity** (Saudi bilingual brand identity): https://campaignme.com/saudi-arabias-ceer-reveals-strategy-behind-rollout-of-visual-sonic-rebrand/
+  - The brief demanded 'equal prominence to Arabic and English' (search-result excerpt).
+  - A custom bilingual typeface runs through the whole identity.
+  - Rollout on a national day across social, digital and OOH ties the brand to a local cultural moment.
+- **Why minimalist aesthetics are stifling truly Arab design (The View From Cairo)** (Critical essay on MENA design): https://www.itsnicethat.com/articles/the-view-from-cairo-minimalist-aesthetics-arab-design-critique-creative-industry-020626
+  - It warns against imported Western minimalism treated as the only marker of 'good design' in the region. 'Clean' must not become generic.
+  - Push the Designer to draw on Arab visual culture (calligraphic energy, local references, Iraqi daily life) inside the brand system. The companion piece on Egypt's calligraphy comeback (itsnicethat.com, 2025) points the same way.
+- **NHS identity guidelines: fonts** (Healthcare brand guidelines (accessibility)): https://www.england.nhs.uk/nhsidentity/identity-guidelines/fonts/
+  - A healthcare identity that limits typefaces and weights and gives accessibility reasons for type choices (for example, avoid italics online as less accessible).
+  - It shows how a health brand writes rules that non-designers can follow. That is the format the Designer agent's brief should take.
+- **Wolt on YouTube Shorts (Think with Google)** (Vertical-video case study): https://business.google.com/en-all/think/search-and-video/wolt-youtube-shorts/
+  - A long-form master edit does not simply translate to vertical. Plan TabeebX reels vertical-first (framing, type size, pacing) rather than cropping 16:9 assets.
+
+## Craft rules (confidence in brackets)
+
+- **Arabic type on screen** (0.9): Never apply letter-spacing (tracking) to Arabic. Set tracking to 0 in Canva, After Effects, Figma and CSS. To widen a line, change the size or the copy, never the tracking. Source: https://developer.apple.com/videos/play/wwdc2022/10034/
+- **Kinetic typography (Arabic)** (0.85): Never animate Arabic letter by letter (per-character animators, typewriter presets, split-text). Animate whole words or lines, or reveal intact text with a moving mask, so letters stay joined and keep their contextual shapes. Source: https://www.framer.com/marketplace/components/shape-safe-reveal/
+- **Arabic type on screen** (0.65): Give Arabic more leading than Latin. Start with line-height of about 1.6–1.8 for body or caption text and about 1.25–1.4 for headlines, then check that dots and descenders don't collide between lines. Add more if you use tashkeel. Source: https://developer.apple.com/videos/play/wwdc2020/10175/
+- **Arabic type on screen** (0.5): Minimum Arabic text size on a 1080-px-wide canvas (feed, carousel, story, reel): body and caption at least about 46 px, supporting labels at least about 40 px, headlines usually 72 px or more. Check a phone-size preview before review. Source: https://dev.to/jubayer910/rtl-ui-design-for-arabic-apps-a-guide-for-uae-teams-3bfd
+- **Hierarchy and contrast** (0.75): Build hierarchy through weight and size contrast, not case or italics, which Arabic doesn't have. With only Cairo Bold and Medium allowed, make the headline about 1.6–2× the body size and limit a slide to three text levels: headline, body, label. Source: https://khtt.net/en/id/598
+- **Arabic type on screen** (0.65): When Arabic and Latin share a frame (e.g. the TabeebX wordmark, a URL), balance visual weight and colour instead of forcing equal heights. Use Cairo's own Latin so both scripts come from one family, and let the Arabic take the vertical room it needs. Source: https://www.khtt.net/en/page/1714/the-design-brief
+- **Arabic type on screen** (0.6): Set Arabic ragged, aligned right. Never justify Arabic in social graphics, and never insert tatweel (U+0640) to stretch words or fill a line. Use elongation only as a deliberate, drawn display gesture in a logo or headline, approved as part of the system. Source: https://www.w3.org/2016/06/28-alreq-minutes.html
+- **Arabic type on screen** (0.6): Use tashkeel (short-vowel marks) only to disambiguate a word that could be misread, never as decoration or on whole sentences. Source: https://scholarlypublications.universiteitleiden.nl/handle/1887/20022
+- **Arabic type on screen** (0.8): Numerals: use Eastern Arabic digits (٠١٢٣٤٥٦٧٨٩) in Arabic copy. Use Western digits only in phone numbers and handles, and never mix systems in one phrase. Never reverse digit order inside a number in RTL layouts (٢٤ stays ٢٤), and keep times like ٨:٣٠ intact. Source: /home/user/marketing-agents/.claude/skills/iraqi-dialect/SKILL.md
+- **RTL reading order** (0.7): Latin words inside Arabic lines (TabeebX, URLs, @handles) stay left-to-right. Don't put a Latin word at the start or end of an Arabic line next to punctuation or a number. Check the rendered frame for punctuation that jumped sides, and in code add a right-to-left mark after the neutral character. Source: https://www.w3.org/WAI/WCAG22/Techniques/html/H34
+- **RTL reading order** (0.65): Mirror anything that shows sequence or progress for Arabic, including motion: step 1 sits at the right, progress bars fill right to left, 'next' arrows and wipes or pushes travel right to left, and timelines read right to left. Do not mirror numbers, the logo, clocks, charts' digit order, or non-directional icons (phone, camera). Verify the carousel swipe cue on a phone with Arabic UI before using an arrow. Source: https://m2.material.io/go/design-bidirectionality
+- **Arabic type on screen** (0.55): Treat Cairo as a display-friendly Kufi-style face. It is strongest in Bold for short headlines. For body copy use Medium at the minimum sizes above, never lighter weights (brand allows only Bold and Medium), and check small text for clogged counters on a phone. Source: https://github.com/Gue3bara/Cairo
+- **Hierarchy and contrast** (0.95): White on navy (#FFFFFF on #181943, 16.68:1) is the default for any text that must be read, at any size. It passes WCAG AAA. Source: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+- **Hierarchy and contrast** (0.95): Pink on navy (or navy on pink) is 4.32:1. It fails AA for normal text, so use it only for large or bold display words (the single accent word or the CTA), never for body or captions. Source: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+- **Hierarchy and contrast** (0.95): White on pink (3.87:1) and white on blue (3.14:1) are large-text-only pairings. For readable text on a blue field use navy text (5.32:1). Pink on white (3.87:1) is also large-text-only. Source: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+- **Hierarchy and contrast** (0.95): Never put pink and blue against each other: no pink text on blue, no blue text on pink, and no pink icon on a blue field (1.23:1). They are nearly the same lightness and will vibrate and disappear for low-vision viewers. Source: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+- **Hierarchy and contrast** (0.55): What counts as 'large text' on a 1080-px social canvas: Cairo Bold at about 52 px or more (≈14 pt bold on a phone), or Medium at about 66 px or more (≈18 pt). Pairings that only pass at 3:1 (pink/navy, white/pink, white/blue) must meet these sizes. Source: https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum
+- **Hierarchy and contrast** (0.9): Exactly one pink element group per frame or slide: the one thing the eye should hit first. Everything else is navy, white or blue. Source: /home/user/marketing-agents/.claude/skills/tabeebx-brand/SKILL.md
+- **Carousel and story layout** (0.7): Carousels: export every slide at 1080×1350 (4:5) at the same ratio, because the first slide sets the crop for all of them. Keep the cover's headline and key visual inside the centred 1012×1350 area (about 34 px clear on each side), because the profile grid now previews posts at 3:4. Source: https://www.kapwing.com/resources/instagrams-new-grid-layout-size-and-dimensions-2025/
+- **Carousel and story layout** (0.6): Carousel structure: slide 1 is a hook (a specific claim, question or surprising fact, never a generic 'X tips' title), each following slide carries one idea, and the last slide has a single CTA. Aim for about 6–10 slides. Use carousels for topics that need explanation or context. Source: https://www.niemanlab.org/2021/07/the-new-york-times-is-using-instagram-slides-and-twitter-cards-to-make-stories-more-digestible/
+- **Carousel and story layout** (0.55): Stories (1080×1920): keep text and key visuals clear of the top ~250 px (account row) and the bottom ~340 px (reply bar, link sticker), with at least 65 px side margins. Put the link sticker or poll in the bottom band, below the headline. For story ads use Meta's 14% / 20–35% / 6% margins. Source: https://campaignswift.com/blog/instagram-safe-zone-sizes
+- **Safe zones** (0.65): Reels/Shorts/TikTok text and key visuals stay in the centred safe band: 220 px top, 500 px bottom, 180 px each side on 1080×1920, leaving a 720×1200 band from y=220 to y=1420. Keep side margins symmetric because the action rail and caption stack can sit on either side in RTL interfaces. For Reels ads, also respect Meta's 14% top / 35% bottom / 6% sides. Source: https://support.google.com/google-ads/answer/16041697?hl=en
+- **Vertical-video hooks and retention** (0.7): The first frame must work as a still: the hook text is fully visible and legible at 0.0 s, with no fade from black, logo intro or slow build. The hook (question, surprising fact, action) lands in the first 1–2 seconds. Source: https://www.thinkwithgoogle.com/_qs/documents/8472/ABCD_Complete_V7b_HR_1.pdf
+- **Vertical-video hooks and retention** (0.6): Brand early, but quietly: the navy/pink palette and Cairo show from frame 1, and the logo figure or wordmark appears within the first ~5 seconds as part of the content, not as an opening logo sting. Source: https://business.google.com/en-all/think/future-of-marketing/youtube-video-ad-creative/
+- **Vertical-video hooks and retention** (0.6): Design every reel to work with sound off: burn in Arabic captions (navy plate, Cairo, inside the safe band) for every spoken or key line. Still add sound (voice or music) for viewers who have it on. Source: https://support.google.com/google-ads/answer/16041697?hl=en
+- **Vertical-video hooks and retention** (0.6): Keep vertical videos under 60 seconds. Action-oriented pieces (book a visit, message us) should run 10–30 seconds. Source: https://support.google.com/google-ads/answer/16041697?hl=en
+- **Kinetic typography timing** (0.55): Arabic reading time for kinetic text: hold each text card at least 0.45 s per Arabic word plus about 0.5 s to find it, with a 1.5 s minimum. Never ask the viewer to read more than ~2.5 words per second, and keep a story frame meant to be read without tapping to about 12 words or fewer. Very fast 5–7-frame word flashes are only for one- to three-word emphasis beats, never for information. Source: https://busqueda.bvsalud.org/portal/resource/es/mdl-38402851
+- **Kinetic typography timing** (0.55): In/out motion: text enters in about 8–12 frames at 30 fps (≈250–400 ms) with an ease-out/decelerate curve, then sits completely still for its full reading window, then exits faster (≈5–6 frames, 150–200 ms) with an ease-in/accelerate curve. Prefer a fade or short slide that follows reading direction (right to left) over bounces, spins or scale-pops on Arabic. Source: https://atlassian.design/foundations/motion

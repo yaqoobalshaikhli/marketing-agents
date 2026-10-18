@@ -34,7 +34,7 @@ Decided 2026-10-08: test all four styles, organic first, then put paid budget be
 
 | Style | Tool | Rule |
 |---|---|---|
-| A. Motion graphics / illustration | Code-rendered motion system in `marketing/motion` of `yaqoobalshaikhli/EMR` (field shapes and safe zones: `references/motion-templates.md`); Canva Free templates | Free, unlimited |
+| A. Motion graphics / illustration | The Designer's code-rendered HTML → PNG/MP4 (`design-studio`); Canva Free; the older EMR motion system (`references/motion-templates.md`) only when Yaqoob asks for it | Free, unlimited |
 | B. AI lifestyle scenes (families, homes, Baghdad streets), no clinicians | Canva AI image generator (Canva Free: limited monthly allowance, about 20 premium AI uses per Canva's pricing page; check the counter in Canva) | Budget about 4–5 AI images a week. **Any AI image showing people is labeled AI**, same as C |
 | C. AI people including clinicians | Canva AI | **Always labeled AI** on the piece; never a real doctor's name or credentials |
 | D. Real shoot | Shot list and brief for a phone shoot with real TabeebX staff and consenting families | Produces a plan, not images, until footage exists. Everyone on camera needs a row in `data/consents.csv` |
@@ -59,6 +59,8 @@ content/2026-W42/
   pieces/
     01-ig-carousel-<slug>.md   ← one file per piece (template below)
     ...
+  design/<piece-id>/        ← Designer: HTML sources and rendered PNG / MP4
+  design-review/<piece-id>-r<n>.md ← Design Critic: 10-lens scores per round
   guard-report.md   ← Brand & Policy Guard: PASS/FAIL per piece
   review.md         ← the pack Yaqoob reads on Thursday: every piece, in order, with checkboxes
 ```
@@ -95,11 +97,8 @@ key: <on-screen text>
 ## Copy check
 <the checker's last line, plus one line per warning: fixed, or why it stays>
 
-## Visual brief
-<per-frame: layout, colours (Navy #181943, Pink #EE396B one element, Blue #1B9CCE), Cairo font, imagery, AI label if style B/C, who-is-on-screen label if D>
-
-## Production
-<tool: motion job spec in a ```json fence | Canva template | Canva AI prompt | shoot plan>
+## Design
+<Designer: the one idea, the reference learned from, output files in design/<piece-id>/, round number and the Design Critic's verdict and average score>
 
 ## Dialect doubts
 <words the Copywriter was unsure of, or "none">
@@ -114,9 +113,13 @@ key: <on-screen text>
   - Text in brackets is ignored by every copy rule, so labels like `Q2-a` are safe inside them.
 - Only `## Copy`, `## Caption`, `## Variant hook` and fenced ```json specs are checked. Notes elsewhere may quote Arabic freely.
 
+## Production order
+
+Director brief → Copywriter (copy checker passes) → **Designer** renders → **Design Critic** scores; the piece passes at an average of ≥ 8/10 with no lens below 6, with up to 3 rounds, otherwise it is escalated → Guard → Yaqoob.
+
 ## Thursday review (Phase 0: Markdown; Phase 1: review page)
 
-1. The Director assembles `review.md`: every piece in posting order, with Guard's verdict and a checkbox: `[ ] approve  [ ] change: ___`. Guard's verdicts map to `status:` like this:
+1. The Director assembles `review.md`: every piece in posting order, with its rendered files, the Design Critic's average score, Guard's verdict and a checkbox: `[ ] approve  [ ] change: ___`. Guard's verdicts map to `status:` like this:
    - `PASS` → `guard-pass`
    - `PASS with note` → `guard-pass` (the note goes into `review.md`)
    - `FAIL` → stays `draft`
