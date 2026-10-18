@@ -1,27 +1,30 @@
 ---
 id: 2026-W42-02
-channel: instagram-story
+channel: [instagram-story]
 style: A
-goal: awareness
-publish: Fri 23 Oct 10:00     # brief Q6-A default; if Q6-B: Tue 20 Oct 10:00
-status: guard-pass
+goal: [awareness]
+publish: Tue 20 Oct 10:00                 # brief's "review Mon 19" slot (decision #64); the campaign's morning-question slot, the same day as piece 01 at 20:30
+status: draft                             # back to draft: the copy changed after Guard's PASS of 17 Oct
+consents: []                              # no people
 ---
-
-**Needs Yaqoob:** Q6 (slot) · the wa.me link for the frame 2 link sticker. No Q2 fact is stated in this piece.
-
-<!-- principle (marketing-psychology): Commitment & consistency. A one-question answer is a small first step; frame 2 offers the next one (a WhatsApp message) to anyone ready now. -->
+Needs Yaqoob: none in the copy. Not blocking the copy: the official logo file (marked slot on both frames); the wa.me link for the frame 2 link sticker is an at-posting value; frame 2 says «هسه», so make sure someone answers WhatsApp for the three hours after 10:00 that Tuesday.
+Psychology: Commitment and consistency. Frame 1 asks for a small, easy first step (type one question); frame 2 offers the next step, a WhatsApp message, to anyone who is already ready.
 
 ## Copy (Iraqi dialect)
 
-Two story frames. Line keys follow the trust campaign's `campaign.json`. ` / ` is a line break on screen; `*stars*` mark the one pink group per frame. The question asks about the service, never about the viewer's health (brief, piece 02).
+> Two story frames. Line keys follow the trust campaign's morning questions (`label`, `question`). ` / ` is a line break on screen; `*stars*` mark the one pink group per frame. The question is about the service, never about the viewer's health (brief, piece 02). `sticker:` and `link:` are typed into Instagram's native stickers at posting, not rendered.
+>
+> Changes from the first draft: «تحب تعرفه» → «تريد تعرفه» and the `small` line rewritten in spoken Baghdadi (Guard's dialect notes); frame 2 now closes with the campaign sign-off (decision #53).
 
 ### Frame 1 · question box
 
 label: سؤال
 
-question: شنو أكثر شي تحب تعرفه / قبل لا يجيك دكتور *للبيت؟*
+question: شنو أكثر شي تريد تعرفه / قبل لا يجيك دكتور *للبيت؟*
 
-small: اكتب سؤالك، بلا أسماء ولا تفاصيل صحية.
+small: لا تكتب اسمك ولا شي عن صحتك.
+
+logo: LOGO SLOT, official file needed
 
 ### Frame 2 · WhatsApp link
 
@@ -31,104 +34,83 @@ sticker: احجز بالواتساب
 
 link: [AT POSTING: wa.me link]
 
+closing: لا تصدگنا. شوف بعينك.
+
+logo: LOGO SLOT, official file needed
+
 ## Caption
 
 None: Instagram stories have no caption.
 
-## Variant hook
+## Copy check
 
-Not applicable: a story is not a feed piece (copywriter.md, step 6).
+Checker's last line (2026-10-18): `Copy check passed: 6 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders; the wa.me link is `[AT POSTING]`. No warnings to justify.
 
-## Visual brief
+Per frame, with the checker's tokenizer: 18 and 14 words (limit 20), counting the sticker text; one pink group each.
 
-Style A: typography only. No imagery, no people, no AI, so no AI label and no Canva AI credits (0 used).
+Facts: a doctor's home visit (`tabeebx-brand`) and booking by WhatsApp message (decision #13). Nothing from decisions #52 or #59 is stated, and nothing about the viewer's health is asked. The sign-off is the campaign's approved closing line.
 
-**Canvas:** two story frames, 1080×1920, right-to-left, right-aligned text. Flat Navy #181943 on both. Keep text and key shapes inside x=90 to 990, y=250 to 1670 [unsure: 250 px top and bottom is Meta's story guidance as I remember it, not checked; the same 250 px also keeps clear of the reply bar].
+## Design
 
-**Colour roles (same rules as piece 01):** text #FFFEFF; Pink #EE396B only on the `*starred*` group, at 76 px Bold or larger (pink on navy is 4.3:1, large text only); Blue #1B9CCE for the label and the arrow; nothing else pink; no logo (see piece 01 producer notes).
+**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
 
-**Frame 1, question box**
+**The one idea:** your question gets to the door before the doctor does. The viewer should feel heard, not sold to, and type one question. On frame 2, anyone who is already ready messages us on WhatsApp.
 
-- `label`: Cairo Medium 48 px, Blue, inside a dashed Blue rounded outline (echoes the dashed highlight icons). Right edge x=990, y=300 to 390.
-- `question`: Cairo Bold 80 px, #FFFEFF, starred group Pink. Breaks as in the copy. y=450 to 800, three lines at most.
-- `small`: Cairo Medium 42 px, #FFFEFF. y=880 to 970.
-- y=1060 to 1560 stays empty navy. The native Question sticker goes here; Yaqoob adds it in the Instagram app.
+**Device:** one round-headed doorway (blue line, threshold on the margins) holds the native sticker on both frames.
+- Frame 1: the doorway is dark and empty, and the Question sticker stands in it, directly under the pink «للبيت؟».
+- Frame 2: the same doorway is lit (filled blue inside its frame), and the WhatsApp link sticker sits in it.
+- Swiping right to left, the door "opens" from frame 1 to frame 2.
+- The head is round on purpose. A pointed arch reads as a mihrab, and we shouldn't borrow a religious form for an ad.
 
-**Frame 2, WhatsApp link**
+**References learned from (`design-studio/references/library.md`):**
+- **Spotify Wrapped 2024:** type as the main graphic on 9:16, built as a system. Here that means one grid, two type sizes, and a fixed header row and doorway on both frames, so frame 2 visibly belongs with frame 1.
+- **Missing Type:** one ownable graphic gesture carries the message instead of decoration. The doorway can also run through piece 01 (from the message to the knock on the door).
+- **Ruby Blooms:** calm, low-surprise design for a health topic. A navy field, one accent, no medical icons and no people.
 
-- `text`: Cairo Bold 76 px, #FFFEFF, starred group Pink. y=400 to 680.
-- Blue down arrow, line icon in the same family as piece 01 (8 px stroke, rounded), 160 px, centred, y=760 to 920, pointing at the sticker.
-- y=980 to 1180 stays empty navy. The native link sticker goes here.
+**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
+- (a) Poster: type only, with an empty sticker zone. Clean, but nothing says "home".
+- (b) Doorway: chosen. The picture completes the headline instead of repeating it, and it carries across both frames.
+- (c) Navy/blue split screen: a template look, and it fails the swap test.
 
-**Sticker colours (the second-pink trap).** Instagram stickers come in colour variants. Use the white or light variant for the link sticker and a white or blue variant for the Question sticker. Never a pink variant: it would be a second pink element in the frame.
+**Grid and type:**
+- 12 columns, 72 px outer margins, 24 px gutters, 8 px unit.
+- Rows on both frames:
+  - header: 272–384
+  - headline: from 432
+  - door apex: 736
+  - threshold: 1448
+  - foot line: 1480–1557
+- The door's jambs sit on the column-1 and column-12 edges (x 128 / 952); the threshold runs margin to margin.
+- Story UI kept clear: top 250 px and bottom 340 px, 72 px sides.
+- Cairo Bold 82 px for the headline. That is the largest size at which each copy line (` / `) still fits on one line in 936 px; I didn't re-break the copy.
+- 48 px for the label (Bold, navy on blue), the `small` line (Medium) and the closing line (Bold), so there are 2 sizes per frame (ratio 1.7).
+- One pink group per frame («للبيت؟» / «دزلنا رسالة واتساب.»), on navy only and never touching blue.
+- Pixel check: 99.2% of frame 1's pixels and 99.3% of frame 2's are exact palette colours; the rest is anti-aliasing.
 
-**Motion:** lines fade up 0.4 s apart, then hold. No loop, no flashing [unsure what `story-question` does by default; keep its default if it already animates].
+**Files** in `design/2026-W42-02/`:
+- `frame-01.png`, `frame-02.png`: **the files to post**, 1080×1920.
+- `frame-01-guide.png`, `frame-02-guide.png`: placement guides showing mock stickers and the Instagram UI bands. **Not for posting.**
+- `preview-sequence.png`: both frames as they will look with stickers, in swipe order.
+- Sources: `frame-01.html`, `frame-02.html`, `frame-0N-guide.html`, `story.css` and `build.mjs`. To change them, edit `build.mjs`, run `node build.mjs`, then `render.mjs still … --w 1080 --h 1920`.
+- `thumbs/`: the three compositions.
 
-## Production
+**At posting (Yaqoob):**
+- **Frame 1:** add the Question sticker, centred on the screen's centre guide, about 60% of the screen width, inside the doorway above the threshold (see the guide). Use the white or blue variant, never pink.
+- **Frame 2:** add the link sticker, white variant, with the text «احجز بالواتساب» and the `[AT POSTING: wa.me link]`. Centre it in the lit doorway at the same height as frame 1's sticker.
 
-**Tool:** style A, code-rendered motion system. **Rendering happens in the `yaqoobalshaikhli/EMR` repo (`marketing/motion`), not in this repo.** As in piece 01, `campaign.json` could not be read in this run. Known: the template names from the Creative Producer definition, and the line keys from the Copy section and the approved lines. Everything else is a guess at the same shape and is listed in `_unsure`. Keys that start with `_` are for reviewers: strip them before copying the jobs into `campaign.json`.
+**Open items for the design (not blocking the critic):**
+1. **Logo:** the slot is marked `[LOGO: official file needed]`, top left, 304×112, in the same place on both frames. The standard lockup has a navy wordmark, which disappears on navy. Yaqoob needs to send a reversed lockup (white wordmark), or approve a white plate behind it.
+2. **The Question sticker's own prompt line** isn't in the copy. If nothing is typed, Instagram shows its default prompt. The Copywriter should supply the wording, or say that the sticker repeats «سؤال». I haven't written any Arabic.
 
-**Template choice**
+Hand-off from the copy (facts and policy only; layout is the Designer's):
 
-- Frame 1 uses `story-question`. Its `label` and `question` keys match the approved question-box story, so this is the safest field in the spec.
-- Frame 2 has no matching template: none of the seven is a link frame. `story-teaser` is the closest (it has `text`), but the approved teasers also carry a `kicker` that this frame does not have [unsure whether `kicker` is required]. If the renderer needs one, ask Yaqoob. Do not invent a kicker.
-- The `native` block is not rendered. The sticker text and the link are added in the Instagram app when Yaqoob posts. The renderer must ignore that block.
+- Two frames at 1080×1920. The first draft's visual brief and EMR render spec are withdrawn (old "no logo" rule, old render route).
+- Style A: type and simple shapes only. No people or faces, real or AI.
+- Leave empty zones for Instagram's native Question sticker (frame 1) and link sticker (frame 2). Yaqoob picks a white, light or blue sticker variant at posting, never pink, so the starred words stay the frame's only pink.
+- Logo: `[LOGO: official file needed]` on both frames. Its pink figure doesn't count as the frame's pink (decision #39). Never redraw or trace it.
 
-**Blocked until:** the wa.me link is supplied (`native.link`, needed at posting time, not at render time). The frames themselves have no brackets and can be rendered now.
-
-```json
-{
-  "_unsure": [
-    "Known: template names (creative-producer definition) and the line keys label, question, small, text (Copy section, approved lines 02d and 01).",
-    "Guessed: id and its naming, size, dir, publish, the \"frames\" array and \"frame\", which template frame 2 should use (no listed template is a link frame; story-teaser is the closest), the \"native\" block.",
-    "Unsure whether story-teaser needs a kicker; none is supplied."
-  ],
-  "id": "2026-W42-02",
-  "size": {
-    "w": 1080,
-    "h": 1920
-  },
-  "dir": "rtl",
-  "publish": "Fri 23 Oct 10:00",
-  "frames": [
-    {
-      "frame": 1,
-      "template": "story-question",
-      "label": "سؤال",
-      "question": "شنو أكثر شي تحب تعرفه / قبل لا يجيك دكتور *للبيت؟*",
-      "small": "اكتب سؤالك، بلا أسماء ولا تفاصيل صحية."
-    },
-    {
-      "frame": 2,
-      "template": "story-teaser",
-      "text": "وإذا تريد تحجز زيارة هسه: / *دزلنا رسالة واتساب.*",
-      "native": {
-        "sticker": "احجز بالواتساب",
-        "link": "[wa.me link]"
-      }
-    }
-  ]
-}
-```
-
-**Output:** one 1080×1920 PNG still per frame is preferred; a 5 to 7 s MP4 if the template only renders video [unsure]. Files `2026-W42-02-f1` and `-f2` [naming unsure].
-
-**Posting (Yaqoob, by hand)**
-
-1. Frame 1: add the Question sticker in a non-pink variant. Set the sticker's own prompt to the `label` word so the question is not printed twice [unsure how the trust campaign did it].
-2. Frame 2: add a link sticker with the text from `native.sticker` and the wa.me link, in a non-pink variant.
-3. Afterwards, read the answers in the app and pass on only the themes. Copy no answer, name or handle into the repo or any tool.
-
-**Checks before Guard:** one pink group per frame, no pink in the stickers, empty sticker zones really empty, Cairo loaded.
-
-**AI credits used:** 0.
+After posting, Yaqoob reads the answers in the Instagram app and passes on only the themes for the W44 brief: no names, handles or health details, and no answer copied into the repo or any tool (CLAUDE.md rule 6).
 
 ## Dialect doubts
 
-- «تحب تعرفه» (frame 1): Baghdad also says «تريد تعرفه». I kept «تحب» because the approved story «شنو أكثر شي / تحبه بالعراق؟» uses it.
-- «بلا أسماء ولا تفاصيل صحية» (frame 1, small line): «تفاصيل صحية» sounds a little written. A spoken alternative is «لا تكتب اسمك ولا شي عن صحتك.» This line is my own addition, to keep names and health details out of the answers; delete it if you think it costs answers.
-- «احجز بالواتساب» (sticker): «احجز» reads close to MSA; «احچي ويانا بالواتساب» is the warmer option if it fits the sticker.
-
-## Copy check
-
-Linter final line (2026-10-17): `Copy check passed: 5 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No warnings to justify. Per-frame totals checked by hand (the linter counts per line): at most 18 words and exactly one pink group per frame.
+none

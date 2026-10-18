@@ -1,98 +1,127 @@
 ---
 id: 2026-W42-04
-channel: whatsapp-broadcast   # if Q4-B this becomes whatsapp-reply; if Q4-C the piece is dropped
-style: A                      # reuses 01's cover, resized; leave out of the style comparison (brief)
-goal: bookings
-publish: Sat 24 Oct [11:00 proposed]   # a time WhatsApp is staffed for the next 3 hours; if Q6-B: Wed 21 Oct, same rule
+channel: [whatsapp-broadcast]             # the existing opted-in list on the TabeebX WhatsApp Business number (decision #54)
+style: A                                  # reuses piece 01's cover; leave out of the style comparison (brief)
+goal: [bookings]
+publish: Wed 21 Oct [AT POSTING: send time, with WhatsApp answered for the 3 hours after it; proposed 11:00]   # brief's "review Mon 19" slot (decision #64)
 status: draft
+consents: []                              # no people
 ---
-
-**Needs Yaqoob:** Q4 (A: send to the existing opted-in list, size [___]; B: rewrite as a reply template for incoming home-visit enquiries, the `ask` to `options` lines carry over; C: drop this piece) · `reply` line fact: who replies to a booking message · Q2-a (`who` line: keep or delete) · the send time, when someone can answer for the next 3 hours · who removes contacts that send the opt-out word in the `optout` line · Q6 (date). Guard blocks this piece while any `[bracket]` is unfilled.
-
-<!-- principle (marketing-psychology): Hick's law. One idea and one reply with three fixed choices, so answering takes a single word. -->
+Needs Yaqoob: [PENDING Q4-optout: who removes anyone who replies «توقف» or STOP, and how soon? A) you, from the broadcast list, the same day and before any next broadcast; B) whoever answers WhatsApp, the same day, and they tell you; C) other: ___]. This doesn't change the copy, but the opt-out line promises it, so answer before sending. Not blocking the copy: the official logo file (it sits on piece 01's cover); the send time is an at-posting value.
+Psychology: Hick's law. One idea, then one action with four one-word replies, so answering takes a single word.
 
 ## Copy (Iraqi dialect)
 
-One WhatsApp message, sent by hand from WhatsApp Business to opted-in contacts only, as the caption of 01's cover image. Each keyed line below is one line of the message, in order (the keys are labels, not text to send); leave a blank line after `greet`, `visit` and `options`. About 52 words.
+> One WhatsApp message, sent by Yaqoob by hand from WhatsApp Business to the opted-in broadcast list only (decision #54), as the caption of piece 01's cover image. The frames below are the message's paragraphs, in order: leave one blank line between them. Each keyed line is one line of the message; the keys are labels, not text to send. 59 words in total (brief: under about 60).
+>
+> Changes from the first draft: the name-and-photo line is gone (decisions #59, #63); the reply line no longer depends on who answers; the call within ٢٤ ساعة (#52 b) and male and female nurses (#52 c) are in; Guard's dialect notes are applied («وتريد زيارة للبيت», «ممرض، ممرضة», STOP beside «توقف»); the campaign sign-off bridges to the reply (#53).
+
+### Frame 1 · paragraph 1: greeting and question
 
 greet: هلا بيك، وياك TabeebX.
 
-ask: شنو يصير من تدزلنا رسالة لزيارة بالبيت ببغداد؟
+ask: شنو يصير من تدزلنا رسالة وتريد زيارة للبيت؟
 
-reply: يرد عليك [منو يرد]، ونتفق وياك على الموعد.
+### Frame 2 · paragraph 2: the steps
 
-PENDING Q2-a (delete the `who` line unless the promise is still kept on every visit):
+steps: تگولنا شنو تحتاج، ونثبّتلك الموعد، ونجيك لحد البيت ببغداد، بلا سرة ولا طريق.
 
-who: [وتعرف اسم وصورة اللي جايك قبل لا يدگ الباب.]
+### Frame 3 · paragraph 3: after the visit, and the sign-off
 
-visit: والزيارة ببيتك، بلا سرة ولا طريق.
+call: وبعد الزيارة، نتصل بيك خلال ٢٤ ساعة نتطمن عليك.
+
+closing: لا تصدگنا. شوف بعينك.
+
+### Frame 4 · paragraph 4: the one action
 
 cta: تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:
 
-options: دكتور، تمريض، أو تحليل.
+options: دكتور، ممرض، ممرضة، أو تحليل.
 
-optout: وإذا ما تريد توصلك رسائلنا، اكتبلنا «توقف».
+### Frame 5 · paragraph 5: opt-out
+
+optout: وإذا ما تريد توصلك رسائلنا، اكتبلنا «توقف» أو STOP.
 
 ## Caption
 
 None separate: the message above is the caption of the cover image (one message, not two).
 
-## Variant hook
+## Copy check
 
-Not applicable: a WhatsApp broadcast is not a feed piece (copywriter.md, step 6).
+Checker's last line (2026-10-18): `Copy check passed: 8 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders in the copy. The one pending item (who handles opt-outs) is in the Needs Yaqoob line because it is about sending, not wording. No warnings to justify.
 
-## Visual brief
+Per paragraph, with the checker's tokenizer: 12, 13, 13, 12, 9 = 59 words. No pink in a text message; the image's pink is on piece 01's cover.
 
-Style A, reused: **no new design.** The image is the cover (slide 1) of piece 01, unchanged: Navy #181943 background, the `hook` in Cairo Bold with its one Pink #EE396B group, a Blue #1B9CCE dashed path from a speech bubble to a front door, the `small` line in Cairo Medium. The full layout is in piece 01's Visual brief. No people, no AI, no AI label, 0 credits.
+Facts, each against its source:
+- Opted-in list, sent by Yaqoob: decision #54.
+- Booking by WhatsApp message: decision #13.
+- Home visit in Baghdad, and doctor, nurse and lab as services: `tabeebx-brand`.
+- Male and female nurses: decision #52 (c).
+- Call within ٢٤ ساعة after the visit: decision #52 (b).
+- Not stated, by design: the visitor's name and photo (#59, #63); who replies or how fast; Health 360.
 
-WhatsApp-specific checks:
+## Design
 
-- Size: 1080×1350 as exported. The brief says "resized", but piece 01's cover keeps everything inside the central 1080×1080 (y=135 to 1215), so no re-layout is needed. If WhatsApp crops the portrait preview, crop to that square [unsure how WhatsApp crops a 4:5 image; verify on a phone].
-- WhatsApp compresses images. The smallest text on the cover is the 42 px `small` line and the 44 px `series` line (if kept), which should survive; check it on the phone.
-- Image and message are one message: the text in the Copy section is the image caption.
-- If the cover changes in piece 01 (for example the `series` line is dropped under Q3), export the final cover, not an earlier one.
+**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
 
-## Production
+**The one idea:** it all starts with your message. The image asks the campaign's question («شنو يصير من تدزلنا رسالة؟»), and the message below answers it step by step, then asks for one reply. The receiver should recognise Tuesday's carousel, read the steps and reply with one word.
 
-**Tool:** style A, reuse. **Rendering happens in the `yaqoobalshaikhli/EMR` repo (`marketing/motion`), not in this repo**, as part of piece 01's job. There is no render job of its own. The job below only records the dependency; it is a guess at the shape, because `campaign.json` could not be read in this run. Everything in it except the template name `carousel` is listed in `_unsure`. Keys that start with `_` are for reviewers.
+**What it is:** piece 01's cover, re-laid out as a **square** for WhatsApp, not cropped. This follows the brief's "01's cover slide, resized". The words, type sizes, header row, pink group and route are the same. Two things change:
+- **1080×1080 instead of 4:5.** In the phone check (`checks/phone-preview.png`), the square image and the whole message fit on one 1080×2340 screen, with the bubble ending 71 px above the input bar. With the 4:5 cover, the bubble runs 125 px past the input bar, and the opt-out paragraph needs a scroll. A square image also has no crop for WhatsApp to apply.
+- **Your bubble is lit** (solid blue, navy dots). This is piece 01's slide 7 state: "your message, the start of the route". The receiver is already in the thread and the action is a reply, so the first station is lit, and it echoes the pink «رسالة؟» above it. Nothing is travelled, and no step numbers are added.
 
-```json
-{
-  "_unsure": [
-    "every field except template",
-    "whether a single slide can be selected from another job (from, slides)",
-    "id naming and output file name"
-  ],
-  "id": "2026-W42-04",
-  "template": "carousel",
-  "from": "2026-W42-01",
-  "slides": [1],
-  "size": { "w": 1080, "h": 1350 },
-  "out": "2026-W42-04-wa-cover.png"
-}
-```
+**References learned from (`design-studio/references/library.md`):**
+- **The New York Times on Instagram slides:** "For WhatsApp, make one self-contained image rather than a cut-down carousel slide." The square card stands alone: question, promise («خطوة بخطوة») and the whole route are on it, and the message carries the steps.
+- **Piece 01 of this pack:** the same grid, header row, route band and logo slot, so Wednesday's broadcast reads as Tuesday's carousel.
 
-If the renderer cannot select one slide, skip the job: take `2026-W42-01-s01.png` from piece 01's render and copy it as `2026-W42-04-wa-cover.png`.
+**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
+- (a) Square cover, your bubble lit: **chosen.** It keeps the series' question and symbol, the image asks, the text answers and the reply ends it, in that order.
+- (b) Reply card: the copy's `cta` and `options` lines as the image. It's a strong Hick's-law poster, but the reader meets the action before knowing what happens, then reads it again word for word in paragraph 4. It also loses the link to Tuesday's carousel.
+- (c) Route as hero, hook at 88: at 1.1× the route breaks the 72 px side margins, and in a chat bubble it reads as four icons with a smaller question.
 
-**Blocked until:** piece 01 is rendered and its cover is final (Q3 decides the `series` line), and Q4 is answered.
+**Grid and type:**
+- 12 columns, 72 px margins on all four sides, 24 px gutters, 8 px unit (piece 01's).
+- Rows:
+  - header: 72–184. Logo slot 304×112 on the left; series pill 88 tall on the right, centred on the slot.
+  - hook: 224–524.
+  - sub-line: 560–643.
+  - route: 742–1008, ground line at y 980.
+- Moved from the cover: header up 112, hook and sub-line up 120, route up 140. Gaps: header to hook 40 (cover 48), sub-line to route 99 (cover 119).
+- Measured content box:
+  - top 72, bottom 72: the confirm disc's edge.
+  - sides 66: the two bubbles' 12 px strokes are centred on the 72 px line, as in piece 01.
+  - The ground line ends 92 px above the foot, so the bottom margin is slightly deeper, which reads as balanced.
+- Cairo only, no tracking. Hook 120 Bold, sub-line 52 Medium, series label 48 Bold (navy on blue, 5.3:1).
+- **Pink:** one group, «رسالة؟», 120 Bold on navy (4.3:1, display size), away from all blue.
 
-**Steps (Yaqoob, by hand, from WhatsApp Business)**
+**Pixel check** on `whatsapp-image.png`:
+- 98.6% of pixels are exact palette colours; the rest is anti-aliasing.
+- Pink pixels sit only inside the hook group's box (x 142–496, y 406–522). Pink-like pixels anywhere else: 0.
 
-1. Send the image to your own number first. Check on the phone that the `hook` and `small` line are readable and nothing is cropped.
-2. Send as an image with the Copy-section text as its caption: one message, not two. Opted-in contacts only (Q4-A).
-3. The contact list and the replies stay on the phone. Neither goes into this repo or any tool (CLAUDE.md rule 6).
+**Words:** a script compared the image's three strings with piece 01's `### Frame 1` (series, hook, small). All three are identical. `build.mjs` reads them from piece 01's cover file and stops if they change. The copy checker on this file still passes: `Copy check passed: 8 Arabic line(s), 0 warning(s), 0 correction(s) loaded.`
 
-**If Q4 is:** B (reply template): the cover can be attached to the template, or the template can go text-only; no extra production either way. C (skip): nothing to produce.
+**Files** in `design/2026-W42-04/`:
+- `whatsapp-image.png`: **the file to send**, 1080×1080, with the message as its caption.
+- Sources: `whatsapp-image.html`, `whatsapp.css` and `build.mjs`.
+  - `build.mjs` takes the words from piece 01's `slide-01.html` and the route from piece 01's `slide-07.html`.
+  - **If piece 01 changes in its critic rounds**, rebuild before sending: `node build.mjs`, then `node .claude/skills/design-studio/scripts/render.mjs still whatsapp-image.html whatsapp-image.png --w 1080 --h 1080`.
+- `checks/phone-preview.png`: **not for sending.** The message as received at phone size: the 4:5 cover beside this square, in a neutral grey chat mock, not WhatsApp's UI. The caption is set in Cairo because it's the only Arabic font here; the phone uses its own font, so its line breaks will differ a little.
+- `thumbs/`: the three compositions and the contact sheet. **Not for sending.**
 
-**AI credits used:** 0.
+**Open items (not blocking):**
+1. **Fit on one screen.** The 71 px to spare is about one line. With a larger phone font, the opt-out line may still need a scroll; step 1 of Sending checks this.
+2. **Logo.** As in piece 01: the slot `[LOGO: official file needed]` is top left. The standard lockup's navy wordmark disappears on navy, so Yaqoob needs to send a reversed (white wordmark) lockup or approve a white plate behind it. The logo is never redrawn.
+3. **Optional, for the Copywriter (formatting only, no word changes):** WhatsApp bold (`*…*`) on paragraph 4's `cta` line would make the one action the only bold line in the message. It isn't applied.
+4. **Fallback:** if Yaqoob would rather send exactly the carousel's file, `design/2026-W42-01/slide-01.png` still works, at the cost of the scroll above.
+
+Sending (Yaqoob, by hand, from WhatsApp Business):
+
+1. Send `whatsapp-image.png` with the message to your own number first. On the phone, check that the image and all five paragraphs read after WhatsApp's compression, and that the opt-out line is visible without scrolling, or close to it.
+2. Send it as one message (image plus caption), to the opted-in broadcast list only.
+3. The list and every reply stay on the phone: not in this repo, not in any tool (CLAUDE.md rule 6).
+4. Log each booking that follows in `data/bookings-log.csv`, with the answer to «منين سمعت بينا؟».
 
 ## Dialect doubts
 
-- «هلا بيك» (`greet`): I hear it in Baghdad, but it is also very Gulf. If it reads Gulf to you, «أهلاً بيك» or «مساء الخير» (time-dependent) are safer.
-- «وياك TabeebX» (`greet`): the Iraqi phone-call way to say who is speaking. It may feel odd in a written message; «هذا TabeebX» is the plain alternative.
-- «تمريض» (`options`): as a one-word reply option it may be clearer as «ممرضة». I avoided gendering it because nurse coverage is still Q2-c.
-- «اكتبلنا «توقف»» (`optout`): the opt-out word. Check that «توقف» is the word you want people to send; an English STOP could sit beside it.
-
-## Copy check
-
-Linter final line (2026-10-17): `Copy check passed: 8 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No warnings to justify. Message length: about 52 words, under the brief's 60.
+- «ونثبّتلك الموعد» (frame 2): same doubt as piece 01. «نحجزلك موعد» is the alternative.
+- «توقف» (frame 5): an MSA imperative; spoken Baghdadi would say «وگّف» or «بس». As an opt-out keyword the MSA form is less ambiguous, so I kept it, with STOP beside it. Change the word if you prefer another.

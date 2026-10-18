@@ -1,216 +1,207 @@
 ---
 id: 2026-W42-03
-channel: tiktok              # + instagram-reel (same video, same slot)
-style: D
-goal: awareness              # secondary: share
-publish: Sun 25 Oct 20:30    # brief Q6-A default (Q6-B: Fri 23 Oct 20:30); only if Q5 is A or D. If Q5-B it posts in W44
+channel: [tiktok, instagram-reel]         # same video, same slot; Yaqoob posts TikTok by hand
+style: A                                  # animated video, kinetic typography (decisions #55, #61); was D (real shoot) in the first draft
+goal: [awareness, share]
+publish: Fri 23 Oct 20:30                 # brief's "review Mon 19" slot (decision #64); the «شوف بعينك» campaign's nightly ٨:٣٠ post (decision #53)
 status: draft
+consents: []                              # no people on screen
 ---
-
-**Needs Yaqoob:** Q5 (shoot by Sat 24 Oct or W44; who is on camera; whether staff play the family; if Q5-C, the persistent label and the clinician frames no longer fit and this copy needs a rewrite) · the staff member's name and role for the optional voice-over · Q2-d (frame 3: keep or delete) · Q2-a (frame 4: keep or delete) · Q2-e (frame 6: how results reach the family; this frame carries the door-to-result arc, so the video is not complete without it) · Q3 (frame 7 `closing` line) · Q6 (slot). Guard blocks this piece while any `[bracket]` is unfilled.
-
-<!-- principle (marketing-psychology): Availability heuristic. Showing each real step of a home lab visit makes it easy to picture; it also fits the trust campaign's "see for yourself" line. -->
+Needs Yaqoob: none in the copy. Not blocking the copy: the official logo file (marked slot from 4.9 s to the end).
+Psychology: Zeigarnik effect. Frame 1 opens a loop («هيچ يصير»: here is how a home test goes) that only frame 6 closes, when a doctor explains the result. Viewers stay to the payoff, and frame 6 gets the longest hold so the close lands.
 
 ## Copy (Iraqi dialect)
 
-Vertical 9:16, about 20 to 30 seconds. On-screen lines follow the trust campaign's `campaign.json` keys; ` / ` is a line break on screen; `*stars*` mark the one pink group per frame. Beat order and the shots behind each frame are the brief's; the Creative Producer turns them into a shot list. No needles, tubes or blood in any line or shot.
+> A silent 19.2 s vertical video (1080×1920), kinetic typography. The lines below are the whole script and are burned in as on-screen text. There is no voice-over; music, if any, is added in the app at posting. Narrative: from the WhatsApp message to the result, explained by a doctor.
+>
+> ` / ` is a line break on screen; `*stars*` mark the one pink group per frame. Timestamps are the reading budget: every card holds still for at least 0.45 s per word plus 0.5 s (`design-studio`), which keeps every frame under 2.5 words a second. Each card enters in 0.3 s (0.4 s for frame 6) with an ease-out fade and a short slide in the reading direction (right to left), holds completely still, and leaves in 0.2 s with an ease-in fade. Words and lines move whole, never letter by letter. The Designer may shape the motion, but not shorten a hold.
+>
+> Changes from the first draft: it was a real-shoot plan (style D). Removed as not true or no longer needed: the doctor approving the test request online (decision #59), the visitor's name and photo (#59, #63), the staff label and every person on screen. Added from decision #60: the result reaches the family on WhatsApp and a doctor explains it.
 
-### All frames · persistent label (approved line, `05-wed30`)
+### Frame 1 · 0.0–2.5 s · hook
 
-small: فيديو توضيحي · الأشخاص من فريق TabeebX
+hook: *تحليل بالبيت؟* / هيچ يصير.
 
-### Frame 1 · hook (0 to 3 s)
+motion: fully on screen at 0.0 s with no fade-in, so the first frame works as a still. Hold 0.0 to 2.3 s, out 2.3 to 2.5 s.
 
-hook: *تحليل بالبيت؟* هيچ يصير.
+### Frame 2 · 2.5–4.9 s · the message
 
-### Frame 2 · the WhatsApp message on a phone
+text: تدزلنا *رسالة واتساب،*
 
-text: يبدي *برسالة واتساب.*
+motion: the pink words arrive like a sent chat bubble (a plain bubble, not the WhatsApp logo). In 2.5 to 2.8 s, hold 2.8 to 4.7 s, out 4.7 to 4.9 s.
 
-### Frame 3 · doctor's review (PENDING Q2-d: delete this frame unless it is true for home bookings)
+### Frame 3 · 4.9–7.7 s · the appointment, series tag and logo enter
 
-text: [دكتور من فريقنا يشوف *طلب التحليل* / أونلاين، قبل لا نجيك.]
+text: ونثبّتلك *الموعد.*
 
-### Frame 4 · who is coming (PENDING Q2-a: delete this frame unless the promise is still kept)
+series: شوف بعينك
 
-text: [تعرف *اسم وصورة* اللي جايك / قبل لا يدگ الباب.]
+logo: LOGO SLOT, official file needed. Enters with this frame (within the first 5 s) and stays to the end.
 
-### Frame 5 · staff member at the door with the kit
+motion: the pink word lands with a calendar tick. The series tag and the logo slot fade in with the line and stay on screen, small and still, until 15.2 s. Line in 4.9 to 5.2 s, hold 5.2 to 7.5 s, out 7.5 to 7.7 s.
 
-text: ويوصلك الفريق / لحد *باب البيت،* / والعدّة كلها وياه.
+### Frame 4 · 7.7–10.1 s · we come to the house
 
-small: ٦٣١ تحليل، تگدر تسويها بالبيت.
+text: ونجيك *لحد البيت.*
 
-### Frame 6 · how the result arrives (PENDING Q2-e: fact missing)
+motion: the pink words travel along a dashed path to a front door (the same path as piece 01's cover, so the campaign reads as one system). In 7.7 to 8.0 s, hold 8.0 to 9.9 s, out 9.9 to 10.1 s.
 
-text: *والنتيجة* توصلك [شلون توصل النتيجة].
+### Frame 5 · 10.1–12.5 s · the result arrives
 
-### Frame 7 · CTA
+text: والنتيجة توصلك *بالواتساب.*
+
+motion: the pink word arrives as a document card dropping into a chat (a generic page icon: no name, no values, nothing legible). In 10.1 to 10.4 s, hold 10.4 to 12.3 s, out 12.3 to 12.5 s.
+
+### Frame 6 · 12.5–15.2 s · a doctor explains it (the payoff)
+
+text: ودكتور *يشرحها إلك.*
+
+motion: the slowest beat. In 12.5 to 12.9 s, a longer still hold 12.9 to 15.0 s, out 15.0 to 15.2 s. The series tag leaves with this line, because the sign-off takes over.
+
+### Frame 7 · 15.2–19.2 s · CTA and sign-off (end card)
 
 cta: *دزها لكروب العائلة.*
 
-PENDING Q3-A only (delete the closing line otherwise):
+closing: لا تصدگنا. شوف بعينك.
 
-closing: [لا تصدگنا. شوف بعينك.]
+motion: the pink CTA and the white sign-off under it enter together, 15.2 to 15.5 s. Hold to the end of the video (3.7 s), with the logo slot still on screen. No exit, so a loop restarts cleanly on frame 1.
 
-### Optional voice-over (spoken by the staff member on camera; one line per frame)
+### Voice-over (spoken)
 
-PENDING Q5: name and role of the staff member.
-
-vo: آني [الاسم]، من فريق TabeebX.
-
-vo: تحليل بالبيت؟ هيچ يصير.
-
-vo: تدزلنا رسالة واتساب، ونتفق وياك على الموعد.
-
-vo: [دكتور من فريقنا يشوف طلب التحليل أونلاين، قبل لا نجيك.]
-
-vo: [وتعرف اسمي وصورتي قبل لا أدگ الباب.]
-
-vo: أجي لبيتك، والعدّة كلها وياي.
-
-vo: والنتيجة توصلك [شلون توصل النتيجة].
-
-vo: إذا عجبك، دزها لكروب العائلة.
+None. The video is silent; every line is on screen above.
 
 ## Caption
 
-Same caption on TikTok and Instagram (Yaqoob posts TikTok by hand):
+Same caption on TikTok and Instagram:
 
 تحليل بالبيت ببغداد، هيچ يصير:
 
-من رسالة الواتساب، لحد ما الفريق يدگ باب بيتك.
+تدزلنا رسالة واتساب، ونثبّتلك الموعد، ونجيك لحد البيت.
 
-٦٣١ تحليل تگدر تسويها بالبيت.
+والنتيجة توصلك بالواتساب (PDF أو صورة) وبتطبيق TabeebX، ودكتور يشرحها إلك.
 
-الأشخاص بالفيديو من فريق TabeebX.
+٦٣١ تحليل، تگدر تسويها بالبيت.
+
+TabeebX · مرخّصين من وزارة الصحة العراقية.
 
 دزها لكروب العائلة.
 
-#تحليل_بالبيت #بغداد #TabeebX
+لا تصدگنا. شوف بعينك.
+
+#تحليل_بالبيت #بغداد #شوف_بعينك #TabeebX
 
 ## Variant hook
 
-For testing against frame 1 (it does not depend on Q2-e):
+For testing against frame 1 (same length, ends on the payoff instead of a promise):
 
-hook: تحليل بالبيت، *خطوة بخطوة.*
-
-## Visual brief
-
-Style D: real footage of real TabeebX staff, shot on a phone. No AI imagery and no Canva AI credits (0 used). Every frame carries the persistent label, which is the approved disclosure that staff play the family.
-
-**Look:** warm and human, never sterile.
-
-- Daylight from a window. No flash, no cold ceiling light. A lived-in Baghdad living room and front door, not a clinic.
-- Natural colour, no filters.
-- Capture: vertical 1080×1920, 30 fps, main (1×) lens, exposure and focus locked. Keep faces, hands and the phone inside y=300 to 1000. The caption plate takes y=1060 to 1400.
-- One pink per frame, and it is the starred caption group. Everyone on camera avoids pink or magenta clothes, and pink objects are cleared from the frame. The kit bag stays closed with its logo turned away or covered, because the logo figure is pink [confirm whether a logo counts as the pink element].
-- Never on camera: needles, blood tubes, blood, tourniquets, an opened kit, lab samples. Meta restricts this imagery (confidence 60%, verify before any ad use) and the brief bans it for this shoot.
-- Never visible: house numbers, street signs, neighbours, car plates, family photos, real patient chats or notifications.
-
-**On-screen text over footage.** Brand type. The vendored white-with-black-outline TikTok caption style is not used, because brand rules override it.
-
-- Caption plate: Navy #181943 at 92% opacity, 36 px corner radius, 36 px by 28 px padding, up to 720 px wide (x=180 to 900), bottom edge at or above y=1400, right-aligned text.
-- Text: Cairo Bold 60 px #FFFEFF (hook 76 px, `cta` 72 px, floor 44 px). The starred group is Pink #EE396B at the same size (4.3:1 on the plate, so large text only). `small` lines are Cairo Medium 40 px inside the plate.
-- Persistent label: navy pill, Cairo Medium 40 px #FFFEFF, top centre, y=240 to 310, on every frame, never covered by a plate.
-- Captions are static: each appears on the first frame of its shot and leaves with it, with no entrance or exit animation.
-- All text inside x=180 to 900, y=220 to 1420 (the cross-platform worst case from the vendored short-form video spec).
-
-## Production
-
-**Tool:** style D, a phone shoot with real staff. This is a plan, not footage: nothing exists until the shoot, and the piece can only post if Q5 is A or D. No AI, no spend.
-
-**Who**
-
-- **A**, the staff member who comes to the door: [name], [role]. Also the speaker of the voice-over (`vo` lines in the Copy section).
-- **B**, a second adult who plays the family and holds the phone: a staff member or a consenting family member [name].
-- **C**, a real TabeebX doctor, hands only, for shot S3 [name, optional]. If no doctor can attend, cut S3 and frame 3 together: hands of a non-doctor would misstate the fact.
-- **Camera:** [camera operator].
-- No children, no real patients, no patient messages on any screen.
-- **Consent:** written consent from everyone on camera, signed before the day, covering organic posts now and paid use later [confirm scope with Yaqoob]. The consent reference [consent ref] goes to Guard. Yaqoob keeps the signed forms; they do not go in this repo.
-
-**Where:** one location, [staff member's home / a consenting family's home]. Only two spots are needed: the entrance door and one sofa by a window.
-
-**Before the day (about 10 minutes, outside the 30)**
-
-1. Consent signed and the reference noted.
-2. Stage the WhatsApp chat on two staff phones: a test conversation between two staff members, never a real patient's. Message text for S2: [typed message text: the Copywriter has not written one, so it needs Arabic text from them].
-3. Prepare A's staged message for S4: A's real first name and A's own photo, used with A's consent.
-4. Bring the real kit bag, closed [what staff really carry on a visit: Yaqoob to confirm]. Show only what is real.
-5. Charge the phones, wipe the lens, switch on Do Not Disturb.
-
-**Run sheet: 30 minutes on location**
-
-| Time | What |
-|---|---|
-| 0:00 to 0:04 | Walk the two spots. Clear the frame: pink items, family photos, post, shoes. Check the door view for house numbers, neighbours and plates. |
-| 0:04 to 0:12 | Door sequence: S1, S5, S6. Two takes each, at least 8 s per take. |
-| 0:12 to 0:22 | Sofa sequence: S2, S4, S7, S8. Two takes each. |
-| 0:22 to 0:25 | S3, only if C is there. |
-| 0:25 to 0:30 | Voice-over as a phone voice memo, then 10 s of room tone. |
-
-**Shot list.** Edit order is S1 to S8. Length is the time on screen.
-
-| # | Frame | Shot | Who | Length | VO |
-|---|---|---|---|---|---|
-| S1 | 1 hook | Locked off at chest height inside the entrance, facing the closed front door. Three knocks from outside. Cut before it opens. | no one on camera (A knocks) | 3 s | vo 2 |
-| S2 | 2 | Close, over B's shoulder: thumbs typing and sending in the staged chat. | B | 4 s | vo 1, then vo 3 |
-| S3 | 3 (Q2-d) | Hands only: C reviews the staged request on a tablet. No face, no real patient data. | C | 4 s | vo 4 |
-| S4 | 4 (Q2-a) | Phone insert: the staged message from A with A's name and photo. Then B looks up toward the door. | B | 4 s | vo 5 |
-| S5 | 5 | Same door as S1. Knock sound, door opens: A on the threshold holding the closed kit bag. B steps back to let A in. | A, B | 5 s | vo 6 |
-| S6 | 5 | Cutaway: the closed kit bag set down on the floor by the door. Bag only. | no one | 2 s | vo 6 continues |
-| S7 | 6 (Q2-e) | B holds the phone, glances at it, smiles. The screen insert (the delivered result) is added later once Q2-e is answered: staged, no legible name or values. | B | 4 s | vo 7 |
-| S8 | 7 | B taps send in a family chat, lowers the phone, smiles. Group name and messages not legible. | B | 3 s | vo 8 |
-
-Total 29 s with every shot, 21 s without S3 and S4, inside the 20 to 30 s target. Without S3 and S4 the list still has 6 shots. If Q2-d or Q2-a is not confirmed, drop the matching shot together with its frame and its `vo` line.
-
-**Voice-over**
-
-- Speaker: A. Record each line twice as a phone voice memo after filming, in a quiet closed room, phone 20 cm from the mouth. A does not speak on camera, so there is no lip-sync to match.
-- Order in the edit: `vo` 2 first (over S1, 0 to 3 s), then `vo` 1, then 3 to 8. The Copywriter listed the self-introduction first, which would push the hook past 3 s [Copywriter to confirm the reorder].
-- The lines, verbatim from the Copy section (numbered in the Copywriter's order). Lines in brackets are pending and are recorded only once their fact is confirmed.
-
-> vo 1: آني [الاسم]، من فريق TabeebX.
->
-> vo 2: تحليل بالبيت؟ هيچ يصير.
->
-> vo 3: تدزلنا رسالة واتساب، ونتفق وياك على الموعد.
->
-> vo 4: [دكتور من فريقنا يشوف طلب التحليل أونلاين، قبل لا نجيك.]
->
-> vo 5: [وتعرف اسمي وصورتي قبل لا أدگ الباب.]
->
-> vo 6: أجي لبيتك، والعدّة كلها وياي.
->
-> vo 7: والنتيجة توصلك [شلون توصل النتيجة].
->
-> vo 8: إذا عجبك، دزها لكروب العائلة.
-
-**Edit**
-
-- Assemble in [edit tool: not set in the content system. A phone editor or Canva Free's video editor, at no cost, is the likely route; Yaqoob to choose]. Export one MP4, 1080×1920, 30 fps, 21 to 29 s, for both TikTok and the Reel.
-- Cut each caption window to its shot window. Place the persistent label across the whole video.
-- Cairo may be missing in a phone editor [unsure]. If so, ask the EMR motion system for the caption plates as transparent PNGs using the same line keys [unsure it can]. Do not fall back to another font.
-- Music: for organic posts, attach a sound in the app when posting, kept low under the voice-over (vendored short-form guidance). Yaqoob posts TikTok by hand.
-- Footage stays on Yaqoob's phone or drive, not in this repo [confirm where].
-
-**If Q5 is:**
-
-- **A:** shoot per this plan by Sat 24 Oct; post Sun 25 Oct 20:30.
-- **B:** this plan stands; shoot in W44.
-- **C:** this shot list no longer applies, the persistent label and clinician frames no longer fit, and the copy needs a rewrite. The brief advises against C. Style B prompts are written only if Yaqoob confirms C.
-- **D:** before the day, list which of S1 to S8 the 30 Sep explainer already covers and shoot only the gaps. The consent on that footage must cover re-use in a new video [consent ref].
-
-**Hand to Guard:** consent reference; the label on every frame; no needle, tube or blood in any shot; staged chats hold no real patient data; no name or photo on screen without that person's consent; one pink group per frame.
-
-**AI credits used:** 0.
-
-## Dialect doubts
-
-- «يبدي» (frame 2): same doubt as piece 01; «تبدي» or «أول شي: رسالة واتساب.» if it reads Levantine.
-- «العدّة» for the lab kit (frame 5, voice-over): I think Baghdad uses «العدّة» for a work kit, but it may sound like tools for a repair job. «الأغراض» or «الجنطة» are the alternatives.
-- «دزها» (frame 7, caption, voice-over): the approved line is «دزها لكروب العائلة.», written for a carousel. For a video («الفيديو», masculine) «دزه» may sound more correct. I kept the approved form.
+hook: تحليل بالبيت، *من الرسالة للنتيجة.*
 
 ## Copy check
 
-Linter final line (2026-10-17): `Copy check passed: 25 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No warnings to justify. Per-frame totals checked by hand, including the 7-word persistent label (the linter counts per line): at most 20 words (frame 5) and exactly one pink group per frame.
+Checker's last line (2026-10-18): `Copy check passed: 18 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders. No warnings to justify.
+
+Reading budget per frame (words from the checker's tokenizer; minimum hold = 0.45 s × words + 0.5 s):
+
+| Frame | Window | Words | Still hold | Minimum hold | Words per second |
+|---|---|---|---|---|---|
+| 1 hook | 0.0–2.5 s | 4 | 2.3 s | 2.3 s | 1.6 |
+| 2 | 2.5–4.9 s | 3 | 1.9 s | 1.85 s | 1.25 |
+| 3 (with series tag) | 4.9–7.7 s | 4 | 2.3 s | 2.3 s | 1.4 |
+| 4 | 7.7–10.1 s | 3 (5 with the tag) | 1.9 s | 1.85 s | 1.25 (2.1) |
+| 5 | 10.1–12.5 s | 3 (5 with the tag) | 1.9 s | 1.85 s | 1.25 (2.1) |
+| 6 | 12.5–15.2 s | 3 (5 with the tag) | 2.1 s | 1.85 s | 1.1 (1.85) |
+| 7 end card | 15.2–19.2 s | 7 | 3.7 s | 3.65 s | 1.75 |
+
+Every frame stays under 2.5 words a second, even counting the series tag again on frames 4 to 6. The hook is 4 words and fully on screen at 0.0 s; the logo slot arrives at 4.9 s; the CTA holds 3.7 s (at least 2 s required). Total 19.2 s (target 15–20 s), 27 words. One pink group per frame.
+
+Facts, each against its source:
+- Home lab across Baghdad, 631 tests (caption only): `tabeebx-brand`.
+- Booking by WhatsApp message: decision #13.
+- The result reaches the family on WhatsApp (PDF or photo) and in the TabeebX app, and a doctor explains it: decision #60. The on-screen line names only WhatsApp, the channel the whole piece runs on; the caption gives the full fact. The app is mentioned as where results arrive, never as something to download (brief).
+- Licence (caption): decision #40.
+- Not stated, by design: who comes to the door (the role of the person who takes the sample isn't recorded), a doctor approving the request online (#59), the visitor's name and photo (#59, #63), how a doctor explains the result (call, message or app isn't recorded), how long results take.
+
+## Design
+
+**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
+
+**The one idea:** the whole home test happens at your own front door. The viewer goes from "a lab test means a trip and a queue" to "it all came to my door, and someone explained it", feeling relief, and shares it with the family group.
+
+**Device:** one round-headed front door, on screen from 0.0 s to the end. It's the same doorway as piece 02, so the pack shares one symbol.
+- 0–7.7 s: the door is closed (navy leaf, ring knocker). Your message (F2, an outgoing bubble) and the appointment (F3, a calendar whose tick draws in) appear on it.
+- 7.8–8.2 s, under «ونجيك لحد البيت.»: the door opens. It's hinged on the left, so the light (blue) appears right to left, in reading direction. This is the video's turn.
+- F5: the result (a file bubble on the incoming side) drops into the lit doorway. F6: it moves up and a speech balloon rises under it (a doctor explains it). F7 holds that picture under the CTA.
+- Loop: the video restarts on the closed door.
+
+**References learned from (`design-studio/references/library.md`):**
+- **Spotify Wrapped 2024:** type as the main element of a 9:16 system with fixed rows, so every card belongs to the same piece.
+- **Don't Blink (type and rhythm):** time tells the story. The payoff (F6) gets the slowest entrance (0.4 s) and a long hold. Everything stays flat 2D, with one exception: the door swing.
+- **Hibrayer (Arabic kinetic type):** each pink word moves whole, with a motion taken from its meaning:
+  - «رسالة واتساب،» slides in right to left, like a sent message.
+  - «الموعد.» doesn't move («نثبّت»: fixed) while the tick draws.
+  - «لحد البيت.» drops toward the door.
+  - «بالواتساب.» rises, like an incoming message.
+  - «يشرحها إلك.» has the slowest fade.
+- **Ruby Blooms:** keep surprise low for a blood-test topic. A gradual reveal, no medical icons, no people.
+
+**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
+- (A) Door stage: chosen. The door completes «بالبيت» instead of repeating it, and the door opening gives the story a turn.
+- (B) Chat thread: rejected. It reads as a fake app screen, and nothing says "home".
+- (C) Type poster with a 5-dot route: rejected. The progress dots are a UI cliché, and nothing turns.
+
+**Grid, type and colour:**
+- Safe band 720×1200 (x 180–900, y 220–1420). Measured content bounds on every frame: x 180–900, y 236–1385. Nothing sits in the bottom 500 px (caption and UI).
+- Rows:
+  - header 236–316: series tag on the right, logo slot on the left
+  - lead line: from 384
+  - pink key line: from 476 (pink always lands in the same place)
+  - line under the key (F1, F7): from 611
+  - door apex: 780; threshold: 1380
+- Cairo only, with no letter-spacing, and words and lines move whole:
+  - key: 104 px Bold, pink
+  - lead: 64 px Medium, white (ratio 1.63)
+  - series tag: 44 px Bold, navy on blue
+  - F7: the CTA at 84 px Bold (the widest that fits its line in 720 px) and the sign-off at 52 px Medium
+- One pink group per frame (the starred words), always on navy and never touching blue.
+- Pixel check: 99.3–99.6% of the pixels on settled frames are exact palette colours; the rest is anti-aliasing (95.5–98.6% on fade frames).
+- **Line breaks: Copywriter to confirm.** The copy marks a break only in frame 1. On frames 2–6 the line breaks exactly where the pink group starts: the white lead sits above and the pink key below. I did this because the copy's own motion notes move the pink group separately, and the full line can't fit 720 px at ≥ 72 px. No words changed. A script checked that each lead + key rejoins to the copy line exactly.
+
+**Timing:**
+- Exactly the copy's timeline, held in one table in `build.mjs`.
+- Checked in the browser: every text card is fully opaque and still for its whole hold, and only one card shows at a time.
+- 19.2 s, 30 fps, 576 frames, silent H.264.
+
+**Departures from the copy's motion notes** (motion is the Designer's call; no words changed):
+- Frame 4 has no dashed path to a door. Piece 01 isn't designed yet, so there was no path to match. The door opening is the arrival instead. If piece 01 picks up the doorway, the campaign reads as one system.
+- The chat shapes are plain: an outlined bubble (F2) and a file bubble with nothing legible on it (F5). There's no WhatsApp logo or green.
+- F6's speech balloon stands for "explains". It isn't meant to show how (call, message or app isn't recorded). **Guard:** please check it reads that way.
+
+**Files** in `design/2026-W42-03/`:
+- `video.mp4`: **the file to post**, one master for TikTok and the Reel. 1080×1920, 30 fps, 19.2 s, silent; music can be added in the app.
+- `frames/`: 12 stills for the critic, at:
+  - 0.0 (hook), 2.4 (hook leaving), 2.7 (F2 entering), 2.8, 5.4
+  - 8.0 (door mid-swing), 8.2, 10.4, 12.7 (F6 entering), 12.9, 15.5, 19.1 (end)
+- `storyboard.png`: the seven settled cards in one strip, right to left.
+- `build.mjs` → `video.html`: the source. `node build.mjs` regenerates the HTML, then render with `render.mjs video … --dur 19.2`.
+- `thumbs/`: the three compositions.
+
+**Logo:** a dashed `[LOGO: official file needed]` slot sits top-left from 4.9 s to the end. It isn't redrawn; it waits for Yaqoob's official file. This doesn't block review.
+
+**My own risk list for the critic** (not a score):
+- F4 holds an empty lit doorway for about 1.7 s. In motion it reads as an open door; as a still it's the plainest frame.
+- The type is set, not drawn. The 720 px band caps the key at 104 px, so the Scher lens may want more scale.
+- The two white bubbles in F5–F7 are generic chat shapes.
+
+Hand-off from the copy (facts and policy only; motion and layout are the Designer's):
+
+- 1080×1920, 30 fps, 19.2 s, silent MP4. One master for TikTok and the Reel. Keep all text inside the 9:16 safe band (`design-studio`).
+- The first draft's shoot plan, shot list, consent steps and staff label are withdrawn: nobody is filmed (decision #55).
+- Style A: type, icons and shapes only. No people, faces or hands, real or AI (no AI people anywhere this week). No platform AI label is needed for motion work (decision #58).
+- Never on screen: needles, blood tubes, blood, an opened lab kit, hospital beds; the WhatsApp logo or its green; a real-looking result with names or values.
+- Logo: `[LOGO: official file needed]`, from 4.9 s to the end. Its pink figure doesn't count as the frame's pink (decision #39). Never redraw or trace it.
+- One pink group per frame: the starred words. The series tag and the sign-off are white or blue.
+
+## Dialect doubts
+
+- «ونثبّتلك الموعد» (frame 3, caption): same doubt as piece 01. «نحجزلك موعد» is the alternative if your staff say that.
+- «دزها» (frame 7, caption): the approved carousel line, here used for a video («الفيديو» is masculine). Guard read «دزها» as a natural generic "it" on screen; with no voice-over, the masculine/feminine clash it flagged in speech no longer arises. Your call if «دزّه» sounds more right to you.

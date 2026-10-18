@@ -1,0 +1,34 @@
+/* 2026-W42-04 · WhatsApp broadcast image, 1080×1080 (1:1).
+   Piece 01's cover, re-laid out for a square (the brief: "01's cover slide, resized"). Same words, same
+   type sizes, same header row, same route band: only the rows move.
+   Grid: 12 columns, 72 px outer margins on all four sides, 24 px gutters, 8 px unit (as piece 01).
+   Rows:
+     header row   72–184    (logo slot 304×112 left; series pill 88 tall, right, centred on the slot)
+     hook         224–524   (two lines, 120 Bold, line-height 1.25)
+     sub          560–643   (52 Medium)
+     band         742–1008  (the route; ground line y 980; the confirm disc hangs to 1008 = 1080 − 72)
+   Header moves up 112 from the cover, hook and sub 120, band 140. Gaps: header→hook 40 (cover 48),
+   sub→band 99 (cover 119), so every element sits inside 72 px margins; the ground line ends 92 px
+   above the foot, a slightly deeper bottom margin, which reads as optically balanced.
+   Type: Cairo only, no tracking. 120 Bold hook · 52 Medium sub · 48 Bold series label. */
+html, body { width: 1080px; height: 1080px; overflow: hidden; }
+body { position: relative; background: var(--navy); }
+.abs { position: absolute; }
+.accent { color: var(--pink); }
+.band { left: 0; top: 0; }
+
+.series {
+  top: 84px; right: 72px; height: 88px; padding: 0 40px;
+  display: flex; align-items: center;
+  background: var(--blue); color: var(--navy);
+  font-weight: 800; font-size: 48px; line-height: 1; border-radius: 44px;
+}
+.series span { position: relative; top: -3px; } /* optical centring, as piece 01 */
+.logo-slot {
+  top: 72px; left: 72px; width: 304px; height: 112px;
+  border: 3px dashed var(--white); border-radius: 16px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  direction: ltr; font-weight: 500; font-size: 30px; line-height: 1.2; color: var(--white);
+}
+.hook { top: 224px; right: 72px; left: 72px; text-align: right; font-weight: 800; font-size: 120px; line-height: 1.25; white-space: nowrap; }
+.sub  { top: 560px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 52px; line-height: 1.6; white-space: nowrap; }

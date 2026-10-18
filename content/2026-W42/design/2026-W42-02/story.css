@@ -1,0 +1,49 @@
+/* 2026-W42-02 · Instagram story, 2 frames, 1080×1920.
+   Grid: 12 columns, 72 px outer margins, 24 px gutters (columns 56 px), 8 px unit.
+   Column edges used: x = 72 / 128 (column 1, left) … 952 / 1008 (column 12, right).
+   Rows (both frames, fixed): header 272–384 · headline from 432 · door apex 736 ·
+   springline 1148 · threshold 1448 · foot line 1480–1557. Story UI kept clear: top 0–250, bottom 1580–1920. */
+html, body { width: 1080px; height: 1920px; overflow: hidden; }
+body { position: relative; background: var(--navy); }
+.abs { position: absolute; }
+
+/* Header row: label at the right margin, logo slot at the left margin (same place on both frames) */
+.label {
+  top: 284px; right: 72px; height: 88px; padding: 0 40px;
+  display: flex; align-items: center;
+  background: var(--blue); color: var(--navy);
+  font-weight: 800; font-size: 48px; line-height: 1; border-radius: 44px;
+}
+.label span { position: relative; top: -3px; } /* optical centring: Cairo's Arabic sits high in its box */
+.logo-slot {
+  top: 272px; left: 72px; width: 304px; height: 112px;
+  border: 3px dashed var(--white); border-radius: 16px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  direction: ltr; font-weight: 500; font-size: 30px; line-height: 1.2; color: var(--white);
+}
+
+/* Headline: the copy's two lines, Cairo Bold, one size on both frames */
+.headline {
+  top: 432px; right: 72px; left: 72px; text-align: right;
+  font-weight: 800; font-size: 82px; line-height: 1.32; white-space: nowrap;
+}
+.headline .accent { color: var(--pink); }
+
+/* The door: one round-headed arch on columns 1–12 (x 128–952), threshold on the margins (x 72–1008) */
+.door { left: 0; top: 0; }
+
+/* Foot line under the threshold */
+.foot { top: 1480px; right: 72px; left: 72px; text-align: right; font-size: 48px; line-height: 1.6; white-space: nowrap; }
+.foot.small { font-weight: 500; }
+.foot.closing { font-weight: 800; }
+
+/* Placement guide (guide files only, never posted) */
+.guide-band { left: 0; right: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,.10) 0 16px, rgba(255,255,255,0) 16px 32px); border: 0 dashed rgba(255,255,255,.5); direction: ltr; font: 500 28px/1.3 Cairo; color: rgba(255,255,255,.85); display: flex; align-items: center; justify-content: center; }
+.guide-tag { top: 24px; left: 24px; direction: ltr; font: 800 28px/1 Cairo; color: #fff; background: rgba(0,0,0,.35); padding: 10px 16px; border-radius: 8px; }
+.mock-card { background: #fff; border-radius: 32px; box-shadow: 0 0 0 4px rgba(255,255,255,.4); direction: ltr; }
+.mock-avatar { position: absolute; left: 272px; top: -48px; width: 96px; height: 96px; border-radius: 50%; background: #c8c8d0; border: 6px solid #fff; }
+.mock-prompt { position: absolute; left: 40px; right: 40px; top: 84px; text-align: center; font: 500 32px/1.3 Cairo; color: #555; }
+.mock-field { position: absolute; left: 40px; right: 40px; bottom: 40px; height: 104px; border-radius: 24px; background: #eeeef2; color: #888; font: 500 32px/104px Cairo; text-align: center; }
+.mock-link { background: #fff; border-radius: 28px; display: flex; align-items: center; justify-content: center; gap: 20px; font: 800 44px/1 Cairo; color: #1B9CCE; }
+.mock-link-icon { width: 44px; height: 22px; border: 7px solid #1B9CCE; border-radius: 12px; transform: rotate(-45deg); }
+.guide-note { left: 72px; right: 72px; text-align: center; direction: ltr; font: 500 28px/1.3 Cairo; color: rgba(255,255,255,.85); }
