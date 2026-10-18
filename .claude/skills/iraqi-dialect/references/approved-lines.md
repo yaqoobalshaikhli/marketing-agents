@@ -160,7 +160,7 @@ Use these for **voice**: word choice, rhythm, line breaks. Do not reuse a factua
 - `labels` گلتولنا:
 - `labels` وعدنا:
 - `unit` دقيقة
-- `promise` تعرف اسم وصورة اللي جايك قبل لا يدگ الباب، بكل زيارة
+- `promise` تعرف اسم وصورة اللي جايك قبل لا يدگ الباب، بكل زيارة  ⚠️ **Not true as of 2026-10-18 (Yaqoob, decision #59). Do not reuse until he confirms it is kept again.**
 - `hero` بكل زيارة
 - `promise` نتصل بيك خلال {n} ساعة بعد الزيارة نتطمن عليك
 - `unit` ساعة

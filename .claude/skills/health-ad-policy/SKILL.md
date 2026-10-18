@@ -12,7 +12,7 @@ Platforms reject health ads for wording, not intent, and a rejected ad can restr
 These hold even when a platform would allow more.
 
 1. **No fabricated testimonials, reviews, patient stories or "results" presented as real.** A testimonial needs a real person who agreed in writing to its use, recorded in `data/consents.csv`. Illustrative scenarios must say so on screen.
-2. **AI labels:** TabeebX's own rule (label every AI image with people) was dropped by Yaqoob on 2026-10-17. Platform rules still apply (table rows marked *AI*, and `docs/research/platform-policy-2026-10.md`); how we handle them is pending decision #58. Never, labelled or not: an AI person presented as a real TabeebX doctor, nurse, patient or customer (CLAUDE.md rule 3).
+2. **AI labels:** TabeebX's own rule (label every AI image with people) was dropped by Yaqoob on 2026-10-17. Platform rules still apply (table rows marked *AI*, and `docs/research/platform-policy-2026-10.md`); decision #58: **label only where the platform requires it**: on TikTok, realistic-looking AI people or scenes (organic: the AIGC label or a clear caption; ads: the mandatory disclaimer); on Meta, photoreal AI video and realistic AI voice-overs. No label on Meta still images or on illustrated/motion work. Never, labelled or not: an AI person presented as a real TabeebX doctor, nurse, patient or customer (CLAUDE.md rule 3).
 2a. **Real people on camera need consent.** Everyone filmed (staff, family, patient) has a row in `data/consents.csv` covering the use, organic or paid. The signed forms stay offline, never in this repo; the CSV holds only a reference. The on-screen label must match who appears: «الأشخاص من فريق TabeebX» is approved for staff only, and staff + family needs a label Yaqoob approves.
 3. **No cure claims and no guaranteed outcomes** (the checker blocks «يشفي», «علاج نهائي», «مضمون»).
 4. **No fear hooks.** Inform and invite.
@@ -50,7 +50,7 @@ For each piece, write `PASS`, or `FAIL: <rule>` with the fix:
 - [ ] `lint-copy.mjs` exits 0 (no errors); every warning is fixed or justified in one line.
 - [ ] No implied personal health attribute, in copy or in the visual's text.
 - [ ] No cure claim, guarantee, superlative without proof, or price.
-- [ ] Any person shown is either real and consented (its `consent_id` is in the piece's `consents:` and in `data/consents.csv`, with a scope that covers this use) or AI-generated and never presented as real TabeebX staff, patients or customers. Platform AI labels follow decision #58.
+- [ ] Any person shown is either real and consented (its `consent_id` is in the piece's `consents:` and in `data/consents.csv`, with a scope that covers this use) or AI-generated and never presented as real TabeebX staff, patients or customers. Platform AI labels follow decision #58 (label only where the platform requires it).
 - [ ] The who-is-on-screen label matches who actually appears (style D).
 - [ ] No testimonial or review unless a consent record covers it.
 - [ ] Emergency symptoms → emergency-services line present.
