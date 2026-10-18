@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8">
-<title>2026-W42-03 · تحليل بالبيت (video, 19.2 s)</title>
+<title>2026-W42-03 · تحليل بالبيت (video, 20.0 s)</title>
 <link rel="stylesheet" href="../../../../.claude/skills/design-studio/assets/fonts/fonts.css">
 <link rel="stylesheet" href="../../../../.claude/skills/design-studio/assets/tabeebx.css">
 <style>
@@ -8,124 +8,121 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; }
 body { position: relative; background: var(--navy); }
 .abs { position: absolute; }
 svg.abs { left: 0; top: 0; }
-/* Type: two sizes + one label. Key (pink) 104 Bold · lead (white) 64 Medium · label 44 Bold. Ratio 1.63. */
-.ln { right: 182px; white-space: nowrap; text-align: right; }
-.key { font-weight: 800; font-size: 104px; line-height: 1.3; color: var(--pink); }
-.lead { font-weight: 500; font-size: 64px; line-height: 1.5; color: var(--white); }
-.cta { font-weight: 800; font-size: 84px; line-height: 1.3; color: var(--pink); }
-.sign { font-weight: 500; font-size: 52px; line-height: 1.5; color: var(--white); }
-.rowA { top: 384px; }   /* lead line above the key */
-.rowK { top: 476px; }   /* the pink key line always lands here */
-.rowB { top: 611px; }   /* line under the key (frame 1, frame 7) */
-/* Header row: series tag right, logo slot left, y 236–316 */
-.tag { top: 236px; right: 182px; height: 80px; padding: 0 32px; border-radius: 40px; background: var(--blue); color: var(--navy);
+/* Type: two sizes + one label, on every card including the end card. Key (pink) 140 Bold · lead (white) 54 Medium
+   (ratio 2.59) · label 44 Bold. */
+.ln { right: 184px; white-space: nowrap; text-align: right; }
+.key { font-weight: 800; font-size: 140px; line-height: 1.25; color: var(--pink); }
+.lead { font-weight: 500; font-size: 54px; line-height: 1.5; color: var(--white); }
+.rowA { top: 402px; }   /* lead line above the key */
+.rowK { top: 466px; }   /* the pink key always lands here; a second key line sits 175 px below */
+.rowC { top: 818px; }   /* line under a two-line key (frame 1, frame 7) */
+/* Header row: series tag right, logo left */
+.tag { top: 236px; right: 184px; height: 80px; padding: 0 32px; border-radius: 40px; background: var(--blue); color: var(--navy);
   display: flex; align-items: center; font-weight: 800; font-size: 44px; line-height: 1; }
 .tag span { position: relative; top: -3px; }
-.logo { top: 236px; left: 180px; width: 248px; height: 80px; border: 3px dashed var(--white); border-radius: 14px;
-  display: flex; align-items: center; justify-content: center; text-align: center; direction: ltr;
-  font-weight: 500; font-size: 26px; line-height: 1.2; color: var(--white); }
-@keyframes f1{0%{opacity:1;transform:translate(0px,0px)}11.9792%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}13.0208%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f1{animation:f1 19.2s linear 0s 1 both}
-@keyframes f2a{0%{opacity:0;transform:translate(48px,0px)}13.0208%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.5833%{opacity:1;transform:translate(0px,0px)}24.4792%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5208%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f2a{animation:f2a 19.2s linear 0s 1 both}
-@keyframes f2k{0%{opacity:0;transform:translate(96px,0px)}13.0208%{opacity:0;transform:translate(96px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.5833%{opacity:1;transform:translate(0px,0px)}24.4792%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5208%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f2k{animation:f2k 19.2s linear 0s 1 both}
-@keyframes f3a{0%{opacity:0;transform:translate(48px,0px)}25.5208%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.0833%{opacity:1;transform:translate(0px,0px)}39.0625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}40.1042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f3a{animation:f3a 19.2s linear 0s 1 both}
-@keyframes f3k{0%{opacity:0;transform:translate(0px,0px)}25.5208%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.0833%{opacity:1;transform:translate(0px,0px)}39.0625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}40.1042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f3k{animation:f3k 19.2s linear 0s 1 both}
-@keyframes f4a{0%{opacity:0;transform:translate(48px,0px)}40.1042%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}41.6667%{opacity:1;transform:translate(0px,0px)}51.5625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}52.6042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f4a{animation:f4a 19.2s linear 0s 1 both}
-@keyframes f4k{0%{opacity:0;transform:translate(0px,-44px)}40.1042%{opacity:0;transform:translate(0px,-44px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}41.6667%{opacity:1;transform:translate(0px,0px)}51.5625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}52.6042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f4k{animation:f4k 19.2s linear 0s 1 both}
-@keyframes f5a{0%{opacity:0;transform:translate(48px,0px)}52.6042%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}54.1667%{opacity:1;transform:translate(0px,0px)}64.0625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}65.1042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f5a{animation:f5a 19.2s linear 0s 1 both}
-@keyframes f5k{0%{opacity:0;transform:translate(0px,44px)}52.6042%{opacity:0;transform:translate(0px,44px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}54.1667%{opacity:1;transform:translate(0px,0px)}64.0625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}65.1042%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f5k{animation:f5k 19.2s linear 0s 1 both}
-@keyframes f6a{0%{opacity:0;transform:translate(32px,0px)}65.1042%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}67.1875%{opacity:1;transform:translate(0px,0px)}78.125%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.1667%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f6a{animation:f6a 19.2s linear 0s 1 both}
-@keyframes f6k{0%{opacity:0;transform:translate(32px,0px)}65.1042%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}67.1875%{opacity:1;transform:translate(0px,0px)}78.125%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.1667%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
-.f6k{animation:f6k 19.2s linear 0s 1 both}
-@keyframes f7k{0%{opacity:0;transform:translate(48px,0px)}79.1667%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}80.7292%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
-.f7k{animation:f7k 19.2s linear 0s 1 both}
-@keyframes f7b{0%{opacity:0;transform:translate(48px,0px)}79.1667%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}80.7292%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
-.f7b{animation:f7b 19.2s linear 0s 1 both}
-@keyframes tag{0%{opacity:0;transform:translate(0px,0px)}25.5208%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.0833%{opacity:1;transform:translate(0px,0px)}78.125%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.1667%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
-.tag{animation:tag 19.2s linear 0s 1 both}
-@keyframes logo{0%{opacity:0;transform:translate(0px,0px)}25.5208%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.0833%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
-.logo{animation:logo 19.2s linear 0s 1 both}
-@keyframes bubOut{0%{opacity:0;transform:translate(80px,0px)}13.0208%{opacity:0;transform:translate(80px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.5833%{opacity:1;transform:translate(0px,0px)}24.4792%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5208%{opacity:0;transform:translate(0px,-48px)}100%{opacity:0;transform:translate(0px,-48px)}}
-.bubOut{animation:bubOut 19.2s linear 0s 1 both}
-@keyframes cal{0%{opacity:0;transform:translate(0px,0px)}25.5208%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.0833%{opacity:1;transform:translate(0px,0px)}39.0625%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}40.1042%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
-.cal{animation:cal 19.2s linear 0s 1 both}
-@keyframes tick{0%{stroke-dashoffset:150}26.3021%{stroke-dashoffset:150;animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.8646%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-.tick{animation:tick 19.2s linear 0s 1 both}
-@keyframes knocker{0%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}1.5625%{opacity:1;transform:translate(0px,0px)}40.3646%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}41.4063%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
-.knocker{animation:knocker 19.2s linear 0s 1 both}
-@keyframes leaf{0%{transform:scaleX(1)}40.625%{transform:scaleX(1);animation-timing-function:cubic-bezier(.45,0,.2,1)}42.7083%{transform:scaleX(.1)}100%{transform:scaleX(.1)}}
-.leaf{animation:leaf 19.2s linear 0s 1 both}
-@keyframes res{0%{opacity:0;transform:translate(0px,-64px)}52.6042%{opacity:0;transform:translate(0px,-64px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}54.1667%{opacity:1;transform:translate(0px,0px)}65.1042%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}67.1875%{opacity:1;transform:translate(0px,-70px)}100%{opacity:1;transform:translate(0px,-70px)}}
-.res{animation:res 19.2s linear 0s 1 both}
-@keyframes talk{0%{opacity:0;transform:translate(0px,40px)}65.1042%{opacity:0;transform:translate(0px,40px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}67.1875%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
-.talk{animation:talk 19.2s linear 0s 1 both}
+.logo { left:173.95px; top:225.69px; width:167.46px; height: auto; }
+@keyframes f1{0%{opacity:1;transform:translate(0px,0px)}11.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}12.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f1{animation:f1 20s linear 0s 1 both}
+@keyframes f2a{0%{opacity:0;transform:translate(48px,0px)}12.5%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14%{opacity:1;transform:translate(0px,0px)}23.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}24.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f2a{animation:f2a 20s linear 0s 1 both}
+@keyframes f2k{0%{opacity:0;transform:translate(120px,0px)}12.5%{opacity:0;transform:translate(120px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14%{opacity:1;transform:translate(0px,0px)}23.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}24.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f2k{animation:f2k 20s linear 0s 1 both}
+@keyframes f3a{0%{opacity:0;transform:translate(48px,0px)}24.5%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}26%{opacity:1;transform:translate(0px,0px)}37.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}38.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f3a{animation:f3a 20s linear 0s 1 both}
+@keyframes f3k{0%{opacity:0;transform:translate(0px,0px)}24.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}26%{opacity:1;transform:translate(0px,0px)}37.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}38.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f3k{animation:f3k 20s linear 0s 1 both}
+@keyframes f4a{0%{opacity:0;transform:translate(48px,0px)}38.5%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}40%{opacity:1;transform:translate(0px,0px)}50.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}51.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f4a{animation:f4a 20s linear 0s 1 both}
+@keyframes f4k{0%{opacity:0;transform:translate(0px,-72px)}38.5%{opacity:0;transform:translate(0px,-72px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}40%{opacity:1;transform:translate(0px,0px)}50.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}51.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f4k{animation:f4k 20s linear 0s 1 both}
+@keyframes f5a{0%{opacity:0;transform:translate(48px,0px)}51.5%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53%{opacity:1;transform:translate(0px,0px)}62.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}63.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f5a{animation:f5a 20s linear 0s 1 both}
+@keyframes f5k{0%{opacity:0;transform:translate(0px,72px)}51.5%{opacity:0;transform:translate(0px,72px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53%{opacity:1;transform:translate(0px,0px)}62.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}63.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f5k{animation:f5k 20s linear 0s 1 both}
+@keyframes f6a{0%{opacity:0;transform:translate(32px,0px)}63.5%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}65.5%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}80%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f6a{animation:f6a 20s linear 0s 1 both}
+@keyframes f6k{0%{opacity:0;transform:translate(32px,0px)}63.5%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}65.5%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}80%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f6k{animation:f6k 20s linear 0s 1 both}
+@keyframes f7k{0%{opacity:0;transform:translate(48px,0px)}80%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}81.5%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.f7k{animation:f7k 20s linear 0s 1 both}
+@keyframes f7b{0%{opacity:0;transform:translate(48px,0px)}80%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}81.5%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.f7b{animation:f7b 20s linear 0s 1 both}
+@keyframes tag{0%{opacity:0;transform:translate(0px,0px)}24.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}26%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}80%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
+.tag{animation:tag 20s linear 0s 1 both}
+@keyframes logo{0%{opacity:0;transform:translate(0px,0px)}24.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}26%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.logo{animation:logo 20s linear 0s 1 both}
+@keyframes bubOut{0%{opacity:0;transform:translate(64px,0px)}12.5%{opacity:0;transform:translate(64px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14%{opacity:1;transform:translate(0px,0px)}23.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}24.5%{opacity:0;transform:translate(0px,-40px)}100%{opacity:0;transform:translate(0px,-40px)}}
+.bubOut{animation:bubOut 20s linear 0s 1 both}
+@keyframes cal{0%{opacity:0;transform:translate(0px,0px)}24.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}26%{opacity:1;transform:translate(0px,0px)}37.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}38.5%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
+.cal{animation:cal 20s linear 0s 1 both}
+@keyframes tick{0%{stroke-dashoffset:1;opacity:0}25.25%{stroke-dashoffset:1;opacity:1;animation-timing-function:cubic-bezier(.16,.84,.3,1)}26.75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+.tick{animation:tick 20s linear 0s 1 both}
+@keyframes route{0%{stroke-dashoffset:1;opacity:0}40.75%{stroke-dashoffset:1;opacity:1;animation-timing-function:cubic-bezier(.45,0,.2,1)}42.75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+.route{animation:route 20s linear 0s 1 both}
+@keyframes pin{0%{opacity:0;transform:translate(0px,-96px)}45.5%{opacity:0;transform:translate(0px,-96px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}47%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.pin{animation:pin 20s linear 0s 1 both}
+@keyframes res{0%{opacity:0;transform:translate(0px,72px)}51.5%{opacity:0;transform:translate(0px,72px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53%{opacity:1;transform:translate(0px,0px)}63.5%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}65.5%{opacity:1;transform:translate(0px,-100px)}79%{opacity:1;transform:translate(0px,-100px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}80%{opacity:0;transform:translate(-32px,-100px)}100%{opacity:0;transform:translate(-32px,-100px)}}
+.res{animation:res 20s linear 0s 1 both}
+@keyframes talk{0%{opacity:0;transform:translate(0px,40px)}63.5%{opacity:0;transform:translate(0px,40px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}65.5%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}80%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.talk{animation:talk 20s linear 0s 1 both}
 </style></head><body>
 
-<!-- the door: on screen from 0.0 s to the end -->
+<!-- the door: the week's drawing (door.mjs), closed to 8.6 s, swinging 8.6–9.1 s, open to the end -->
+<svg id="doorClosed" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"><path d="M514.7 1398 L514.7 1118 A140.7 140.7 0 0 0 233.3 1118 L233.3 1398" fill="none" stroke="#1B9CCE" stroke-width="4" stroke-linejoin="round"/><circle cx="488.18" cy="1231.93" r="9.23" fill="#1B9CCE"/><path d="M532 1404 L532 1118 A158 158 0 0 0 216 1118 L216 1404" fill="none" stroke="#1B9CCE" stroke-width="12" stroke-linejoin="round"/><line x1="188" y1="1404" x2="560" y2="1404" stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"/></svg>
+<svg id="doorSwing" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="display:none"></svg>
+<svg id="doorOpen" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="display:none"><path d="M518.16 1398 L518.16 1118 A144.16 144.16 0 0 0 229.84 1118 L229.84 1398 Z" fill="#1B9CCE"/><path d="M206.77 1398 L206.77 945.01 L280.58 945.01 C300.19 991.14 303.65 1060.34 303.65 1137.61 L303.65 1386.7 Z" fill="#181943"/><circle cx="286.35" cy="1222.63" r="7.5" fill="#1B9CCE"/><path d="M532 1404 L532 1118 A158 158 0 0 0 216 1118 L216 1404" fill="none" stroke="#1B9CCE" stroke-width="12" stroke-linejoin="round"/><line x1="188" y1="1404" x2="560" y2="1404" stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"/></svg>
+
+<!-- the route to the door: piece 01's dots, filled solid right → left at the turn -->
 <svg class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
-  <path d="M856 1374 L856 1120 A316 316 0 0 0 224 1120 L224 1374 Z" fill="#1B9CCE"/>
+  <g fill="#1B9CCE"><circle cx="894" cy="1404" r="6"/><circle cx="858" cy="1404" r="6"/><circle cx="822" cy="1404" r="6"/><circle cx="786" cy="1404" r="6"/><circle cx="750" cy="1404" r="6"/><circle cx="714" cy="1404" r="6"/><circle cx="678" cy="1404" r="6"/><circle cx="642" cy="1404" r="6"/><circle cx="606" cy="1404" r="6"/></g>
+  <line class="route" x1="894" y1="1404" x2="560" y2="1404" stroke="#1B9CCE" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1"/>
 </svg>
-<svg class="abs leaf" style="transform-origin:221px 0" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
-  <path d="M859 1374 L859 1120 A319 319 0 0 0 221 1120 L221 1374 Z" fill="#181943"/>
-</svg>
-<svg class="abs knocker" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
-  <circle cx="796" cy="1176" r="8" fill="#1B9CCE"/>
-  <circle cx="796" cy="1206" r="22" fill="none" stroke="#1B9CCE" stroke-width="8"/>
-</svg>
-<svg class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
-  <path d="M880 1380 L880 1120 A340 340 0 0 0 200 1120 L200 1380" fill="none" stroke="#1B9CCE" stroke-width="12" stroke-linejoin="round"/>
-  <line x1="186" y1="1380" x2="894" y2="1380" stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"/>
+
+<!-- F4 → end: the arrival, a map pin on the threshold (navy, so it stands in the light like a silhouette) -->
+<svg class="abs pin" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <path d="M412 1398 C400 1374 366 1336 366 1312 A46 46 0 0 1 458 1312 C458 1336 424 1374 412 1398 Z M412 1296 A16 16 0 1 0 412 1328 A16 16 0 1 0 412 1296 Z" fill="#181943" fill-rule="evenodd"/>
 </svg>
 
 <!-- F2: your message (outgoing bubble; in an Arabic chat, sent messages sit left with the tail left) -->
-<svg class="abs bubOut" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"><g transform="translate(0 -20)">
-  <path d="M424 1080 H676 A44 44 0 0 1 720 1124 V1212 A44 44 0 0 1 676 1256 H400 L376 1280 L380 1236 V1124 A44 44 0 0 1 424 1080 Z" fill="#181943" stroke="#1B9CCE" stroke-width="10" stroke-linejoin="round"/>
-  <g stroke="#FFFEFF" stroke-width="12" stroke-linecap="round"><line x1="672" y1="1132" x2="440" y2="1132"/><line x1="672" y1="1168" x2="472" y2="1168"/><line x1="672" y1="1204" x2="560" y2="1204"/></g>
-</g></svg>
+<svg class="abs bubOut" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <path d="M720 1180 H844 A40 40 0 0 1 884 1220 V1276 A40 40 0 0 1 844 1316 H712 L672 1346 L680 1300 V1220 A40 40 0 0 1 720 1180 Z" fill="#181943" stroke="#1B9CCE" stroke-width="10" stroke-linejoin="round"/>
+  <g stroke="#FFFEFF" stroke-width="10" stroke-linecap="round"><line x1="852" y1="1218" x2="712" y2="1218"/><line x1="852" y1="1248" x2="738" y2="1248"/><line x1="852" y1="1278" x2="790" y2="1278"/></g>
+</svg>
 
 <!-- F3: the appointment (calendar, tick drawn in) -->
-<svg class="abs cal" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"><g transform="translate(0 -20)">
-  <rect x="404" y="1024" width="272" height="252" rx="28" fill="#181943" stroke="#1B9CCE" stroke-width="10"/>
-  <line x1="404" y1="1092" x2="676" y2="1092" stroke="#1B9CCE" stroke-width="10"/>
-  <g stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"><line x1="470" y1="1000" x2="470" y2="1046"/><line x1="610" y1="1000" x2="610" y2="1046"/></g>
-  <path class="tick" d="M488 1184 L524 1220 L596 1144" fill="none" stroke="#FFFEFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="150"/>
-</g></svg>
+<svg class="abs cal" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <rect x="694" y="1164" width="192" height="176" rx="24" fill="#181943" stroke="#1B9CCE" stroke-width="10"/>
+  <line x1="694" y1="1216" x2="886" y2="1216" stroke="#1B9CCE" stroke-width="10"/>
+  <g stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"><line x1="744" y1="1140" x2="744" y2="1180"/><line x1="836" y1="1140" x2="836" y2="1180"/></g>
+  <path class="tick" d="M748 1280 L776 1308 L834 1246" fill="none" stroke="#FFFEFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1"/>
+</svg>
 
 <!-- F5: the result arrives (incoming file bubble; incoming sits right with the tail right). Nothing legible on it. -->
-<svg class="abs res" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"><g transform="translate(0 -20)">
-  <path d="M380 1040 H700 L726 1016 L722 1060 V1190 A40 40 0 0 1 682 1230 H380 A40 40 0 0 1 340 1190 V1080 A40 40 0 0 1 380 1040 Z" fill="#FFFEFF"/>
-  <path d="M610 1076 H660 A10 10 0 0 1 670 1086 V1184 A10 10 0 0 1 660 1194 H588 A10 10 0 0 1 578 1184 V1108 Z" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M610 1076 V1108 H578" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
-  <g stroke="#181943" stroke-width="14" stroke-linecap="round"><line x1="534" y1="1120" x2="394" y2="1120"/><line x1="534" y1="1156" x2="442" y2="1156"/></g>
-</g></svg>
+<svg class="abs res" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <path d="M704 1200 H858 L890 1174 L884 1222 V1300 A36 36 0 0 1 848 1336 H700 A36 36 0 0 1 664 1300 V1240 A40 40 0 0 1 704 1200 Z" fill="#FFFEFF"/>
+  <path d="M818 1224 H840 A10 10 0 0 1 850 1234 V1302 A10 10 0 0 1 840 1312 H806 A10 10 0 0 1 796 1302 V1246 Z" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M818 1224 V1246 H796" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
+  <g stroke="#181943" stroke-width="12" stroke-linecap="round"><line x1="766" y1="1254" x2="696" y2="1254"/><line x1="766" y1="1284" x2="724" y2="1284"/></g>
+</svg>
 
-<!-- F6: a doctor explains it (speech balloon under the result) -->
-<svg class="abs talk" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"><g transform="translate(0 -20)">
-  <rect x="350" y="1190" width="280" height="110" rx="55" fill="#FFFEFF"/>
-  <path d="M372 1278 L336 1330 L420 1292 Z" fill="#FFFEFF" stroke="#FFFEFF" stroke-width="4" stroke-linejoin="round"/>
-  <g fill="#181943"><circle cx="430" cy="1245" r="13"/><circle cx="490" cy="1245" r="13"/><circle cx="550" cy="1245" r="13"/></g>
-</g></svg>
+<!-- F6: a doctor explains it (speech balloon under the result, its tail toward the house) -->
+<svg class="abs talk" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <rect x="680" y="1258" width="184" height="80" rx="40" fill="#FFFEFF"/>
+  <path d="M700 1322 L672 1360 L734 1334 Z" fill="#FFFEFF" stroke="#FFFEFF" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#181943"><circle cx="732" cy="1298" r="10"/><circle cx="772" cy="1298" r="10"/><circle cx="812" cy="1298" r="10"/></g>
+</svg>
 
 <!-- header -->
 <div class="abs tag"><span>شوف بعينك</span></div>
-<div class="abs logo">[LOGO: official file needed]</div>
+<img class="abs logo" src="../../../../.claude/skills/design-studio/assets/brand/tabeebx-logo-stacked-on-navy.png" alt="TabeebX">
 
-<!-- words, exactly as in the piece file -->
+<!-- words, exactly as in the piece file (line breaks inside a key: Copywriter to confirm; no word changed) -->
 <div class="f1">
-  <p class="abs ln key rowK">تحليل بالبيت؟</p>
-  <p class="abs ln lead rowB">هيچ يصير.</p>
+  <p class="abs ln key rowK">تحليل<br>بالبيت؟</p>
+  <p class="abs ln lead rowC">هيچ يصير.</p>
 </div>
 <p class="abs ln lead rowA f2a">تدزلنا</p>
-<p class="abs ln key rowK f2k">رسالة واتساب،</p>
+<p class="abs ln key rowK f2k">رسالة<br>واتساب،</p>
 <p class="abs ln lead rowA f3a">ونثبّتلك</p>
 <p class="abs ln key rowK f3k">الموعد.</p>
 <p class="abs ln lead rowA f4a">ونجيك</p>
@@ -133,8 +130,45 @@ svg.abs { left: 0; top: 0; }
 <p class="abs ln lead rowA f5a">والنتيجة توصلك</p>
 <p class="abs ln key rowK f5k">بالواتساب.</p>
 <p class="abs ln lead rowA f6a">ودكتور</p>
-<p class="abs ln key rowK f6k">يشرحها إلك.</p>
-<p class="abs ln cta rowK f7k" style="top:488px">دزها لكروب العائلة.</p>
-<p class="abs ln sign rowB f7b" style="top:616px">لا تصدگنا. شوف بعينك.</p>
+<p class="abs ln key rowK f6k">يشرحها<br>إلك.</p>
+<p class="abs ln key rowK f7k">دزها لكروب<br>العائلة.</p>
+<p class="abs ln lead rowC f7b">لا تصدگنا. شوف بعينك.</p>
 
+<script>
+// The door swing (8.6–9.1 s): swingSVG is defined in build.mjs and embedded here.
+const DG = {"xl":216,"xr":532,"apex":960,"ground":1404,"sw":12}, SWING = [8.6,9.1];
+function swingSVG(p, DG) {
+  const BLUE = '#1B9CCE', NAVY = '#181943';
+  const f = (n) => +n.toFixed(2), lerp = (a, b, q) => a + (b - a) * q;
+  const { xl, xr, apex, ground: G, sw } = DG;
+  const s = (xr - xl) / 548, R = (xr - xl) / 2, YS = apex + R, H = G - YS;
+  const LT = Math.max(24 * s, sw / 2 + 6), HX = xl + LT, FX = HX + 128 * s, X0 = xr - LT + 2;
+  const LI = Math.max(30 * s, sw / 2 + 10), lw = Math.max(6 * s, 4);
+  const fx = lerp(X0, FX, p), foot = lerp(G - sw / 2, G - 30 * s, p);
+  const light = `M${f(xr - LT)} ${G - sw / 2} L${f(xr - LT)} ${f(YS)} A${f(R - LT)} ${f(R - LT)} 0 0 0 ${f(xl + LT)} ${f(YS)} L${f(xl + LT)} ${G - sw / 2} Z`;
+  const leaf = `M${f(HX - 40 * s)} ${G - sw / 2} L${f(HX - 40 * s)} ${f(YS - 300 * s)} L${f(fx - 40 * s * p)} ${f(YS - 300 * s)} ` +
+    `C${f(fx - 6 * s * p)} ${f(YS - 220 * s)} ${f(fx)} ${f(YS - 100 * s)} ${f(fx)} ${f(YS + 34 * s)} L${f(fx)} ${f(foot)} Z`;
+  const line = `M${f(xr - LI)} ${G - sw / 2} L${f(xr - LI)} ${f(YS)} A${f(R - LI)} ${f(R - LI)} 0 0 0 ${f(xl + LI)} ${f(YS)} L${f(xl + LI)} ${G - sw / 2}`;
+  const kc = { dx: (xr - LT) - (xr - LI - Math.max(46 * s, 18)), y: YS + (196 / 492) * H, r: Math.max(16 * s, 9) };
+  const ko = { dx: FX - (FX - Math.max(30 * s, 12)), y: YS + (180 / 492) * H, r: Math.max(13 * s, 7) };
+  const kx = fx - lerp(kc.dx, ko.dx, p), ky = lerp(kc.y, ko.y, p), kr = lerp(kc.r, ko.r, p);
+  const frame = `<path d="M${xr} ${G} L${xr} ${YS} A${R} ${R} 0 0 0 ${xl} ${YS} L${xl} ${G}" fill="none" stroke="${BLUE}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  const threshold = `<line x1="${xl - 34 + sw / 2}" y1="${G}" x2="${xr + 34 - sw / 2}" y2="${G}" stroke="${BLUE}" stroke-width="${sw}" stroke-linecap="round"/>`;
+  return `<path d="${light}" fill="${BLUE}"/><path d="${leaf}" fill="${NAVY}"/>` +
+    `<path d="${line}" fill="none" stroke="${BLUE}" stroke-width="${f(lw)}" stroke-linejoin="round" opacity="${f(Math.max(0, 1 - p / 0.2))}"/>` +
+    `<circle cx="${f(kx)}" cy="${f(ky)}" r="${f(kr)}" fill="${BLUE}"/>${frame}${threshold}`;
+}
+const el = (id) => document.getElementById(id);
+// Sine ease-in-out on the leaf's projected width: the light gap opens from the first frames, speeds up, then settles
+// (a cubic ease on the angle, projected through cos, left the first 0.15 s of the swing almost still).
+const ease = (u) => (1 - Math.cos(Math.PI * u)) / 2;
+window.__seek = (ms) => {
+  const t = ms / 1000, u = (t - SWING[0]) / (SWING[1] - SWING[0]);
+  el('doorClosed').style.display = u <= 0 ? '' : 'none';
+  el('doorOpen').style.display = u >= 1 ? '' : 'none';
+  el('doorSwing').style.display = u > 0 && u < 1 ? '' : 'none';
+  if (u > 0 && u < 1) el('doorSwing').innerHTML = swingSVG(ease(u), DG);
+};
+window.__seek(0);
+</script>
 </body></html>

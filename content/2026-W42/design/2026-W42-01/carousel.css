@@ -1,21 +1,25 @@
-/* 2026-W42-01 · Instagram carousel (and Facebook cross-post), 7 slides, 1080×1350 (4:5).
+/* 2026-W42-01 · Instagram carousel (and Facebook cross-post), 7 slides, 1080×1350 (4:5). Round 2.
    Grid: 12 columns, 72 px outer margins, 24 px gutters (columns 56 px), 8 px unit.
    Rows (fixed on every slide):
-     header row   184–296   (cover and last slide: series label right, logo slot left)
-     text top     344       (every slide's words hang from this line, right-aligned, ragged left)
-     band         888–1142  (the route; ground line y 1120)
-     foot         1160–1237 (last slide only: the sign-off)
-   Top margin 184 = bottom margin of the band (1350 − 1164), so the frame is balanced. Everything on the cover
-   sits inside y 184–1142, ≥ 48 px inside a centred square crop (y 135–1215, piece 04's WhatsApp image),
-   and inside the centred 1012 px of the profile grid's 3:4 preview.
-   Type: Cairo only. 120 Bold (cover hook) · 88 Bold (headlines; 76 on slide 2) · 52 Medium/Bold (body) · 48 (labels, proof, sign-off). No tracking. */
+     header row   184–296   label right (cover: series pill; slides 3–6: step disc, 196–284), logo left (slides 1, 7)
+                            logo: the official on-navy file, ink x 72–288 (columns 1–3), y 184–405
+     text top     344       every slide's words hang from this line, right-aligned, ragged left
+                            (slide 7 only: 424, the first row clear of the logo, because its first line runs full width)
+     band         888–1142  the route; ground line y 1120 (slide 5's light pool reaches 1166)
+     foot         1160–1237 last slide only: the sign-off
+   Everything on the cover sits inside y 184–1142, ≥ 48 px inside a centred square crop (y 135–1215, piece 04's
+   WhatsApp image), and inside the centred 1012 px of the profile grid's 3:4 preview.
+   Type: Cairo only, no tracking. Hierarchy from size and weight, never colour alone:
+     white setup words Medium 500 · the one pink group Bold 800 · navy-on-blue labels Bold 800
+     120 (cover hook) · 88 (headlines, slides 2–6) · 96 (slide 7 CTA) · 60 (slide 7 question) · 52 (body) · 48 (labels)
+   Pink sits ≥ 70 px from any blue on every slide. */
 html, body { width: 1080px; height: 1350px; overflow: hidden; }
 body { position: relative; background: var(--navy); }
 .abs { position: absolute; }
-.accent { color: var(--pink); }
+.accent { color: var(--pink); font-weight: 800; }
 .band { left: 0; top: 0; }
 
-/* Header row: same pieces, same places as piece 02 (blue label pill right, logo slot left) */
+/* Header row: same pieces, same places as piece 02 (blue label right, logo left) */
 .series {
   top: 196px; right: 72px; height: 88px; padding: 0 40px;
   display: flex; align-items: center;
@@ -23,25 +27,30 @@ body { position: relative; background: var(--navy); }
   font-weight: 800; font-size: 48px; line-height: 1; border-radius: 44px;
 }
 .series span { position: relative; top: -3px; } /* optical centring: Cairo's Arabic sits high in its box */
-.logo-slot {
-  top: 184px; left: 72px; width: 304px; height: 112px;
-  border: 3px dashed var(--white); border-radius: 16px;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  direction: ltr; font-weight: 500; font-size: 30px; line-height: 1.2; color: var(--white);
+.step {
+  top: 196px; right: 72px; width: 88px; height: 88px; border-radius: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--blue); color: var(--navy);
+  font-weight: 800; font-size: 56px; line-height: 1;
 }
+.step span { position: relative; top: -2px; }
+/* Logo file 520×530 with 24 px transparent margins; at 238 px wide its ink is 216 px: x 72–288, y 184–405 */
+.logo { left: 61px; top: 173px; width: 238px; height: auto; }
 
 /* Cover */
-.hook { top: 344px; right: 72px; left: 72px; text-align: right; font-weight: 800; font-size: 120px; line-height: 1.25; white-space: nowrap; }
+.hook { top: 344px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 120px; line-height: 1.25; white-space: nowrap; }
 .sub  { top: 680px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 52px; line-height: 1.6; white-space: nowrap; }
 
 /* Inner slides: the words hang from the text top line */
 .hero { top: 344px; right: 72px; left: 72px; text-align: right; white-space: nowrap; }
-h2.hero, .hero h2 { font-weight: 800; font-size: 88px; line-height: 1.35; }
-.s02 h2.hero { font-size: 76px; } /* slide 2's copy line «ونطرة ما تعرف شگد تطول.» is 1051 px at 88: it only fits the 936 px measure at 76 */
+h2.hero, .hero h2 { font-weight: 500; font-size: 88px; line-height: 1.35; }
+.nobreak h2.hero, .nobreak .hero h2 { font-size: 80px; } /* fallback only (S2_BREAK=0): the copy's own break fits at 80 */
 .hero .list  { margin-top: 16px; font-weight: 500; font-size: 52px; line-height: 1.65; }
-.hero .punch { margin-top: 24px; font-weight: 800; font-size: 52px; line-height: 1.6; }
-.hero .cta   { margin-top: 32px; font-weight: 800; font-size: 88px; line-height: 1.35; }
-.hero .proof { margin-top: 32px; font-weight: 500; font-size: 48px; line-height: 1.6; }
+.hero .punch { margin-top: 24px; font-weight: 500; font-size: 52px; line-height: 1.6; }
 
-/* Last slide */
-.closing { top: 1160px; right: 72px; left: 72px; text-align: right; font-weight: 800; font-size: 48px; line-height: 1.6; white-space: nowrap; }
+/* Last slide, in the copy's order: licence line, question, CTA; sign-off at the foot */
+.close-stack { top: 424px; right: 72px; left: 72px; text-align: right; white-space: nowrap; }
+.close-stack .proof    { font-weight: 500; font-size: 48px; line-height: 1.5; }
+.close-stack .question { margin-top: 24px; font-weight: 500; font-size: 60px; line-height: 1.4; }
+.close-stack .cta      { margin-top: 8px; font-size: 96px; line-height: 1.25; }
+.closing { top: 1160px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 48px; line-height: 1.6; white-space: nowrap; }

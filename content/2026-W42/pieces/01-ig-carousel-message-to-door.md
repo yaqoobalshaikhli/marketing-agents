@@ -130,69 +130,86 @@ The hook comes from the campaign's launch-reel promise «وشنو يصير من 
 
 ## Design
 
-**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
+**Round 2** · Designer, 2026-10-18 · Round 1: Design Critic **REVISE**, average 7.25, lowest 6.5 (Glaser, Scher, Rand), `design-review/2026-W42-01-r1.md`. Round 2 goes to the critic next.
 
-**The one idea:** your WhatsApp message and your front door are only a few steps apart. The viewer goes from "the road, the queue and a wait with no end" to "four short steps from one message to my door, and a call after". They should feel relieved, save the post and send the message.
-
-**Device:** one symbol on every slide. A street line runs along the foot of each slide, drawn in piece 02's blue line language (12 px stroke, the same round-headed doorway and threshold). Right to left it reads: your message (bubble), we confirm (disc), the door, our call back (bubble).
-- Dots are the road still to travel. A solid line is the road already travelled.
-- The lit station is this slide's step and carries the copy's label (١ ٢ ٣ ٤, navy on blue).
-- A dotted callout rises from the lit station to the slide's words on slides 3, 4 and 6. On slide 5 the words already sit on the door.
-- **Slide 1:** the whole route as a map, nothing lit. The hook asks what happens between the bubble and the door.
-- **Slide 2:** the same dots form an endless winding queue. It enters and leaves the frame and never reaches a door. Its bottom row lies on the route's ground line, so slide 3's straight, short route answers it.
-- **Slides 3–6:** one station lit per slide, moving right to left as the viewer swipes. The door lights up on slide 5 (the visit) and stays lit on slide 6.
-- **Slide 7:** back to the start. Your bubble is lit ("your message"), nothing is travelled, and it sits next to the CTA.
+**The one idea:** your WhatsApp message and your front door are only a few short steps apart. The viewer goes from "the road, the queue and a wait with no end" to "four short steps from one message to my door, and a call after", feels relieved, saves the post and sends the message.
 
 **References learned from (`design-studio/references/library.md`):**
-- **Missing Type:** one ownable graphic gesture (here the dotted route) carries the message instead of decoration.
-- **The New York Times on Instagram slides:** carousels are for explanation. Here that means a hook first, one step per slide and a single CTA last.
-- **Ruby Blooms:** for an anxious health topic, reduce surprise with a gradual step-by-step reveal and a calm field. No medical icons and no people.
-- **Piece 02 of this pack:** the same doorway, header row, label pill and logo slot, so the week reads as one system.
+- **Missing Type:** one ownable graphic gesture (the dotted route) carries the message instead of decoration.
+- **The New York Times on Instagram slides:** a hook first, one step per slide, a single CTA last.
+- **Ruby Blooms:** for an anxious health topic, reduce surprise with a gradual step-by-step reveal and a calm field. No medical icons, no people.
+- **Piece 02's round-2 door** (rebuilt in parallel, 14:48): the open door here is that drawing, so the week's doorway stays one symbol (see fix 1).
 
-**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
-- (a) Poster, type only: a strong hook, but nothing says "home" or "steps", and slides 2–7 would have no thread. Its 132 px hook also runs past the left margin.
-- (b) Route: **chosen**. The picture answers the hook without repeating it, and the same band runs through all seven slides.
-- (c) Giant chat bubble around the hook: it reads as a fake chat screen with a box around the headline, and the door is an afterthought.
+**What changed in round 2 (the critic's top 3 first):**
+1. **The door opens; nothing is set inside it.**
+   - Slide 5's lit slab with «٣» in it is gone. The door is piece 02's frame-2 drawing: the light (blue) fills the doorway inside a navy margin, and the leaf has swung inward on its left hinge. It shows as a narrow navy panel with a knob, a shorter free edge and a rising foot.
+   - When closed (every other slide), the door is a leaf line with a knob, so it reads as a door at rest, not an arch.
+   - `door.mjs` is that drawing written as a function of size. At 02's numbers it returns 02's paths exactly (checked). Piece 03 can import it for its door fix.
+   - On slide 6 the door goes back to rest and the call-back bubble is lit. "Lit" now means only "this step"; the solid line is the road travelled.
+2. **Hierarchy from weight and size, not colour alone.**
+   - On all 7 slides the white setup words are Cairo Medium (500) and only the pink group is Bold (800). In greyscale the pink group is now the heaviest weight on each slide, not the weakest line (`checks/sequence-rtl-greyscale.png`).
+   - Slide 7's CTA «رابط الواتساب بالبايو.» is 96 Bold over the question at 60 Medium (1.6:1), the largest line on the slide. It can't go bigger: 96 px measures 912 px; at 100 it would run past the 936 px measure.
+   - Every line was re-measured with Cairo loaded. None of the copy's breaks changed apart from slide 2 (item 3a).
+3. **Copywriter points, and the logo.**
+   - (a) Slide 2: «ونطرة ما تعرف شگد تطول.» is 1025 px at 88 even with Medium setup words, against a 936 px measure. I set it as «ونطرة ما تعرف / شگد تطول.», so slide 2 is at the house 88 px and the pink pivot gets its own line. **This break needs the Copywriter's confirmation:** no Copywriter could be reached in this run. If it's declined: `checks/slide-02-if-no-break-80px.png` keeps the copy's own break, but then the house size drops to 80 px on slides 2–6 (one CSS line) so slide 2 isn't a one-off.
+   - (b) Slide 7 now follows the copy's order: licence line, question, CTA, then the sign-off. No confirmation is needed, because it is the copy's own order.
+   - The official on-navy logo (`tabeebx-logo-stacked-on-navy.png`, unaltered, decision #66) replaces the slot on slides 1 and 7. Gate 7 now fails a placeholder. It is 238 px wide, so its ink is 216 px, snapped to columns 1–3 (x 72–288, y 184–405), inside the x 72–368 the critic asked for. That is the same size and column as piece 02's round-2 logo.
+
+**Also changed (from lens notes, not in the top 3):**
+- **Step labels.** «١ ٢ ٣ ٤» (the copy's `label:` keys) moved out of the stations into a blue disc in the header row, top right, where the cover's series pill sits. Each number now sits right above its own words (Spiekermann), and «١» is no longer inside a chat bubble (Chahine).
+- **Each lit station now shows what its step means** (Rand: the old disc said nothing): your bubble has navy dots (your message), the disc a navy tick (confirmed), the door is open, and our bubble has a handset (we call).
+- **The dotted callouts are gone,** so dots mean one thing only: road (Vignelli).
+- **Slide 2's queue** is five rows 56 px apart, top row at y 896.
+- **Pink to blue** is at least 74 px on every slide.
+
+**Three thumbnails** (round 1, unchanged; `thumbs/contact-sheet.png`): (a) type-only poster, (b) route (**chosen**), (c) giant chat bubble.
 
 **Grid and type:**
 - 12 columns, 72 px outer margins, 24 px gutters, 8 px unit.
 - Rows, fixed on every slide:
-  - header: 184–296 (slides 1 and 7: label pill right, logo slot left)
-  - text top: 344 (all words hang from it, right-aligned, ragged left)
-  - band: 888–1142, ground line at y 1120
-  - foot: 1160–1237 (slide 7's sign-off)
+  - header 184–296: label right; logo left on slides 1 and 7 (logo ink to 405)
+  - text top 344: slide 7 alone starts at 424, because its first line (the licence line) runs the full width and must clear the logo
+  - band 888–1142, ground line 1120
+  - foot 1160–1237
 - Station x positions are fixed: your bubble 920, disc 667, door 413, our bubble 160.
-- On the cover, everything sits inside y 184–1142. That is at least 48 px inside a centred square crop (piece 04's WhatsApp image; `checks/cover-square-crop.png`) and inside the profile grid's 3:4 preview (`checks/cover-profile-grid-3x4.png`).
-- Cairo only, no tracking:
-  - 120 Bold: cover hook
-  - 88 Bold: headlines and the CTA
-  - 76 Bold: slide 2 only
-  - 52 Medium or Bold: cover sub-line, slide 5's service list and «بلا سرة ولا طريق.»
-  - 48: series label, licence line, sign-off
-  - Station numerals: 72 Bold, navy on blue
-- **Why slide 2 is smaller:** its line «ونطرة ما تعرف شگد تطول.» is 1051 px wide at 88 px, and the measure is 936. I didn't re-break the copy.
-- **Pink:** one group per slide, the starred words, all at 76 px or more in Bold, on navy, never touching blue.
-- **Pixel check:** on every slide, the pink pixels fall only inside the starred group's box. Between 98.6% and 99.4% of each slide's pixels are exact palette colours; the rest is anti-aliasing.
-- **Words:** a script compared every Arabic string on the slides with `## Copy`. They are identical, apart from the two layout points below.
+- Cairo only, no tracking; setup words Medium, pink group Bold:
+  - 120: cover hook
+  - 88: headlines, slides 2–6
+  - 96: slide 7 CTA
+  - 60: slide 7 question
+  - 52: cover sub-line, slide 5 list and «بلا سرة ولا طريق.»
+  - 48: series pill, licence line, sign-off
+  - 56 Bold: step numerals, navy on blue
+- Pink is one group per slide (the starred words), at least 88 px Bold, on navy, at least 74 px from any blue.
+
+**Checks run on the final PNGs:**
+- **Palette:** 98.1–99.4% of pixels are exact palette colours (slides 1 and 7 include the logo's anti-aliasing).
+- **Pink:** each slide's pink sits only inside its starred group.
+- **Margins:** text ink stays inside x 72–1008. The cover's ink stays inside y 184–1147, inside the square crop (`checks/cover-square-crop.png`) and the 3:4 grid preview (`checks/cover-profile-grid-3x4.png`).
+- **Text:** a script compared every rendered string with `## Copy`. All words, «گ», shadda and Eastern digits match, slide 7 is in the copy's order, and the only break that differs from the copy is slide 2's (3a above). As in round 1, slide 5's `text` key is set as a headline plus a list, with the same words and breaks.
+- **Linter:** `lint-copy.mjs` passes, 0 warnings.
+- **Viewing:** every slide was viewed at full size and at 390 px phone width, in colour and greyscale.
 
 **Files** in `design/2026-W42-01/`:
-- `slide-01.png` … `slide-07.png`: **the files to post**, 1080×1350, in this order, for Instagram and the Facebook cross-post. Piece 04 uses `slide-01.png` as it is.
-- Sources: `slide-01.html` … `slide-07.html`, `carousel.css` and `build.mjs`. To change them, edit `build.mjs` or `carousel.css`, run `node build.mjs`, then `render.mjs still slide-0N.html slide-0N.png --w 1080 --h 1350`.
-- `checks/`: **not for posting.** `sequence-rtl.png` shows all seven slides in swipe order, right to left, at phone size. `cover-square-crop.png` and `cover-profile-grid-3x4.png` are the crop checks.
-- `thumbs/`: the three cover compositions. **Not for posting.**
+- `slide-01.png` … `slide-07.png`: **the files to post**, 1080×1350, in this order, for Instagram and the Facebook cross-post. Piece 04 uses `slide-01.png` (its cover changed: logo and type weights).
+- Sources: `slide-01.html` … `slide-07.html`, `carousel.css`, `build.mjs` and `door.mjs` (the week's door). To change them, edit `build.mjs`, `door.mjs` or `carousel.css`, run `node build.mjs`, then `render.mjs still slide-0N.html slide-0N.png --w 1080 --h 1350`. `S2_BREAK=0 node build.mjs` builds the slide 2 fallback as `-nobreak` files.
+- `checks/` (**not for posting**):
+  - `sequence-rtl.png` and `sequence-rtl-greyscale.png`: all seven slides in swipe order at phone size
+  - `r1-vs-r2.png`: round 1 on top, round 2 below
+  - `cover-square-crop.png` and `cover-profile-grid-3x4.png`: the cover crops
+  - `slide-02-if-no-break-80px.png`: the 3a fallback
+- `thumbs/`: round 1's three cover compositions. **Not for posting.**
 
-**Open items for the Copywriter and the critic (not blocking):**
-1. **Cover hook line break.** The copy gives the hook as one line. At a size that stops the thumb it needs two, so it breaks after «شنو يصير», at the sense break ("what happens / when you send us a message?"). The words are unchanged. Copywriter: confirm, or mark the break with ` / `.
-2. **Slide 5 hierarchy.** Its `text` key is set as a headline («ونجيك للبيت:», 88 Bold) and three service lines (52 Medium), with the same words and line breaks.
-3. **The ١ on slide 3** is Cairo's Eastern Arabic one, a single upright stroke. It's correct, and «أول شي،» sits above it, but it's the least obvious of the four station marks.
-4. **Logo.** The slot is marked `[LOGO: official file needed]`, 304×112, top left on slides 1 and 7, in the same place as in piece 02. The standard lockup has a navy wordmark that disappears on navy. Yaqoob needs to send a reversed (white wordmark) lockup, or approve a white plate behind it.
-5. **Swipe direction.** I haven't tested Instagram's swipe direction with an Arabic UI on a phone. The design doesn't depend on it: there are no arrows, nothing crosses a slide edge, and the route reads right to left inside each slide.
+**Open items:**
+1. **Copywriter:** confirm slide 2's break «ونطرة ما تعرف / شگد تطول.» (3a). Still open since round 1: the cover hook's break after «شنو يصير».
+2. **Logo:** the stacked lockup is used at 216 px ink (wordmark about 216×37 px). A horizontal lockup or an SVG from Yaqoob would allow a slimmer header later; it isn't needed for this piece.
+3. **Swipe direction** is still untested with an Arabic UI on a phone. Nothing depends on it: there are no arrows and nothing crosses a slide edge.
 
 Hand-off from the copy (facts and policy only; layout is the Designer's):
 
 - 7 slides at 1080×1350, in the order above. The first draft's 8-slide visual brief and its EMR render spec are withdrawn: they were written for the old name-and-photo slide and the old "no logo" rule.
 - Style A: type, icons and illustration. No people or faces at all this week, real or AI.
-- Logo: `[LOGO: official file needed]` on frames 1 and 7. Its pink figure doesn't count as the slide's pink (decision #39). Never redraw or trace it.
+- Logo: `[LOGO: official file needed]` on frames 1 and 7. Its pink figure doesn't count as the slide's pink (decision #39). Never redraw or trace it. *(Designer, round 2: superseded. The official on-navy file is now placed, unaltered; decision #66.)*
 - One pink group per slide: the starred words.
 - The licence line is text only: no Ministry of Health emblem or other official mark.
 - Never on a slide: needles, blood tubes, blood, hospital beds; the WhatsApp logo or its green (a plain speech bubble is fine).

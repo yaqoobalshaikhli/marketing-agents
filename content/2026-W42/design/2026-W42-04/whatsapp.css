@@ -1,20 +1,24 @@
-/* 2026-W42-04 · WhatsApp broadcast image, 1080×1080 (1:1).
-   Piece 01's cover, re-laid out for a square (the brief: "01's cover slide, resized"). Same words, same
-   type sizes, same header row, same route band: only the rows move.
-   Grid: 12 columns, 72 px outer margins on all four sides, 24 px gutters, 8 px unit (as piece 01).
-   Rows:
-     header row   72–184    (logo slot 304×112 left; series pill 88 tall, right, centred on the slot)
-     hook         224–524   (two lines, 120 Bold, line-height 1.25)
-     sub          560–643   (52 Medium)
-     band         742–1008  (the route; ground line y 980; the confirm disc hangs to 1008 = 1080 − 72)
-   Header moves up 112 from the cover, hook and sub 120, band 140. Gaps: header→hook 40 (cover 48),
-   sub→band 99 (cover 119), so every element sits inside 72 px margins; the ground line ends 92 px
-   above the foot, a slightly deeper bottom margin, which reads as optically balanced.
-   Type: Cairo only, no tracking. 120 Bold hook · 52 Medium sub · 48 Bold series label. */
+/* 2026-W42-04 · WhatsApp broadcast image, 1080×1080 (1:1). Round 2.
+   Piece 01's round-2 cover, re-laid out for a square (the brief: "01's cover slide, resized"). Same words, same
+   type sizes and weights, same logo, same header row, same route band: only the rows move.
+   Grid: 12 columns, 72 px outer margins on all four sides, 24 px gutters (columns 56 px), 8 px unit (as piece 01).
+   Rows, every edge on the 8 px unit:
+     header row   72–184    series pill right (84–172, centred on the row, as piece 01's 196–284 in 184–296);
+                            logo left: the official on-navy file, ink x 72–288 (columns 1–3), y 72–293
+     hook         232–532   (two lines, 120, line-height 1.25; line 1 sits beside the logo, line 2 clears it)
+     sub          568–651   (52 Medium)
+     band         744–998   (the route; arch apex 744, ground line 976; the confirm disc hangs to 1004)
+   Moves from piece 01's cover: header, logo, hook and sub up 112 (14 units), so the top block is the cover's to the
+   pixel, including the 48 px header→hook gap. Band up 144 (18 units): the only gap that changes is sub→band
+   (box 651 → apex 744 = 93; cover 125). The content box is 72–1004 (bubble strokes centred on the 72 px side lines).
+   Type: Cairo only, no tracking. Hierarchy from size and weight, never colour alone (as piece 01, round 2):
+     white setup words Medium 500 · the one pink group «رسالة؟» Bold 800 · navy-on-blue label Bold 800
+     120 hook · 52 sub · 48 label.
+   build.mjs checks the weights and the logo rule against piece 01's carousel.css, so the two can't drift. */
 html, body { width: 1080px; height: 1080px; overflow: hidden; }
 body { position: relative; background: var(--navy); }
 .abs { position: absolute; }
-.accent { color: var(--pink); }
+.accent { color: var(--pink); font-weight: 800; }
 .band { left: 0; top: 0; }
 
 .series {
@@ -24,11 +28,8 @@ body { position: relative; background: var(--navy); }
   font-weight: 800; font-size: 48px; line-height: 1; border-radius: 44px;
 }
 .series span { position: relative; top: -3px; } /* optical centring, as piece 01 */
-.logo-slot {
-  top: 72px; left: 72px; width: 304px; height: 112px;
-  border: 3px dashed var(--white); border-radius: 16px;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  direction: ltr; font-weight: 500; font-size: 30px; line-height: 1.2; color: var(--white);
-}
-.hook { top: 224px; right: 72px; left: 72px; text-align: right; font-weight: 800; font-size: 120px; line-height: 1.25; white-space: nowrap; }
-.sub  { top: 560px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 52px; line-height: 1.6; white-space: nowrap; }
+/* Logo file 520×530 with 24 px transparent margins; at 238 px wide its ink is 216 px: x 72–288, y 72–293.
+   Piece 01's rule moved up 112 (left 61, top 173 → 61, width 238). Used as it is: no recolour, crop or effect. */
+.logo { left: 61px; top: 61px; width: 238px; height: auto; }
+.hook { top: 232px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 120px; line-height: 1.25; white-space: nowrap; }
+.sub  { top: 568px; right: 72px; left: 72px; text-align: right; font-weight: 500; font-size: 52px; line-height: 1.6; white-space: nowrap; }

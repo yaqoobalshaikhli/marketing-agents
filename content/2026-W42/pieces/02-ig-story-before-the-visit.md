@@ -52,55 +52,77 @@ Facts: a doctor's home visit (`tabeebx-brand`) and booking by WhatsApp message (
 
 ## Design
 
-**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
+**Round 2** · Designer, 2026-10-18 · answers the Design Critic's round 1 (`design-review/2026-W42-02-r1.md`: REVISE, average 6.75, lowest 5.5 Rand, gate 7 FAIL). Design Critic round 2: **not yet scored**.
 
-**The one idea:** your question gets to the door before the doctor does. The viewer should feel heard, not sold to, and type one question. On frame 2, anyone who is already ready messages us on WhatsApp.
+**The one idea (unchanged):** your question gets to the door before the doctor does. The viewer should feel heard, not sold to, and type one question. On frame 2 the same door opens for anyone who is ready to message us on WhatsApp.
 
-**Device:** one round-headed doorway (blue line, threshold on the margins) holds the native sticker on both frames.
-- Frame 1: the doorway is dark and empty, and the Question sticker stands in it, directly under the pink «للبيت؟».
-- Frame 2: the same doorway is lit (filled blue inside its frame), and the WhatsApp link sticker sits in it.
-- Swiping right to left, the door "opens" from frame 1 to frame 2.
-- The head is round on purpose. A pointed arch reads as a mihrab, and we shouldn't borrow a religious form for an ad.
+**What changed, the critic's top 3 first:**
+1. **Gate 7, logo.** The official `design-studio/assets/brand/tabeebx-logo-stacked-on-navy.png` (decision #66) is used unaltered, at the same size and place on both frames.
+   - Size: 239 px wide (the file limit is ~300). Its ink is x 72–288, which is exactly columns 1–3, and y 1337–1554. The wordmark is 216×37 px and reads at phone size.
+   - Position: bottom-left as the signature, at the RTL reading end, with the wordmark's foot on the threshold line, so the logo and the door stand on one line. Clear space is 92 px.
+   - Why the header slot was dropped: the stacked lockup is about 1:1, so at a legible size it is 217 px tall. A header row that tall leaves no room for a door that is taller than wide and still holds a ~45%-wide sticker.
+   - The Arabic still leads: «سؤال» and the headline are read first. The Latin wordmark (37 px) is smaller and lighter than the 48 px chip and the 72/104 px headline. Its pink figure doesn't count as the frame's pink (#39).
+2. **The doorway is now a front door, and it opens.**
+   - Proportions: piece 01's. The frame's ink is 560 × 772 px (1 : 1.38; piece 01 is 168 × 232). The right jamb sits on the right margin under the right-aligned text, and the threshold runs on column edges (x 392–1008).
+   - Door cues: an inset leaf line and a knob.
+   - Frame 1: the door is shut.
+   - Frame 2: the same door has swung inward on its left hinge. The dark leaf is seen at an angle (shorter free edge, its foot lifting off the floor, the knob on it), light fills the doorway, and a wedge of light shows on the floor under the leaf.
+   - The hinge is on the left, so the door opens right to left, with the swipe. The light is inset inside the frame, so the frame and the light never merge into one round-topped slab.
+3. **The key words lead by size, not colour alone.** The setup words are 72 px and the key words 104 px (×1.44), all Cairo 800. «للبيت؟» and «دزلنا رسالة واتساب.» are the largest type on their frames and stay so in greyscale (`checks/r1-vs-r2-phone.png`).
 
-**References learned from (`design-studio/references/library.md`):**
-- **Spotify Wrapped 2024:** type as the main graphic on 9:16, built as a system. Here that means one grid, two type sizes, and a fixed header row and doorway on both frames, so frame 2 visibly belongs with frame 1.
-- **Missing Type:** one ownable graphic gesture carries the message instead of decoration. The doorway can also run through piece 01 (from the message to the knock on the door).
-- **Ruby Blooms:** calm, low-surprise design for a health topic. A navy field, one accent, no medical icons and no people.
+Also from the critic's list:
+- Frame 1's privacy line «لا تكتب اسمك ولا شي عن صحتك.» now sits directly under the headline, so it is read before the sticker (AbiFarès).
+- Frame 2's sign-off takes the same row.
 
-**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
-- (a) Poster: type only, with an empty sticker zone. Clean, but nothing says "home".
-- (b) Doorway: chosen. The picture completes the headline instead of repeating it, and it carries across both frames.
-- (c) Navy/blue split screen: a template look, and it fails the swap test.
+**Considered and rejected:**
+- Logo top-left in a header row with a centred door: the door could only be about 530 × 730 px, the sticker about 40% wide, and the logo's pink figure would sit directly above the pink key word.
+- Leaf swinging outward to the left: it collides with the logo.
+
+**References (`design-studio/references/library.md`), unchanged:**
+- Spotify Wrapped 2024: one type system on 9:16, the same rows on both frames.
+- Missing Type: one ownable gesture, the door.
+- Ruby Blooms: calm design for a health topic, with no medical icons and no people.
+- Series: piece 01's doors (`design/2026-W42-01/checks/sequence-rtl.png`).
 
 **Grid and type:**
 - 12 columns, 72 px outer margins, 24 px gutters, 8 px unit.
-- Rows on both frames:
-  - header: 272–384
-  - headline: from 432
-  - door apex: 736
-  - threshold: 1448
-  - foot line: 1480–1557
-- The door's jambs sit on the column-1 and column-12 edges (x 128 / 952); the threshold runs margin to margin.
-- Story UI kept clear: top 250 px and bottom 340 px, 72 px sides.
-- Cairo Bold 82 px for the headline. That is the largest size at which each copy line (` / `) still fits on one line in 936 px; I didn't re-break the copy.
-- 48 px for the label (Bold, navy on blue), the `small` line (Medium) and the closing line (Bold), so there are 2 sizes per frame (ratio 1.7).
-- One pink group per frame («للبيت؟» / «دزلنا رسالة واتساب.»), on navy only and never touching blue.
-- Pixel check: 99.2% of frame 1's pixels and 99.3% of frame 2's are exact palette colours; the rest is anti-aliasing.
+- Rows, fixed on both frames:
+  - label: 272–360 (frame 1 only)
+  - headline: from 392 (lines on a 96 / 136 px pitch)
+  - sub line: 648–720
+  - door: apex 776, springline 1056, threshold 1548
+  - logo: 1337–1554, left
+- Type sizes: label 48 Bold, navy on blue; headline 72 / 104 Bold; sub line 48 (Medium on frame 1, Bold on frame 2). That is 3 levels per frame. The widest line is 902 of the 936 px available.
+- One pink group per frame, on navy only.
+
+**Checks I ran on the final PNGs:**
+- Palette: 99.27% / 99.40% of pixels outside the logo box are exact palette colours; the rest is anti-aliasing.
+- Safe zones: all ink sits in x 72–1007, y 272–1554, so nothing is in the top 250 px or the bottom 340 px.
+- Pink: frame 1 x 112–400, y 521–616; frame 2 x 111–1002, y 520–619. The nearest blue is 273 px away (frame 1) and 161 px (frame 2).
+- Copy: every rendered string matches `## Copy` character for character, line breaks included (by script).
+- Fonts: Cairo 500 and 800 only, with letter-spacing 0.
+- Viewed at full size, at phone size (390 px), at 270 px and in greyscale.
 
 **Files** in `design/2026-W42-02/`:
 - `frame-01.png`, `frame-02.png`: **the files to post**, 1080×1920.
-- `frame-01-guide.png`, `frame-02-guide.png`: placement guides showing mock stickers and the Instagram UI bands. **Not for posting.**
-- `preview-sequence.png`: both frames as they will look with stickers, in swipe order.
-- Sources: `frame-01.html`, `frame-02.html`, `frame-0N-guide.html`, `story.css` and `build.mjs`. To change them, edit `build.mjs`, run `node build.mjs`, then `render.mjs still … --w 1080 --h 1920`.
-- `thumbs/`: the three compositions.
+- `frame-01-guide.png`, `frame-02-guide.png`: placement guides with mock stickers and the Instagram UI bands. **Not for posting.**
+- `preview-sequence.png`: both guides in swipe order (right to left).
+- `checks/r1-vs-r2-phone.png`: round 1 against round 2 at phone size, plus greyscale.
+- `checks/thumb-270-rtl.png`: both frames at 270 px.
+- `r1/`: the round-1 renders, kept for comparison.
+- Sources: `build.mjs` (all geometry in one place), `story.css`, and the HTML it writes. To change them, run `node build.mjs`, then `render.mjs still … --w 1080 --h 1920`.
+- `thumbs/`: round-1 compositions.
 
 **At posting (Yaqoob):**
-- **Frame 1:** add the Question sticker, centred on the screen's centre guide, about 60% of the screen width, inside the doorway above the threshold (see the guide). Use the white or blue variant, never pink.
-- **Frame 2:** add the link sticker, white variant, with the text «احجز بالواتساب» and the `[AT POSTING: wa.me link]`. Centre it in the lit doorway at the same height as frame 1's sticker.
+- **Frame 1:** add the Question sticker, white variant (never pink), shrunk to about 45% of the screen width. Centre it on the door, not on the screen, with its top near the top of the doorway and above the knob (see `frame-01-guide.png`).
+- **Frame 2:** add the link sticker, white variant, with «احجز بالواتساب» and the `[AT POSTING: wa.me link]`. Put it in the lit part of the doorway, to the right of the dark leaf, at about the height of frame 1's sticker (see `frame-02-guide.png`).
 
-**Open items for the design (not blocking the critic):**
-1. **Logo:** the slot is marked `[LOGO: official file needed]`, top left, 304×112, in the same place on both frames. The standard lockup has a navy wordmark, which disappears on navy. Yaqoob needs to send a reversed lockup (white wordmark), or approve a white plate behind it.
-2. **The Question sticker's own prompt line** isn't in the copy. If nothing is typed, Instagram shows its default prompt. The Copywriter should supply the wording, or say that the sticker repeats «سؤال». I haven't written any Arabic.
+**Open items (for others; not blocking the critic):**
+1. **Question sticker prompt (Copywriter):** its wording isn't in the copy. The guide shows a Latin placeholder at real size. I haven't written any Arabic.
+2. **Hold time (Copywriter, Yaqoob):** if Instagram holds each photo story for about 5 s, frame 1 (17 words plus the prompt) needs about 8 s at the house reading rate. Confirm on a device, and cut the copy if needed.
+3. **Stale logo notes (Copywriter, Director):** the "Needs Yaqoob" line at the top of this file and the copy hand-off below still say the logo file is needed. Decision #66 supersedes that. I haven't edited their lines.
+
+Round 1 (09:55, before the logo files arrived): a 824×712 round-headed archway that held the sticker, with a dashed `[LOGO: official file needed]` slot top-left. Scored 6.75 / REVISE.
 
 Hand-off from the copy (facts and policy only; layout is the Designer's):
 

@@ -123,74 +123,87 @@ Facts, each against its source:
 
 ## Design
 
-**Round 1** · Designer, 2026-10-18 · Design Critic: **not yet scored** (round 1 goes to the critic next).
+**Round 2** · Designer, 2026-10-18 · Design Critic: **round 2 not yet scored**. Round 1 was REVISE, average 6.8, lowest 5.5 (Rand): `design-review/2026-W42-03-r1.md`. Round-1 files are kept in `design/2026-W42-03/r1/`.
 
-**The one idea:** the whole home test happens at your own front door. The viewer goes from "a lab test means a trip and a queue" to "it all came to my door, and someone explained it", feeling relief, and shares it with the family group.
+**The one idea (unchanged):** the whole home test happens at your own front door. The viewer goes from "a lab test means a trip and a queue" to "it all came to my door, and someone explained it", feeling relief, and shares it with the family group.
 
-**Device:** one round-headed front door, on screen from 0.0 s to the end. It's the same doorway as piece 02, so the pack shares one symbol.
-- 0–7.7 s: the door is closed (navy leaf, ring knocker). Your message (F2, an outgoing bubble) and the appointment (F3, a calendar whose tick draws in) appear on it.
-- 7.8–8.2 s, under «ونجيك لحد البيت.»: the door opens. It's hinged on the left, so the light (blue) appears right to left, in reading direction. This is the video's turn.
-- F5: the result (a file bubble on the incoming side) drops into the lit doorway. F6: it moves up and a speech balloon rises under it (a doctor explains it). F7 holds that picture under the CTA.
-- Loop: the video restarts on the closed door.
-
-**References learned from (`design-studio/references/library.md`):**
-- **Spotify Wrapped 2024:** type as the main element of a 9:16 system with fixed rows, so every card belongs to the same piece.
-- **Don't Blink (type and rhythm):** time tells the story. The payoff (F6) gets the slowest entrance (0.4 s) and a long hold. Everything stays flat 2D, with one exception: the door swing.
+**References learned from** (`design-studio/references/library.md`):
+- **Spotify Wrapped 2024:** type is the main graphic element of the 9:16 frame. This round, the pink key is the largest thing on every card.
+- **Don't Blink (type and rhythm):** restraint makes the one move into depth land. The door swing now has its own beat, after the line has settled.
 - **Hibrayer (Arabic kinetic type):** each pink word moves whole, with a motion taken from its meaning:
   - «رسالة واتساب،» slides in right to left, like a sent message.
-  - «الموعد.» doesn't move («نثبّت»: fixed) while the tick draws.
-  - «لحد البيت.» drops toward the door.
+  - «الموعد.» stays fixed.
+  - «لحد البيت.» comes down toward the door.
   - «بالواتساب.» rises, like an incoming message.
-  - «يشرحها إلك.» has the slowest fade.
-- **Ruby Blooms:** keep surprise low for a blood-test topic. A gradual reveal, no medical icons, no people.
+  - «يشرحها إلك.» has the slowest entrance.
+- **The week's door and path:** `design/2026-W42-01/door.mjs` (piece 02's round-2 door as a function) and piece 01's dotted route. Pieces 01, 02 and 03 now share one doorway and one path.
 
-**Three thumbnails** (`thumbs/contact-sheet.png`, right to left):
-- (A) Door stage: chosen. The door completes «بالبيت» instead of repeating it, and the door opening gives the story a turn.
-- (B) Chat thread: rejected. It reads as a fake app screen, and nothing says "home".
-- (C) Type poster with a 5-dot route: rejected. The progress dots are a UI cliché, and nothing turns.
+**The critic's top 3 fixes, in order:**
+1. **Logo (gates 7 and 5).** The dashed placeholder is gone. In its place is `design-studio/assets/brand/tabeebx-logo-stacked-on-navy.png` (decision #66), unaltered.
+   - It sits in a header zone 152 px tall: ink x 182–333, y 236–388, 151 px wide (under the 300 px cap). The wordmark is about 26 px tall and reads at phone size.
+   - It enters with F3 at 4.9 s and stays to the end, so it signs the end card.
+   - No English dev text is left on screen. The only Latin is the TabeebX wordmark.
+2. **The turn lands (F4, 7.7–10.3 s).** «ونجيك لحد البيت.» enters at 7.7–8.0 s and settles. Then come three beats, while the line holds still:
+   - 8.15–8.55 s: the route fills solid right to left, up to the threshold.
+   - 8.6–9.1 s: the door swings open, as a beat of its own. The leaf turns on its left hinge, so its free edge travels right to left, its foot lifts off the floor line and its knob rides with it. It settles as the week's open door: the leaf edge-on as a navy panel, and the light inside with a navy margin. It reads as an opening, not a slab.
+   - 9.1–9.4 s: a map pin lands on the threshold, in the light, and stays to the end. Something arrives at the door, and no person is shown.
+   - F6 «ودكتور يشرحها إلك.» now holds still for 2.7 s, the longest of the six cards (F1 and F3 hold 2.3 s). F4 gained 0.2 s and F6 gained 0.6 s, so the video is 20.0 s, decision #61's cap.
+3. **Type as the strong element.** The key is now 140 px Bold pink against a 54 px Medium white lead, a 2.59:1 ratio (round 1 was 104 against 64, 1.63:1). Long keys break onto two lines. 140 px is the largest size at which the widest line, «دزها لكروب» (ink 702 px), fits the 720 px band.
 
-**Grid, type and colour:**
-- Safe band 720×1200 (x 180–900, y 220–1420). Measured content bounds on every frame: x 180–900, y 236–1385. Nothing sits in the bottom 500 px (caption and UI).
-- Rows:
-  - header 236–316: series tag on the right, logo slot on the left
-  - lead line: from 384
-  - pink key line: from 476 (pink always lands in the same place)
-  - line under the key (F1, F7): from 611
-  - door apex: 780; threshold: 1380
-- Cairo only, with no letter-spacing, and words and lines move whole:
-  - key: 104 px Bold, pink
-  - lead: 64 px Medium, white (ratio 1.63)
-  - series tag: 44 px Bold, navy on blue
-  - F7: the CTA at 84 px Bold (the widest that fits its line in 720 px) and the sign-off at 52 px Medium
-- One pink group per frame (the starred words), always on navy and never touching blue.
-- Pixel check: 99.3–99.6% of the pixels on settled frames are exact palette colours; the rest is anti-aliasing (95.5–98.6% on fade frames).
-- **Line breaks: Copywriter to confirm.** The copy marks a break only in frame 1. On frames 2–6 the line breaks exactly where the pink group starts: the white lead sits above and the pink key below. I did this because the copy's own motion notes move the pink group separately, and the full line can't fit 720 px at ≥ 72 px. No words changed. A script checked that each lead + key rejoins to the copy line exactly.
+**Also fixed from the review:**
+- **Pictograms off the door:** they now stand on the route, to the right of the door, one at a time: the message (F2), the calendar (F3), the result (F5), then the result with the balloon (F6).
+- **End card:** no chat bubbles. It holds the open door with the pin, the logo and the CTA. It also stays on the piece's two sizes and rows: the CTA at key size on the key rows, and the sign-off at lead size under it, mirroring the hook card. There are now three text sizes (key, lead, label), down from five.
+- **One shared axis:** the door's threshold starts at the band's left edge (x 182) and the route ends at its right edge (x 900), so one ground line spans the band. The type hangs from the right edge (x 896).
+- **Calendar tick:** it now uses `pathLength="1"` and stays hidden until it draws, so there's no stray dot at 4.9–5.06 s.
 
-**Timing:**
-- Exactly the copy's timeline, held in one table in `build.mjs`.
-- Checked in the browser: every text card is fully opaque and still for its whole hold, and only one card shows at a time.
-- 19.2 s, 30 fps, 576 frames, silent H.264.
+**Line breaks: Copywriter to confirm.** No word changed: `checks/verify.mjs` compares every on-screen string with the Copy section byte for byte. The new breaks, needed at this size, are:
+- «تحليل / بالبيت؟» (hook)
+- «رسالة / واتساب،» (F2)
+- «يشرحها / إلك.» (F6)
+- «دزها لكروب / العائلة.» (F7)
 
-**Departures from the copy's motion notes** (motion is the Designer's call; no words changed):
-- Frame 4 has no dashed path to a door. Piece 01 isn't designed yet, so there was no path to match. The door opening is the arrival instead. If piece 01 picks up the doorway, the campaign reads as one system.
-- The chat shapes are plain: an outlined bubble (F2) and a file bubble with nothing legible on it (F5). There's no WhatsApp logo or green.
-- F6's speech balloon stands for "explains". It isn't meant to show how (call, message or app isn't recorded). **Guard:** please check it reads that way.
+The round-1 lead/key splits on F2–F6 stay as they were.
+
+**Timing.** Every hold meets the copy's minimum, and none was shortened.
+
+| Frame | Window | Still hold | Minimum |
+|---|---|---|---|
+| 1 hook | 0.0–2.5 s | 2.3 s | 2.3 s |
+| 2 | 2.5–4.9 s | 1.9 s | 1.85 s |
+| 3 (with the series tag) | 4.9–7.7 s | 2.3 s | 2.3 s |
+| 4 (the turn) | 7.7–10.3 s | 2.1 s | 1.85 s |
+| 5 | 10.3–12.7 s | 1.9 s | 1.85 s |
+| 6 (the payoff) | 12.7–16.0 s | **2.7 s, the longest** | 1.85 s |
+| 7 end card | 16.0–20.0 s | 3.7 s | 3.65 s |
+
+F4–F7 now start and end later than the Copy section's timestamps say. The Copywriter may want to update the copy-check table to match.
+
+**Checks** (`checks/verify.mjs`, all pass):
+- The words match byte for byte (10 strings).
+- Each card is fully opaque and still for its whole hold, with no other card showing.
+- F6 has the longest hold, and the video runs 20.0 s.
+- On settled frames, 99.2–99.6 % of pixels are exact palette colours.
+- Content bounds are x 181–899, y 236–1409, inside the 720×1200 band.
+- Pink is never closer than 157 px to blue, the logo excluded (decision #39).
+- There's one pink group per frame, and the hook is fully on screen at 0.0 s.
 
 **Files** in `design/2026-W42-03/`:
-- `video.mp4`: **the file to post**, one master for TikTok and the Reel. 1080×1920, 30 fps, 19.2 s, silent; music can be added in the app.
-- `frames/`: 12 stills for the critic, at:
-  - 0.0 (hook), 2.4 (hook leaving), 2.7 (F2 entering), 2.8, 5.4
-  - 8.0 (door mid-swing), 8.2, 10.4, 12.7 (F6 entering), 12.9, 15.5, 19.1 (end)
-- `storyboard.png`: the seven settled cards in one strip, right to left.
-- `build.mjs` → `video.html`: the source. `node build.mjs` regenerates the HTML, then render with `render.mjs video … --dur 19.2`.
-- `thumbs/`: the three compositions.
+- `video.mp4`: **the file to post**, one master for TikTok and the Reel. 1080×1920, 30 fps, 600 frames, 20.0 s, H.264, silent; music can be added in the app.
+- `frames/`: 18 stills for the critic, at:
+  - 0.0, 2.4, 2.7, 3.5, 5.1 (tick drawing), 6.5
+  - 8.0, 8.4 (route filling), 8.8 (mid-swing), 9.2 (pin landing), 9.6
+  - 10.5, 11.5, 12.9, 14.5, 16.1, 18.0, 19.9
+- `storyboard.png`: the seven settled cards, right to left.
+- `build.mjs` → `video.html`: the source. Run `node build.mjs`, then render with `render.mjs video video.html video.mp4 --w 1080 --h 1920 --fps 30 --dur 20`.
+- `checks/verify.mjs`: the checks above. It rebuilds `video.html` first.
+- `r1/`: the round-1 build, video, frames and storyboard, for comparison.
+- `thumbs/`: the round-1 thumbnails.
 
-**Logo:** a dashed `[LOGO: official file needed]` slot sits top-left from 4.9 s to the end. It isn't redrawn; it waits for Yaqoob's official file. This doesn't block review.
+**How the door is built:** the closed and open states are `door.mjs`'s own output, embedded in `video.html` at build time, so the posted video doesn't change if `door.mjs` does. If `door.mjs` changes, re-run `node build.mjs` and re-render. Only the 0.5 s swing between the two states is drawn in `build.mjs`, from the same construction constants, so a change to the door's construction needs the swing updated too.
 
-**My own risk list for the critic** (not a score):
-- F4 holds an empty lit doorway for about 1.7 s. In motion it reads as an open door; as a still it's the plainest frame.
-- The type is set, not drawn. The 720 px band caps the key at 104 px, so the Scher lens may want more scale.
-- The two white bubbles in F5–F7 are generic chat shapes.
+**For Guard:** the map pin and the speech balloon are generic symbols. The pin says "at your door", not who comes. The balloon says "explains", not how (call, message or app isn't recorded). There are no people, no clinical imagery, no WhatsApp logo or green, and nothing legible on the result.
+
+**For the "Needs Yaqoob" line at the top:** the official logo is now placed, so the logo item there is resolved.
 
 Hand-off from the copy (facts and policy only; motion and layout are the Designer's):
 
