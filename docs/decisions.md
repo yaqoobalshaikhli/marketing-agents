@@ -74,7 +74,7 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
 - **Colour master and account skill.** The brand guide's HEX and RGB disagree slightly (#51). Which is the master? Your account skill `tabeebx-context` matches the guide's RGB except pink (it says 238,83,107; the guide says 238,53,107).
-- **AI label:** Yaqoob said on 2026-10-17 not to label AI images. Pending: which platform rules (TikTok, Meta) still require a label; research running.
+- **AI label (#58 pending):** Yaqoob said on 2026-10-17 not to label AI images. Research (`docs/research/platform-policy-2026-10.md`) found that TikTok still requires a label on realistic AI people and scenes (organic and ads), and Meta requires one on photoreal AI video and realistic AI voice-overs. Meta still images and illustrated or motion work need none. Which way do we go?
 - **Staff + family label:** the who-is-on-screen label for a shoot with staff and a consenting family still needs approved Arabic wording.
 - **Week 42 brief.** Q1–Q5 and Q7 are answered (#38, #52–55, #31). Open: Q6 (review day), what unticked Q2 (a) and (d) mean, Q2 (e) how lab results reach the family.
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

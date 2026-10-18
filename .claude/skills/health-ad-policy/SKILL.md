@@ -1,6 +1,6 @@
 ---
 name: health-ad-policy
-description: Policy and safety checklist for TabeebX health marketing on Meta (Facebook/Instagram) and TikTok, plus TabeebX's own non-negotiables (no fabricated testimonials, labeled AI people, no cure claims). Use before any piece goes to Yaqoob for review, before any ad is drafted, and whenever copy mentions symptoms, conditions, doctors or results.
+description: Policy and safety checklist for TabeebX health marketing on Meta (Facebook/Instagram) and TikTok, plus TabeebX's own non-negotiables (no fabricated testimonials, no AI people passed off as real staff or patients, no cure claims; platform AI-label rules). Use before any piece goes to Yaqoob for review, before any ad is drafted, and whenever copy mentions symptoms, conditions, doctors or results.
 ---
 
 # Health ad policy: TabeebX checklist
@@ -12,7 +12,7 @@ Platforms reject health ads for wording, not intent, and a rejected ad can restr
 These hold even when a platform would allow more.
 
 1. **No fabricated testimonials, reviews, patient stories or "results" presented as real.** A testimonial needs a real person who agreed in writing to its use, recorded in `data/consents.csv`. Illustrative scenarios must say so on screen.
-2. **Any AI-generated image or video showing people is labeled as AI on the piece** (visual styles B and C). The exact Arabic label wording is still to be approved by Yaqoob; use `[PENDING: AI label wording]` until then. An AI clinician never gets a real doctor's name, face, licence number or credentials.
+2. **AI labels:** TabeebX's own rule (label every AI image with people) was dropped by Yaqoob on 2026-10-17. Platform rules still apply (table rows marked *AI*, and `docs/research/platform-policy-2026-10.md`); how we handle them is pending decision #58. Never, labelled or not: an AI person presented as a real TabeebX doctor, nurse, patient or customer (CLAUDE.md rule 3).
 2a. **Real people on camera need consent.** Everyone filmed (staff, family, patient) has a row in `data/consents.csv` covering the use, organic or paid. The signed forms stay offline, never in this repo; the CSV holds only a reference. The on-screen label must match who appears: «الأشخاص من فريق TabeebX» is approved for staff only, and staff + family needs a label Yaqoob approves.
 3. **No cure claims and no guaranteed outcomes** (the checker blocks «يشفي», «علاج نهائي», «مضمون»).
 4. **No fear hooks.** Inform and invite.
@@ -29,6 +29,8 @@ These hold even when a platform would allow more.
 | **Health & wellness**: no negative self-perception to sell health products; no cure claims for incurable diseases (symptom management is allowed) | Positive framing; describe what the visit includes, not outcomes | Same | 75% |
 | Some imagery is restricted, e.g. graphic medical images, people in hospital beds; the source also lists blood tests and X-rays | Home lab visits: show the nurse arriving, the kit, the result arriving on the phone, not needles in arms or blood tubes. **Verify** before using any lab imagery in ads | Same | 60% |
 | Ad audiences and custom conversions must not be named after conditions | Name audiences by service or area ("home-lab-mansour"), never "diabetics" | Same | 70% |
+| *AI*: a label is required for organic photorealistic AI **video** and realistic AI **voice-over**; not for still images or cartoon-style video | Motion graphics and stills need no label on Meta. A reel with a realistic AI voice needs Meta's AI label | [Meta Help Centre](https://www.meta.com/en-gb/help/artificial-intelligence/1783222608822690/), research 2026-10-17 | 88% |
+| **Insurance ads (Health 360)**: 18+ targeting; legally required disclosures; no direct request for personal or financial info; lead forms never ask health or current-insurance questions; Meta may ask for verification and proof of authorization. No special ad category for Iraq-only targeting | Geo-lock to Iraq. Lead forms: name, phone, governorate. Copy describes the plan, not the viewer's age, family or finances | `docs/research/platform-policy-2026-10.md` rows 12–17 | 80% |
 | Instagram's Terms ban automated collection of Instagram data without permission, logged in or not | Agents never scrape Instagram or facebook.com, including the Ad Library website. Use official APIs and connectors only | [Instagram Terms of Use](https://help.instagram.com/581066165581870) | 93% |
 
 ## TikTok
@@ -37,6 +39,9 @@ These hold even when a platform would allow more.
 |---|---|---|---|
 | Healthcare ads: Iraq sits in a market group where medical institutions "may be allowed" with local regulator approval and 18+ targeting; "medical services provided online or through apps that include remote diagnosis and remote treatment" are listed as not allowed | **Do not run paid TikTok ads for teleconsultation.** Home-visit ads might be possible with Ministry of Health licence proof; check before spending | [TikTok Healthcare & Pharmaceuticals ad policy](https://ads.tiktok.com/help/article/tiktok-ads-policy-healthcare-pharmaceuticals) (not double-checked) | 55% |
 | Organic posts are not ads | Organic TikTok content is fine within community guidelines; the paid restriction does not apply | General platform structure | 80% |
+| *AI*: realistic-looking AI people or scenes must be labelled, in organic posts (TikTok's AIGC label or a clear caption/sticker) and in ads (mandatory disclaimer). Illustrated or cartoon styles are exempt. Unlabelled posts may be removed or restricted; repeat cases risk the account | Photoreal Canva/AI images on TikTok carry the label. Motion graphics don't | `docs/research/platform-policy-2026-10.md` rows 1–4 | 75–90% |
+| Ads must not show false endorsement by, or impersonate, health professionals | No AI "doctor" endorsing or advising in a TikTok ad | Row 5 | 60% |
+| Insurance ads in Iraq: **unconfirmed** | No TikTok Health 360 ads until TikTok's Iraq representative confirms in writing | Row 18 | 25–60% |
 
 ## Guard's pass/fail checklist
 
@@ -45,7 +50,7 @@ For each piece, write `PASS`, or `FAIL: <rule>` with the fix:
 - [ ] `lint-copy.mjs` exits 0 (no errors); every warning is fixed or justified in one line.
 - [ ] No implied personal health attribute, in copy or in the visual's text.
 - [ ] No cure claim, guarantee, superlative without proof, or price.
-- [ ] Any person shown is either real and consented (its `consent_id` is in the piece's `consents:` and in `data/consents.csv`, with a scope that covers this use) or labeled AI.
+- [ ] Any person shown is either real and consented (its `consent_id` is in the piece's `consents:` and in `data/consents.csv`, with a scope that covers this use) or AI-generated and never presented as real TabeebX staff, patients or customers. Platform AI labels follow decision #58.
 - [ ] The who-is-on-screen label matches who actually appears (style D).
 - [ ] No testimonial or review unless a consent record covers it.
 - [ ] Emergency symptoms → emergency-services line present.
