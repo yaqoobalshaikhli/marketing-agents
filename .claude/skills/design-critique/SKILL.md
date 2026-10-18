@@ -22,7 +22,7 @@ The Design Critic scores the Designer's **rendered** work: PNGs, and frames plus
 4. Text inside the safe zones for the format (`design-studio` → Layout system).
 5. Minimum sizes: body ≥ 46 px, labels ≥ 40 px on a 1080 px canvas.
 6. Arabic text in the design matches the approved copy exactly (spelling, dialect, Eastern digits).
-7. Logo: the official file, unaltered. A marked `[LOGO: …]` slot is allowed only while the official file is missing, with a note.
+7. Logo: one of the official files in `design-studio/assets/brand/`, unaltered: the white-wordmark version on navy, the original on light backgrounds. A placeholder logo slot now fails, because the official files exist since 2026-10-18.
 8. Video: the hook is readable at 0.0 s; every text card is held long enough to read (0.45 s per word + 0.5 s, minimum 1.5 s); the duration matches the brief.
 9. No AI person presented as real TabeebX staff, patients or customers. Platform AI labels follow decision #58.
 

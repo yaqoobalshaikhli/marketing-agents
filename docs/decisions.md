@@ -76,13 +76,14 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 63 | **Name-and-photo promise:** Yaqoob says TabeebX never made it. The line is in the trust campaign's `09-sun04-promise-reel` job (`approved-lines.md`), so whether it was posted is unconfirmed; it stays blocked. **New, in progress:** contracting many doctors as service providers, and clinic-appointment booking in the app alongside home services | Yaqoob, in his words |
 | 64 | **W42 pack review: Monday 19 Oct** (the earlier slots in the brief) | Yaqoob, multiple-choice answer |
 | 65 | **Design team built:** `designer` and `design-critic` agents (Opus), `design-studio` (code-rendered HTML → PNG/MP4 with vendored Cairo) and `design-critique` (10 lenses) skills. The Creative Producer is removed. The fact-checks on the designer research run afterwards | Yaqoob chose "build now, check after" |
+| 66 | **Official logo received** (stacked lockup, 1080 px JPG on white). **On navy backgrounds the "TabeebX" wordmark is white** instead of navy; the figure keeps its pink and blue. Transparent versions are in `design-studio/assets/brand/` | Yaqoob, in his words |
 
 ## Open questions for Yaqoob
 
 - **Facebook network access:** facebook.com is now reachable from this environment (it was blocked earlier on 2026-10-17). Rule 5 still holds: the agents never browse Facebook. If you opened it only for this lookup, you can close it again.
 - **Competitor Instagram/TikTok handles.** Saleem, Hayat, Healder and Sehty have Instagram handles. The 5 labs and دليل صحتي have none, and no competitor has a TikTok handle; Coupler and Metricool need handles.
 - **Account skill (#62):** update your Claude account skill `tabeebx-context` to RGB 24,25,67 / 238,57,107 / 27,156,206. Only you can edit it.
-- **Logo files:** send the official logo (SVG or high-resolution PNG, the colour version plus any approved white or one-colour version). The Designer won't use a redrawn logo. The only brand image in the EMR motion system, `figure-white.png`, is a different mark from the brand-guide logo.
+- **Logo, optional upgrade:** an SVG, or a larger transparent PNG, of the stacked and horizontal lockups would allow sizes above about 300 px and the horizontal layout.
 - **Clinic booking in the app (#63):** is it live now, or coming soon? Posts can mention it only once it's live.
 - **Staff + family label:** the who-is-on-screen label for a shoot with staff and a consenting family still needs approved Arabic wording.
 - **Voice examples.** What do «يعلّك» and «فتشي عامية وبروفشنل» in the brand voice notes mean? Keep them or remove them?

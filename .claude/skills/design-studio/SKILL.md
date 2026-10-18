@@ -29,7 +29,12 @@ node $S frames page.html frames/  --at 0,1,3,6,10,15 --w 1080 --h 1920   # still
 - Animate with CSS `@keyframes` and transitions; the renderer pauses and seeks every animation, so frames are exact. For script-driven motion, define `window.__seek(ms)`.
 - Link fonts by absolute path, or relative to the HTML file: `<link rel="stylesheet" href="…/design-studio/assets/fonts/fonts.css">`. Cairo is vendored (SIL OFL, `assets/fonts/OFL.txt`), so rendering needs no network.
 - **Videos are silent.** Music or voice is added in the app at posting. Burn in Arabic captions for every key line, because most people watch with the sound off.
-- **Logo:** use only the official file. `assets/brand/` holds no logo yet: until Yaqoob sends the official files, leave a marked logo slot (`[LOGO: official file needed]`) and say so in the piece. Never redraw, trace or recolour the logo.
+- **Logo** (official file from Yaqoob, 2026-10-18; stacked lockup), in `assets/brand/`:
+  - `tabeebx-logo-stacked-on-navy.png`: transparent, with the **white wordmark Yaqoob approved for navy backgrounds** (decision #66). Use this on navy.
+  - `tabeebx-logo-stacked.png`: transparent, original navy wordmark. Use it on white or light backgrounds.
+  - `tabeebx-logo-stacked-original.jpg`: the file as sent (1080 px JPG on white).
+
+  Use these files as they are: never redraw, re-colour further, stretch, crop off the wordmark or add effects. The source is a 1080 px JPG, so keep the logo at most about 300 px wide on a 1080 canvas. Ask Yaqoob for an SVG if a larger use comes up. There is no horizontal-lockup file yet.
 
 Output goes in `content/<YYYY>-W<ww>/design/<piece-id>/`: the HTML sources, `slide-01.png`…, or `video.mp4` plus `frames/`.
 

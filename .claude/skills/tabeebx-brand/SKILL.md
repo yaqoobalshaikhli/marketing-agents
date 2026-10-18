@@ -51,7 +51,7 @@ Ads from these accounts are ours. Competitor intel logs them with `on_watchlist=
 | Blue (secondary) | `#1B9CCE` — RGB 27,156,206. Supporting graphics, icons |
 | White | `#FFFEFF` — clean space; use generously |
 | Font | **Cairo** (Bold for headlines, Medium for body) — both Arabic and Latin |
-| Logo | Abstract human figure with raised arms (pink head/torso + blue arms/base) above the "TabeebX" wordmark in navy. Never recolor, stretch, or place on clashing backgrounds |
+| Logo | Abstract human figure with raised arms (pink head/torso + blue arms/base) above the "TabeebX" wordmark in navy. Never recolor, stretch, or place on clashing backgrounds. **Exception approved by Yaqoob 2026-10-18:** on navy backgrounds the wordmark is white. Files: `.claude/skills/design-studio/assets/brand/` |
 
 **Official brand guide** (image Yaqoob sent on 2026-10-17). Values exactly as printed:
 
