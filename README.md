@@ -10,7 +10,7 @@ TabeebX's in-house marketing team, built as Claude Code agents ("mods"), each pi
 | `director` | Opus | Weekly brief: themes, 10+ pieces, visual-style allocation; assembles the Thursday review | Wednesday, Thursday |
 | `copywriter` | Opus (provisional) | Baghdadi-dialect copy for posts, reels, stories, captions, WhatsApp | Wednesday |
 | `designer` | Opus | Finished, rendered designs (PNG, MP4) in code-rendered HTML, Claude Design, Canva, Adobe | Wednesday |
-| `design-critic` | Opus | Scores each design on 10 lenses from 7 world and 3 Arabic designers' published principles; pass at avg ≥ 8, none < 6 | Wednesday |
+| `design-critic` | Sonnet | Scores each design on 10 lenses from 7 world and 3 Arabic designers' published principles; pass at avg ≥ 8, none < 6 | Wednesday |
 | `brand-policy-guard` | Opus | Runs the copy checker and health-ad checklist; PASS/FAIL with fixes | Before review |
 | `analyst` | Sonnet | Weekly results, the 4-style test, WhatsApp bookings | End of week |
 | `ads-manager` | Sonnet | Paid Meta tests after approval; creates everything **paused** | From week 4 |

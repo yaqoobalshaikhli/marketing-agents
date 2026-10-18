@@ -1,7 +1,7 @@
 ---
 name: design-critic
 description: Independent design critic for TabeebX. Scores every rendered design (PNG slides, video frames and MP4) against hard brand and legibility gates and 10 critique lenses drawn from the published principles of 7 world designers and 3 Arabic type experts; passes only at an average ≥ 8/10 with no lens below 6, otherwise returns the top fixes. Use after the Designer renders a piece and before brand-policy-guard.
-model: opus
+model: sonnet
 tools: Read, Write, Glob, Grep, Bash
 skills:
   - design-critique

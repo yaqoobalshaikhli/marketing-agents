@@ -77,6 +77,7 @@ Newest at the bottom. Every row is something Yaqoob decided, or a fact the decis
 | 64 | **W42 pack review: Monday 19 Oct** (the earlier slots in the brief) | Yaqoob, multiple-choice answer |
 | 65 | **Design team built:** `designer` and `design-critic` agents (Opus), `design-studio` (code-rendered HTML → PNG/MP4 with vendored Cairo) and `design-critique` (10 lenses) skills. The Creative Producer is removed. The fact-checks on the designer research run afterwards | Yaqoob chose "build now, check after" |
 | 66 | **Official logo received** (stacked lockup, 1080 px JPG on white). **On navy backgrounds the "TabeebX" wordmark is white** instead of navy; the figure keeps its pink and blue. Transparent versions are in `design-studio/assets/brand/` | Yaqoob, in his words |
+| 67 | **The Design Critic runs on Sonnet** (was Opus) to save Pro usage; **the bar stays: average ≥ 8/10, no lens below 6**. In W42, round-1 scores came from the Opus critic and later rounds from Sonnet | Yaqoob, in his words |
 
 ## Open questions for Yaqoob
 

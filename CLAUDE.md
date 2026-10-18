@@ -10,7 +10,7 @@ This repo is TabeebX's in-house marketing team, built as Claude Code agents and 
 | competitor-intel | sonnet | Tuesday competitor run (Meta Ad Library, Coupler/Metricool) |
 | copywriter | opus (provisional until the blind test) | Iraqi-dialect consumer copy |
 | designer | opus | Finished, rendered designs (PNG, MP4): carousels, stories, 15–20 s animations |
-| design-critic | opus | Scores every design on 10 lenses; passes at avg ≥ 8, none < 6 |
+| design-critic | sonnet | Scores every design on 10 lenses; passes at avg ≥ 8, none < 6 |
 | brand-policy-guard | opus | Quality gate on every piece and ad |
 | ads-manager | sonnet | Paid Meta tests after approval; creates ads paused |
 | ads-pulse | haiku | Daily read-only ad check while paid is live |
