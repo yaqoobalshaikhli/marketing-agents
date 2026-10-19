@@ -17,6 +17,17 @@
 //  3b. The door: piece 01's round 2 drew the week's door (door.mjs) into every band, so slide 7's outlined door now has
 //     its leaf line and knob. The check below stops if slide 7's band no longer carries that closed door.
 //  Round 1's three thumbnails stay in thumbs/ as the record of the choice; they are no longer rebuilt here.
+//
+// Round 3 (Design Critic r2: REVISE 7.45, lowest 6.5 Glaser). What changed here:
+//  2. Poster scale, one clear type step: piece 01's round 3 set the cover hook 136 and the sub-line 48 (the pill
+//     label's size) in carousel.css; this image follows (whatsapp.css), and the checks below still lock size, weight
+//     and line-height to piece 01. Header, logo and hook keep the 112 px shift. The sub-line moves 128 (16 more):
+//     the square is 270 px shorter than the cover, so the cover's 96 px sub-line→apex gap can't be kept, and at the
+//     cover's spacing the sub-line would sit as close to the band as to the hook (ink 67 / 60). At 592 it groups
+//     with the hook (ink gap 44) and clears the arch apex by 83.
+//     The band now carries piece 01's round-3 lit bubble (1.15×, grown about its ground point; top 912 → 768 here).
+//  1, 3. The Copywriter's (cut the `ask` line; WhatsApp bold on the `cta` line). Not done by the Designer. The phone
+//     check shows them as a labelled proposal and renders WhatsApp *bold* as bold, so it follows the copy once changed.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -47,15 +58,18 @@ const rule = (css, sel) => {
 };
 const css01 = readFileSync(path.join(p01, 'carousel.css'), 'utf8');
 const css04 = readFileSync(path.join(here, 'whatsapp.css'), 'utf8');
-const HEADER_SHIFT = 112;   // piece 01's header row 184 → 72 (14 units); hook 344 → 232, sub 680 → 568
+// Vertical moves from piece 01's cover into the square, all whole units: header row 184 → 72 (14 units), so the logo,
+// pill and hook keep the cover's 48 px header→hook gap; the sub-line moves 16 px more (16 units: 720 → 592), so it
+// groups with the hook in the shorter square (see the round-3 note above).
+const SHIFT_FROM_01 = { '.logo': 112, '.series': 112, '.hook': 112, '.sub': 128 };
 for (const [sel, props] of [['.hook', ['font-weight', 'font-size', 'line-height']], ['.sub', ['font-weight', 'font-size', 'line-height']],
   ['.accent', ['color', 'font-weight']], ['.series', ['font-weight', 'font-size', 'height', 'right']], ['.logo', ['left', 'width']]]) {
   const a = rule(css01, sel), b = rule(css04, sel);
   for (const p of props) if (a[p] !== b[p]) fail(`${sel} ${p} differs: piece 01 has ${a[p]}, this image ${b[p]}`);
 }
-for (const sel of ['.logo', '.series', '.hook', '.sub']) {
+for (const [sel, shift] of Object.entries(SHIFT_FROM_01)) {
   const t01 = parseFloat(rule(css01, sel).top), t04 = parseFloat(rule(css04, sel).top);
-  if (t01 - t04 !== HEADER_SHIFT) fail(`${sel} top is ${t04}, expected piece 01's ${t01} − ${HEADER_SHIFT}`);
+  if (t01 - t04 !== shift) fail(`${sel} top is ${t04}, expected piece 01's ${t01} − ${shift}`);
 }
 
 // ---- route band: piece 01's slide 7 (start state), moved into the square ---------------------------
@@ -100,10 +114,15 @@ const copy = md.split('\n## Copy')[1].split('\n## ')[0];
 const paras = copy.split(/^### /m).slice(1).map((f) =>
   f.split('\n').map((l) => l.match(/^([a-z]+): (.+)$/)).filter(Boolean).map((x) => ({ key: x[1], text: x[2] })));
 if (paras.length !== 5) fail(`expected 5 paragraphs in piece 04's copy, found ${paras.length}`);
-if (!paras[0].some((l) => l.key === 'ask')) console.warn('note: piece 04 has no `ask` line any more; the right phone equals the left');
+if (!paras[0].some((l) => l.key === 'ask')) console.warn('note: piece 04 has no `ask` line any more (critic fix 1 applied)');
+if (paras.flat().some((l) => l.key === 'cta' && /^\*.*\*$/.test(l.text))) console.warn('note: the `cta` line is already bold (critic fix 3 applied)');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const msg = (drop = []) => paras.map((p) => p.filter((l) => !drop.includes(l.key)))
-  .filter((p) => p.length).map((p) => `<p>${p.map((l) => esc(l.text)).join('<br>')}</p>`).join('\n');
+// WhatsApp formatting: *text* shows as bold on the phone, so the mock shows it bold too.
+const wa = (s) => esc(s).replace(/\*([^*\n]+)\*/g, '<b>$1</b>');
+const msg = (drop = [], bold = []) => paras.map((p) => p.filter((l) => !drop.includes(l.key))
+  .map((l) => (bold.includes(l.key) && !/^\*.*\*$/.test(l.text) ? { ...l, text: `*${l.text}*` } : l)))
+  .filter((p) => p.length).map((p) => `<p>${p.map((l) => wa(l.text)).join('<br>')}</p>`).join('\n');
+const words = (html) => html.replace(/<[^>]+>/g, ' ').split(/\s+/).filter((w) => /[\u0600-\u06FFA-Za-z]/.test(w)).length;
 
 const phone = (body, label) => `<section>
   <div class="label">${label}</div>
@@ -134,12 +153,13 @@ writeFileSync(path.join(here, 'checks/phone-preview.html'), `<!doctype html>
   .bubble img { width: 784px; aspect-ratio: 1 / 1; display: block; border-radius: 18px; }
   .text  { direction: rtl; text-align: right; font-size: 44px; line-height: 1.45; color: #111; font-weight: 500; padding: 12px 24px 20px; }
   .text p { margin: 0 0 1.45em; } .text p:last-child { margin: 0; }
+  .text b { font-weight: 800; }
   .input { position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: #F4F4F4; }
   .field { position: absolute; left: 32px; right: 32px; top: 36px; height: 108px; border-radius: 54px; background: #fff; }
   .fold  { position: absolute; left: 0; right: 0; bottom: 180px; border-top: 6px dashed #444; }
 </style></head><body><div class="wrap">
-${phone(msg(), 'As the copy stands (the message to send today)')}
-${phone(msg(['ask']), 'Proposal for the Copywriter, NOT approved copy: the same message without the `ask` line (critic fix 3a)')}
+${phone(msg(), `As the copy stands in piece 04, ${words(msg())} words`)}
+${phone(msg(['ask'], ['cta']), `NOT approved copy, a proposal: r2 fixes 1 + 3 (no \`ask\` line, \`cta\` bold), ${words(msg(['ask'], ['cta']))} words`)}
 </div>
 <script>
 document.fonts.ready.then(() => {
