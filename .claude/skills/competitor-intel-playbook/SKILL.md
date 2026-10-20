@@ -19,7 +19,7 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
 
 ## Not allowed
 
-- Fetching, browsing or scraping facebook.com, instagram.com or tiktok.com pages, including the Ad Library website. Instagram's Terms ban automated collection "regardless of whether" logged in. Ad snapshot links are for Yaqoob to open.
+- Fetching, browsing or scraping facebook.com, instagram.com or tiktok.com pages, including the Ad Library website. (The decision #68 exception, viewing single public influencer profiles, covers influencer research only. The competitor run never uses it.) Instagram's Terms ban automated collection "regardless of whether" logged in. Ad snapshot links are for Yaqoob to open.
 - Third-party scraper services (Apify and similar).
 - Stories: skipped by decision on 2026-10-08. No official route exists, and viewing shows our account in their viewer list.
 

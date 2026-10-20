@@ -22,7 +22,7 @@ This repo is TabeebX's in-house marketing team, built as Claude Code agents and 
 2. **Consumer Arabic copy follows the `iraqi-dialect` skill** and must pass `node .claude/skills/iraqi-dialect/scripts/lint-copy.mjs <file>` before review.
 3. **Facts come from `tabeebx-brand`, our data files, or a cited source.** Never invent services, numbers, doctors, testimonials or results. Mark anything uncertain with a confidence, and leave `[placeholders]` rather than guessing.
 4. **Every piece passes `design-critic`** (average ≥ 8/10, no lens below 6) **and then `brand-policy-guard`** (the `health-ad-policy` checklist) before Yaqoob sees it.
-5. **No scraping** of facebook.com, instagram.com or tiktok.com, and no scraper services. Competitor data comes only from the sources in `competitor-intel-playbook`.
+5. **No scraping** of facebook.com, instagram.com or tiktok.com, and no scraper services. Competitor data comes only from the sources in `competitor-intel-playbook`. **Exception (decision #68):** for influencer and creator research only, individual public profiles may be viewed read-only, one at a time, with no login and no bulk collection.
 6. **Patient messages (DMs, WhatsApp) never go to third-party tools.**
 7. **The Pro plan is shared and limited.** Prefer one good draft over many. Don't fan out agents for small tasks.
 8. **Yaqoob prefers multiple-choice questions** when a decision is his. Ask; don't assume.
