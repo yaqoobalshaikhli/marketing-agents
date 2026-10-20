@@ -1,0 +1,22 @@
+/* TabeebX brand tokens and Arabic typography defaults. Link from any design page:
+   <link rel="stylesheet" href="<path>/assets/fonts/fonts.css"><link rel="stylesheet" href="<path>/assets/tabeebx.css"> */
+:root {
+  --navy: #181943;   /* primary dark: backgrounds, wordmark */
+  --pink: #EE396B;   /* ONE accent per frame (logo figure excluded) */
+  --blue: #1B9CCE;   /* secondary: icons, supporting graphics */
+  --white: #FFFEFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { direction: rtl; }
+body {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--navy);
+  line-height: 1.55;          /* Arabic needs room for ascenders/descenders and dots */
+  letter-spacing: 0;          /* never track Arabic: it breaks the joins */
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, .display { font-weight: 800; line-height: 1.25; }
+.accent { color: var(--pink); }
+.num { font-feature-settings: "lnum" 0; } /* write digits as Eastern Arabic characters (٠١٢٣٤٥٦٧٨٩) in the text itself */
