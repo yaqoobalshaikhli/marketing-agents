@@ -15,6 +15,7 @@ Research on 2026-10-08 settled what is possible and what is allowed. The details
 | Coupler.io "Instagram Public Data" | Competitors' public posts (captions, likes, comments, reel views, dates) and follower counts, **Business/Creator accounts only**, with history if "track changes" is on | Coupler connector | ⏳ Free-tier test pending (setup guide in `docs/setup/`) |
 | Metricool Free (5 fixed competitors) | Competitors' Instagram/Facebook posts | Metricool connector | ⏳ Free-tier test pending (setup guide in `docs/setup/`) |
 | Web search | News, launches, prices on public websites | `WebSearch` | ✅ |
+| **Perplexity** (plugin `perplexity`) | Web-grounded answers with citations on public websites, app stores, news and price pages | `perplexity_search`, `perplexity_ask`, `perplexity_research`. Exclude facebook.com, instagram.com and tiktok.com in domain filters and never ask it to summarise their pages. Treat an answer as a lead: check each key claim against the page it cites | ✅ Added 2026-10-28 (decision #70) |
 | Yaqoob | TikTok video links; screenshots of anything else | He pastes them in | Manual |
 
 ## Not allowed
