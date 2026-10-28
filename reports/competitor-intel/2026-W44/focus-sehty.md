@@ -10,7 +10,7 @@ Run date: 2026-10-28 (week 44). Researcher: competitor-intel focus run. Competit
 
 | Fact | What I found | Source | Evidence | Confidence |
 |---|---|---|---|---|
-| Website | Not found. `sehty.net` did not resolve in this session (could be blocked by the session's network rules or not exist; I cannot tell which). No search returned any `sehty.net` page. | Failed fetch, 3 searches for the handle and domain | n/a | 90% that no website is findable by search; 0% on whether sehty.net exists |
+| Website | Not found. `sehty.net` did not resolve in this session (could be blocked by the session's network rules or not exist; I cannot tell which). No search returned any `sehty.net` page. | Failed fetch, 3 searches for the handle and domain | n/a | 90% that no website is findable by search; whether sehty.net exists is unknown |
 | Identity of "Sehty (sehty_net)" | Unconfirmed. Best candidate: patient app "Sehty Guide - دليل صحتي", package `net.healder.sehty`, support email on healder.net. | https://play.google.com/store/apps/details?id=net.healder.sehty&hl=en_US | search_snippet | 45% |
 | Iraqi link of that candidate | Indirect only: Healder has an active Iraq ad in our ad-log. The store text I saw does not name Iraq. | `data/competitors/ad-log.csv` row 1476277414404891 | file on record | 40% |
 | Best-candidate app listing | Google Play 5K+ downloads, updated 2026-10-02; App Store 3.9 from 9 ratings, seller Tech Ball | Play and App Store pages below | search_snippet | 70% |
