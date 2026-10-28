@@ -127,3 +127,27 @@ None of this shows a real overlap with TabeebX's home visits, labs, physiotherap
 - The play.google.com and apps.apple.com pages themselves for the other Healder app were not read, so its rating, installs, version and update date are unverified.
 
 **Suggested next steps (for Yaqoob to choose):** (a) open the ad snapshot himself and note the destination; (b) allow healder.ai, healder.net, play.google.com and apps.apple.com in the session network settings and re-run this profile; (c) keep Healder on the watchlist with the weekly Ad Library check and revisit once the destination is known.
+
+## Verification (2026-10-28)
+
+Independent fact-check run the same day. Method: WebSearch only (about 63 calls across all six files, 2 "extended"), no fetches made. Evidence is a search-tool summary of a store page or aggregator, never a page read. "Confirmed" means reproduced from the primary page in a fresh search. Ad Library facts cannot be tested with web search and are marked unverifiable.
+
+| # | Claim | Verdict | Independent evidence | Corrected value |
+|---|---|---|---|---|
+| 1 | "I could not identify the Iraqi Healder business"; no website, app listing or service found | contradicted | healder.net is the support, terms and privacy domain of Tech Ball's Arabic apps "Sehty Guide - دليل صحتي" and "دليل صحتي برو - SGP": Play https://play.google.com/store/apps/details?id=net.healder.sehty&hl=en_US (support@healder.net), https://play.google.com/store/apps/details?id=net.healder.pro.sehty&hl=en, App Store https://apps.apple.com/app/id6764244876 (terms at https://healder.net/ar-terms-of-service). Package prefix is net.healder.* | A Healder-branded domain with Arabic health apps exists. Whether the Facebook Page `healdernet` (792564193937642) is that company is unverified, about 60% |
+| 2 | No app of the Iraqi Healder in Play or App Store results; only the pain-relief app | contradicted | Same listings as row 1. A title search for "Healder" misses them because the app titles say Sehty, not Healder | apps exist under the titles Sehty Guide, Sehty Guide Pro and Sehty360 |
+| 3 | "Healder: 5-Min Pain Relief" exists, package com.tapps.healder, developer t-Apps | confirmed | Play https://play.google.com/store/apps/details?id=com.tapps.healder&hl=en_US ; App Store https://apps.apple.com/us/app/healder-5-min-pain-relief/id6748706663 ; developer contact is on t-apps.io | none |
+| 4 | Yearly plan USD 49.99 (US App Store) | confirmed | US App Store listing summary (row 3 link) also shows monthly USD 7.99 and weekly USD 2.99 | add monthly and weekly tiers |
+| 5 | "About 20% that our Page is the exercise app" | contradicted | The exercise app's developer contact is t-apps.io, unrelated to healder.net, while the Page username `healdernet` matches healder.net. No Arabic or Iraq link for the exercise app in any result | lower to about 10%. Still no page evidence either way |
+| 6 | Tracker: about 316+ Android installs and 69 monthly users for the exercise app | unverifiable | The Play summary shows 100+ downloads (consistent with "tiny", not the tracker figure) | not changed |
+| 7 | iOS exercise app shows 0 ratings, individual developer, Oct 2025 release | confirmed | App Store summary: not enough ratings to display; an older title "Healder: Back Pain Exercises" shows 1 rating of 2.0 (https://apps.apple.com/us/app/healder-back-pain-exercises/id6748706663). Developer shown as an individual (name not recorded). Release date not reproduced | add the old-title 1 rating |
+| 8 | No site found for healder.ai or healder.net by search | confirmed | Searches for both names return no indexed page (reproduced). Note healder.net exists as a referenced domain (row 1), content unread | healder.net is a live developer domain, not a missing one |
+| 9 | No funding, team or news found for Healder | confirmed | Reproduced in searches for Healder, healder.ai, healdernet and Tech Ball; no coverage | none |
+| 10 | Health 360 AI (Baghdad) is "a different company" | unverifiable | Health 360 AI exists as a Baghdad startup (Clinic 360 and Doctor 360, founded 2022, small funding) per https://www.cbinsights.com/company/health-360-361 and https://startupblink.com/startup/health-360. Tech Ball's older Play package is co.health360.sehty360, but no source links Tech Ball to Health 360 AI | lead only, do not assume either way |
+| 11 | Ad 1476277414404891, started 2026-10-13, Page 792564193937642 | unverifiable | Meta Ad Library is outside this check (facebook.com not opened) | on-file facts only |
+
+### Corrections that matter
+1. **The bottom line is wrong as written.** "No Iraqi Healder found" should read: healder.net is the developer domain of an Arabic patient app and a provider app (Tech Ball), and the Page link is unconfirmed (about 60%).
+2. **Lower the exercise-app theory** from about 20% to about 10%.
+3. **The Low threat rating had no basis** once the Healder Page may be the Tech Ball family, whose legacy Play package shows 50K+ downloads (see the Sehty file, Verification row 6). Re-rate after the ad's destination is seen; do not keep "Low" as a finding.
+4. Section 14 gap "which business the Page is": narrowed to two options (Tech Ball family, about 60%, or the exercise app, about 10%, or something else, about 30%).

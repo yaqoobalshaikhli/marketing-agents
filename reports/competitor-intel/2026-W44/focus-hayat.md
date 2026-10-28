@@ -214,3 +214,33 @@ What would move it:
 10. Founder, team size, funding, hiring: not found.
 11. Unverified: the Michigan developer address (40%); the 12 Oct 2026 update date (one query only, 60%); the year of the App Store hot-fix dates.
 12. Organic Facebook and Instagram posts: not covered (organic is not connected, and those pages are off limits for this work).
+
+## Verification (2026-10-28)
+
+Independent fact-check run the same day. Method: WebSearch only (about 63 calls across all six files, 2 "extended"), no fetches made. Evidence is a search-tool summary of a store page or company page, never a page read. Every Hayat source below (site, Play, App Store) is controlled by the company, so no row here has third-party support. Rows are worded "page says X" where only the company states it.
+
+| # | Claim | Verdict | Independent evidence | Corrected value |
+|---|---|---|---|---|
+| 1 | "Hayat Platform" exists on both stores: Play com.gula.hayat, developer Gula DHS; App Store id6758530740, provider GULA DHS, CO. | confirmed | https://play.google.com/store/apps/details?id=com.gula.hayat&hl=en_US ; https://apps.apple.com/no/app/hayat-platform/id6758530740 | none |
+| 2 | hayatdhs.com is the company site; the About page (Arabic) describes a hybrid care marketplace | confirmed | A search restricted to hayatdhs.com returned https://www.hayatdhs.com/ and https://www.hayatdhs.com/about (company's own pages) | none |
+| 3 | Operator is Gula LLC, Baghdad | unverifiable | The site footer says Gula LLC, Baghdad, copyright 2026 (company's own page). The Play listing shows admin@hayatdhs.com and a Canton, Michigan, US address (seen in two searches). Two searches, one extended, found no third-party record of a Gula LLC or Gula DHS in Iraq | do not call the Baghdad operator independently confirmed |
+| 4 | Founded in Baghdad in 2025 (self-stated) | unverifiable | Only the About page | not changed |
+| 5 | The site and listings say: video consultation, clinic booking, home visits, home lab tests, encrypted records; the app has browsing of doctors and services, time slots and video consultations | confirmed | About page and store summaries (rows 1 and 2). Home visits and home labs appear only on the About page, not in the store text I saw | self-claims only |
+| 6 | Google Play 1K+ downloads | confirmed | https://play.google.com/store/apps/details?id=com.gula.hayat | none |
+| 7 | Play release note dated 12 Oct 2026 (file grouping, sharing with several doctors, queue on lock screen) | confirmed | Same Play listing; reproduced in a second search | upgrade confidence from 60% to about 80% |
+| 8 | App Store: Health & Fitness, 16+, 69.6 MB, iOS 16.0 or later, free | confirmed | https://apps.apple.com/no/app/hayat-platform/id6758530740 | none |
+| 9 | App Store versions "1.0.8" and "1.0.81", current version not found | unverifiable | The App Store summary lists 1.0.97 as the latest entry (general performance improvements) and an earlier entry with a live queue position. Year of the old entries still not shown | latest listed version 1.0.97 |
+| 10 | Support phone +964 781 855 2172 on the About page | unverifiable | Not surfaced in any of my searches | not changed |
+| 11 | Play developer address in Canton, Michigan (file said 40%, one query) | confirmed | The Play listing summary shows it again in a second search (https://play.google.com/store/apps/details?id=com.gula.hayat) | upgrade to about 80% that the Play page shows it; it conflicts with the Baghdad operator line |
+| 12 | Same business as watchlist handles Hayatdhs (Facebook) and hayatdhs (Instagram), 80% | unverifiable | Only the identical string. The Play contact is admin@hayatdhs.com, which ties the app to the domain, but no page links the social accounts. Social pages not opened | lower to about 65% |
+| 13 | App Store id6738328977 "حياة / Hayat" is a different app (residential community) | confirmed | The listing appears in results as a separate app (https://apps.apple.com/us/app/%D8%AD%D9%8A%D8%A7%D8%A9-hayat/id6738328977). New namesake seen, relation unverified: "Hayat Online" (https://hayat-online-website.pages.dev/privacypolicy.html), a privacy policy dated January 2025 governed by Iraqi law | do not attribute Hayat Online to Gula |
+| 14 | No link between Hayat and Saleem (Seniorplus LLC) | confirmed | Saleem seller is Seniorplus LLC in two searches; nothing links Gula to it | none |
+| 15 | No press, funding or launch news for Hayat or Gula | confirmed | Reproduced, including one extended search. It returned only unrelated Gula entities (a Berlin company Gula Holistic Health with an Iraqi-born founder, a US fund, a Facebook page "Gula Medical Tourism" in Baghdad with 25 likes). No source links any of them to Hayat | do not assume a link to any of these |
+| 16 | "First integrated hybrid care platform in Iraq" | unverifiable | Self-claim on the About page, no third party | not changed |
+| 17 | No ads and no Ad Library Page ID | unverifiable | Ad Library is outside this check | on-file only |
+
+### Corrections that matter
+1. **"Baghdad operator" rests on the company's own site only.** The Play page shows a US (Michigan) address, now seen twice. State "says it is Baghdad-based" in anything that leaves this repo.
+2. **Watchlist link is by identical handle and domain only**, lower to about 65% until the website's social links or the Page's website field is seen.
+3. Latest App Store version is 1.0.97 (not 1.0.81). The 12 Oct 2026 Play update is solid.
+4. The Gula namesakes (Berlin, Baghdad Facebook page) were surfaced but are not linked to Hayat by any source. Treat as a lead for Yaqoob only if he can open the pages.

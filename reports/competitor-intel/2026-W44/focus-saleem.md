@@ -213,3 +213,37 @@ What lowers the rating: no prices, licence, reviews or B2B offer found; ad perfo
 - **Ad content** (body text, images, destination) not reviewed by anyone; today's status of the 45 logged ads not re-checked (no new Ad Library calls this run).
 
 Searches used: 24 WebSearch calls plus 4 failed WebFetch calls. Compliance: no facebook.com, instagram.com or tiktok.com page was opened; no one was contacted; Perplexity not used.
+
+## Verification (2026-10-28)
+
+Independent fact-check run the same day. Method: WebSearch only (about 63 calls across all six files, 2 "extended"), no fetches made. Evidence is a search-tool summary of a store page, press release or aggregator, never a page read. "Confirmed" means reproduced from the primary page in a fresh search. Ad Library facts (45 IDs, Hilla ads) cannot be tested with web search and are marked unverifiable.
+
+| # | Claim | Verdict | Independent evidence | Corrected value |
+|---|---|---|---|---|
+| 1 | AppGoblin shows Android 59.6K installs, 51 ratings, updated 2026-04-13, version 100, released Apr 2024 | confirmed | https://appgoblin.info/apps/com.saleemiq.android (same tracker as the original, so not independent of it) | none, but see rows 2 and 3 |
+| 2 | Android rating 4.2 from 51 ratings | contradicted | A Google Play snapshot summary shows 4.1 from roughly 65 to 74 reviews (https://play.google.com/store/apps/details?id=com.saleemiq.android&hl=en) | about 4.1, 65 to 74 reviews on a Play snapshot; counts differ by snapshot |
+| 3 | About 59.6K Android installs (tracker estimate) | unverifiable | The Play snapshot summaries gave a 50K+ band in one and 100K+ in a newer one; a follow-up search could not support 100K+. The mwm.ai aggregator (https://mwm.ai/apps/saleem/6474654440) shows "24K+" for iOS | do not quote 59.6K as a store number. Play band is 50K+, possibly 100K+ |
+| 4 | iOS ratings conflict: 4.7 from 23, 4.31 from 26, 5.0 from 3 (stale) | confirmed | App Store snapshots: US 4.3 from 28, a later US snapshot 4.7 from 23, Jordan 5.0 from 1, Iraq 5.0 from 2 (https://apps.apple.com/us/app/saleem-%D8%B3%D9%84%D9%8A%D9%85/id6474654440) | same picture: 1 to 28 ratings, small and inconsistent |
+| 5 | About 1.3K iOS installs (tracker) | unverifiable | mwm.ai lists "24K+ downloads" for the iOS app (rating 4.6 with 0 ratings counted). The two aggregators differ by about 18 times and Apple publishes no figure | unresolved, do not use |
+| 6 | iOS seller is Seniorplus LLC | confirmed | App Store pages in two searches (row 4 link) | none |
+| 7 | Services: doctor visits, nursing, physiotherapy, home lab draws, imaging (echo, ultrasound, Doppler), eye exams, wound care, family profiles, Baghdad directory | confirmed | Play and App Store summaries (https://play.google.com/store/apps/details?id=com.saleemiq.android&hl=en_US , https://apps.apple.com/app/id6474654440). Baghdad is named | none |
+| 8 | In-app electronic payment; methods and cash on visit not named | confirmed | App Store summary says in-app electronic payment, no methods named | none (see the discovery file row on FastPay and ZainCash, which conflicts) |
+| 9 | Providers "vetted for quality" | confirmed | App Store text "every provider is vetted for quality" (summary) | upgrade from 50% to about 75% |
+| 10 | Zain Great Idea finalist (Oct 2025) | confirmed | Regional list of 13 startups, Iraqi names Andalusi, Jaamila, Saleem: https://menastartupdigest.com/?p=20100 and https://www.zawya.com/en/press-release/companies-news/zain-great-idea-13-regional-tech-startups-to-embark-on-the-global-acceleration-program-in-silicon-valley-mygm4f4c | the Zain Iraq release names only two Iraqi startups (Jaamila and Saleem), the regional list names three; this does not touch Saleem |
+| 11 | Zain Iraq press release (Dec 2025) names Saleem's founder as Taha Ayad and calls Saleem a health-tech venture (telemedicine, homecare apps) | confirmed | https://www.iq.zain.com/en/about-us/media-coverage/baghdad-silicon-valley-zain-iraq-selects-two-innovators-advance-zain-great-idea . The same founder name is on the Village profile of the Saleem home-care company (https://village.ai/person/taha-ayad-NjIwMDU0MTE2 and https://village.ai/company/saleemapp) | identity with the home-care app rises from 65% to about 80%. Zain's wording also says "medical devices", which the app listing does not |
+| 12 | Founded 2023, 30+ employees | unverifiable | Only the Village company profile says so (self-reported, reproduced). The April 2024 Play release is consistent with a 2023 start | staff count unverified |
+| 13 | 350+ providers, 15,000+ patients in Baghdad, 30+ partners | unverifiable | Only the CEO's own Village profile | claim only |
+| 14 | Whether Saleem was among the 11 startups in the Silicon Valley phase | unverifiable | No final results found in two searches | not changed |
+| 15 | Website not found; saleemapp.com is an unverified lead (25%) | unverifiable | The Village company page is keyed to saleemapp.com, but the site itself did not appear. A different "Saleem App" at saleemtech.com is a Jordanian GP home-visit service, not this one | lead raised to about 40%, still unread |
+| 16 | Provider app "Saleem Team" (com.saleemiq_team.android), about 164 installs, last update 2024-04-28 | unverifiable | Only the AppGoblin URL surfaced (https://appgoblin.info/apps/com.saleemiq_team.android); the figures were not visible | not changed |
+| 17 | "Do not confuse": Saleem Telemedicine (Bahrain, NHRA) is a different company | confirmed | https://startupbahrain.com/blog/saleem-how-saleem-is-connecting-gulf-patients-to-specialist-care-across-borders ; also the Jordanian "Saleem App" in row 15 | add the Jordanian namesake |
+| 18 | Hilla nursing ads, 45 logged Ad Library IDs, batch dates | unverifiable | Meta Ad Library is outside this check | on-file facts only |
+| 19 | No published prices found | confirmed | No price in any listing summary or profile | none |
+| 20 | Reviews: "not found" | contradicted | The App Store reviews page shows a few reviews: one praises convenient services and an approachable call center, an Iraqi reviewer welcomed the app (https://apps.apple.com/us/app/saleem-%D8%B3%D9%84%D9%8A%D9%85/id6474654440?see-all=reviews&platform=iphone , summary) | a few positive reviews exist; one mentions a call center. Sample is tiny |
+
+### Corrections that matter
+1. **Android numbers are snapshot-dependent.** Use "Play band 50K+, possibly 100K+; rating about 4.1; 65 to 74 reviews" instead of "59.6K and 4.2 from 51". The 59.6K is a tracker estimate and iOS install figures conflict by about 18 times (1.3K vs 24K+).
+2. **The Zain finalist claim holds**, and the founder-name match makes the link to the home-care company about 80%.
+3. **Founding year, staff and scale claims remain self-reported** (company directory profile and the CEO's own profile). Do not state them as facts.
+4. **"No reviews found" is wrong**: a handful of App Store reviews exist, with one mention of a call center. Booking by phone is plausible, still unconfirmed.
+5. saleemapp.com is more likely to be the company site than the original 25% suggested, but no page was read.

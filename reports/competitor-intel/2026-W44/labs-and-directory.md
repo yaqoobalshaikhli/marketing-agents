@@ -102,3 +102,25 @@ Only what the evidence supports:
 - Ad content of all five labs never reviewed (W42 gap, still open); ad status after 2026-10-17 not re-checked in this task.
 - Not checked: the Iraqi Ministry of Health licence lists or any licensing register, so no licence or accreditation could be confirmed for any lab.
 - دليل صحتي: no Page ID, no web page, no ads check (by decision).
+
+## Verification (2026-10-28)
+
+Independent fact-check run the same day. Method: WebSearch only (about 63 calls across all six files, 2 "extended"), no fetches made. One fresh Arabic-name search per lab plus targeted searches for Al-Nokhba, nass-iq.com and the directory name. Evidence is a search-tool summary, never a page read. Ad Library facts cannot be tested with web search.
+
+| # | Claim | Verdict | Independent evidence | Corrected value |
+|---|---|---|---|---|
+| 1 | مختبر سحر بغداد / Majestic Lab: no web presence found | unverifiable | Search "مختبر سحر بغداد تحاليل سحب دم منزلي" returned only Saudi job ads and a Webteb article. Reproduced absence, which does not prove none exists | claim should read "none found", not "none" |
+| 2 | مختبر النخبة النموذجي: no web presence found | unverifiable | Nothing under this name. The only similar result was a Riyadh lab, مختبرات النخبة المعتمدة (https://www.zavis.ai/ar/sa/directory/riyadh/labs-diagnostics/al-nakhbah-muatamadah), a different business | same |
+| 3 | مختبر الثناء الطبي: no web presence found | unverifiable | Results were a radiation-lab accreditation news item and a Kimadia tender, as in the original | same |
+| 4 | مختبر هورمون حي العامل: no web presence found | unverifiable | Results were academic papers on hormones | same |
+| 5 | مختبر الصدى حي العامل: no web presence found | unverifiable | Results were university and job pages | same |
+| 6 | Al-Nokhba Laboratories (Baghdad): home-visit booking through an app, «نتائج سريعة ودقيقة», branches, 24 h branch, "30 ألف" offer | unverifiable | An Arabic search for مختبرات النخبة للتحليلات المرضية المتقدمة did not surface this lab at all (results were Saudi labs and university pages). Not refuted, not reproduced | still a paraphrase needing a page read |
+| 7 | nass-iq.com (خدمات ناس للرعاية الصحية) offers free home blood draws booked on WhatsApp | unverifiable | Two searches found no page for it. Only a RIPE registry entry for "Nass Al Iraq Company for General Trading and Technical Solution and Training Ltd", Baghdad (https://www.ripe.net/membership/indices/data/iq.nass.html), which reads as a general trading and training firm, not a health provider. "Nass Al Iraq" also co-led the Tabib Baghdad seed round (https://www.wamda.com/2020/11/tabib-baghdad-raises-seed-round). No source ties nass-iq.com to either | stays a 45% lead at most, do not quote a free-draw promise |
+| 8 | دليل صحتي (directory): "three searches returned no page for it", "none" | contradicted | An app titled exactly "Sehty Guide - دليل صحتي" exists on Play (https://play.google.com/store/apps/details?id=net.healder.sehty&hl=en_US) and the App Store (https://apps.apple.com/us/app/sehty-guide-%D8%AF%D9%84%D9%8A%D9%84-%D8%B5%D8%AD%D8%AA%D9%8A/id6472179725), developer Tech Ball, support domain healder.net | the name does have a store presence. Whether the watchlist row is this app: about 70%, unconfirmed |
+| 9 | Adjacent directory Tabibiraq.com exists (Iraq doctors, centres, hospitals) | confirmed | https://mwm.ai/apps/tabibiraq-com/1384311003 ; Play listing tabibiraq.com (Baghdad, Erbil, Kurdistan Region) | none |
+| 10 | Correction that "longest-running" Majestic claim is unproven | unverifiable | Depends on Ad Library data, outside this check | on-file only |
+
+### Corrections that matter
+1. **Do not write "no web presence"** for the five labs. The accurate line is "not found by a US-based search tool in Arabic and English", which my fresh searches reproduce. Absence here is weak evidence, as the file already says.
+2. **دليل صحتي is not web-less.** It is an app title with a store listing (see the Sehty file Verification for the Tech Ball and healder.net link).
+3. nass-iq.com and the Al-Nokhba details stay unverified paraphrases. Neither should reach a brief as a competitor fact.

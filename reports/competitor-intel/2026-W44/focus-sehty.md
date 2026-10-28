@@ -164,3 +164,36 @@ All Sehty statements apply to candidate A, so they carry that candidate's 45% id
 - Ad Library Page ID for Sehty: not found; no new Ad Library call was made.
 - Iraqi storefront data for the apps: not checked.
 - Whether Sehty, دليل صحتي and Healder on the watchlist are one business: unresolved (best guess is that Sehty Guide and Healder are one company, about 65%; that `sehty_net` is part of it, about 45%).
+
+## Verification (2026-10-28)
+
+Independent fact-check run the same day. Method: WebSearch only (about 63 calls across all six files, 2 of them "extended"), no fetches made. Evidence is still a search-tool summary of a store page, press release or aggregator, never a page read. "Confirmed" means the fact was reproduced from the primary page in a fresh search run. A fact that only the company states about itself is marked as a self-claim. Ad Library facts (Healder ad, Page IDs) were not testable with web search and are marked unverifiable.
+
+| # | Claim | Verdict | Independent evidence | Corrected value |
+|---|---|---|---|---|
+| 1 | App "Sehty Guide - دليل صحتي", package net.healder.sehty, developer Tech Ball | confirmed | Play https://play.google.com/store/apps/details?id=net.healder.sehty&hl=en_US ; App Store https://apps.apple.com/us/app/sehty-guide-%D8%AF%D9%84%D9%8A%D9%84-%D8%B5%D8%AD%D8%AA%D9%8A/id6472179725 (developer Tech Ball) | none |
+| 2 | Support domain is healder.net | confirmed | Play listings of both apps show support@healder.net; the App Store Pro listing links terms and privacy at https://healder.net/ar-terms-of-service and https://healder.net/ar-privacy-policy (https://apps.apple.com/app/id6764244876). One other summary of the Pro listing named a Gmail contact (tech.flame.iq@gmail.com), so the listing may show more than one contact. The package prefix net.healder.* ties both apps to the same domain | none |
+| 3 | Pro app seller is "TECH BALL FOR INFORMATION TECHNOLOGY AND SPORT SERVICES LIMITED LIABILITY COMPANY" | confirmed | https://play.google.com/store/apps/details?id=net.healder.pro.sehty&hl=en | none |
+| 4 | Patient app: Google Play 5K+ downloads (net.healder.sehty) | confirmed | https://play.google.com/store/apps/details?id=net.healder.sehty&hl=en | none for this package; see row 6 |
+| 5 | App Store 3.9 from 9 ratings | confirmed | App Store US listing (row 1 link); version 2.1.2 dated Aug 15, year not shown | add version 2.1.2 |
+| 6 | "Small traction" (5K+ on Play, 9 App Store ratings), weakness 1 in section 12, threat Low | contradicted | The same App Store id 6472179725 is titled "Sehty360 - صحتي٣٦٠" in the UAE storefront (https://apps.apple.com/ae/app/sehty360-%D8%B5%D8%AD%D8%AA%D9%8A%D9%A3%D9%A6%D9%A0/id6472179725). Tech Ball also publishes Play package co.health360.sehty360 (https://play.google.com/store/apps/details?id=co.health360.sehty360), summarised as 50K+ downloads and 3.9 from about 95 reviews; AppGoblin estimates 74.6K+ installs, 96 ratings, 3.89, released Dec 2023, last update 2025-07-13 (https://appgoblin.info/apps/co.health360.sehty360, tracker estimate) | The family has tens of thousands of installs, not 5K. net.healder.sehty looks like a newer package of the same app |
+| 7 | Play last update 2026-10-02 (patient app) | unverifiable | No summary I got showed a date for net.healder.sehty. The older Sehty360 package shows 2025-07-13 | not changed |
+| 8 | Services: provider directory, booking, video visits where offered, AI assistant, wallet payments, reminders; "not a medical device" disclaimer | confirmed | Play and App Store summaries (row 1 links) | none |
+| 9 | No home visits, home labs, nursing or physio in the listings | unverifiable | Absence in summaries only | not changed |
+| 10 | Pro app: Play 100+ downloads, updated 2026-08-15; App Store 2 ratings | unverifiable | No independent figure. AppsHunter lists version 0.0.11 dated 2026-07-06 (https://appshunter.io/ios/app/sgp/id6764244876), a different date | not changed |
+| 11 | Pro subscription USD 11.99 and 19.99 per month | unverifiable | Only the same aggregator (appshunter.io) shows it, not Apple | not changed |
+| 12 | Iraqi link "indirect only, store text does not name Iraq" | unverifiable | Two of three searches say the Pro listing address is Al-Wahda St., Al-Rusafa, Baghdad, and one extended search calls Tech Ball a Baghdad company. A third search could not find the address, and the listing text I could see does not name Baghdad. The Gmail handle ends ".iq". No page read | Lean Iraqi (Baghdad), about 65%, not confirmed |
+| 13 | `sehty_net` / `sehtynet` is the Sehty Guide app (45%) | unverifiable | No source ties the social handles to any app. sehty.net did not appear in any search, and the apps use healder.net, not sehty.net | keep at 45% or below |
+| 14 | The three watchlist rows (Sehty, دليل صحتي, Healder) may be one business | unverifiable | Confirmed only at developer level: Sehty Guide, Sehty Guide Pro and Sehty360 are one developer, and "دليل صحتي" is the exact Arabic title of the app. No source links the Facebook or Instagram handles to the apps | see summary below |
+| 15 | Candidate B: صحتي العراق, developer SpaceNet IQ, Erbil address, package com.spacenet.sehati_user | confirmed | https://play.google.com/store/apps/details?id=com.spacenet.sehati_user&hl=en : SPACE NET COMPANY FOR INTERNET SERVICES AND INFORMATION TECHNOLOGY, Empire Business Towers, Erbil. SpaceNet IQ also publishes unrelated apps (Savor, We Padel IQ, Meeqat) | it is a general app studio, not a health specialist |
+| 16 | Candidate B update date unreliable ("Aug 24, 2026" next to "438 days") | unverifiable | One metadata line says "last updated about 168 days ago" (about mid-May 2026) | not settled |
+| 17 | Candidate B App Store seller "Sahati Trading Company LTD", 5.0 from 3 ratings | unverifiable | Not reproduced | not changed |
+| 18 | Candidate B is a different business from Candidate A | confirmed | Different developers (SpaceNet IQ vs Tech Ball) and different packages and domains | none |
+| 19 | No news, directory entry or funding item for Healder or Sehty | confirmed | Six or more searches (English and Arabic) found no independent coverage of Tech Ball, healder.net or Sehty Guide. This is a reproduced absence, not proof | none |
+
+### Corrections that matter
+1. **Reach is understated.** Sehty Guide shares an App Store id with "Sehty360", and a legacy Play package of the same developer shows 50K+ downloads. Weakness 1 ("small traction") and the Low threat basis should not rest on 5K+ and 9 ratings.
+2. **Healder connection is real at developer level.** healder.net is the support, terms and privacy domain of Tech Ball's apps (row 2). The "Healder" watchlist row and this app family share a domain name, not yet a confirmed Page.
+3. **Iraqi location is not confirmed but leans Baghdad** (65%). Do not write "Iraqi" in client-facing text until the Instagram bio link or the Ad Library destination is seen.
+4. **دليل صحتي is an app title, not only a directory name.** An app with exactly that Arabic title exists (row 1).
+5. Candidate B (SpaceNet IQ, Erbil) is confirmed as a different developer, so it can be dropped as a Sehty candidate.
