@@ -157,7 +157,7 @@ From `data/competitors/ad-log.csv` and `watchlist.csv`. Ad Library Page ID 10516
 | Free assessment | 2026-10-11 | 18 | 6 | «سوي تقييمج المجاني هسه» | campaign push, created within 40 minutes |
 | Free assessment | 2026-10-13 | 4 | 4 | «سوي تقييمج المجاني هسه» | campaign push |
 
-- Pattern: Saleem launches ads in large same-day batches, four batches in the 18 days from 2026-10-06 to 2026-10-13 alone (34 ads). The ads were in the log as `active` at last sight; they were not re-checked this week, so today's status is unknown.
+- Pattern: Saleem launches ads in large same-day batches, four batches (33 ads) between 2026-10-06 and 2026-10-13, an 8-day span. The ads were in the log as `active` at last sight; they were not re-checked this week, so today's status is unknown.
 - Our own page «Tabeebx» (Page 102936468976144) had one ad at the same time (ad-log, own). Comparison only.
 
 ## 12. Strengths and weaknesses against TabeebX
@@ -212,4 +212,4 @@ What lowers the rating: no prices, licence, reviews or B2B offer found; ad perfo
 - **Self-reported scale** (350+ providers, 15,000+ patients, 30+ partners) comes from a person's own directory profile, not from the company site or press. Treat as a claim only.
 - **Ad content** (body text, images, destination) not reviewed by anyone; today's status of the 45 logged ads not re-checked (no new Ad Library calls this run).
 
-Searches used: 22 WebSearch calls plus 4 failed WebFetch calls. Compliance: no facebook.com, instagram.com or tiktok.com page was opened; no one was contacted; Perplexity not used.
+Searches used: 24 WebSearch calls plus 4 failed WebFetch calls. Compliance: no facebook.com, instagram.com or tiktok.com page was opened; no one was contacted; Perplexity not used.
