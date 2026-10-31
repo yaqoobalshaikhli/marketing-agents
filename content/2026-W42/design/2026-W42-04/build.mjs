@@ -72,18 +72,59 @@ for (const [sel, shift] of Object.entries(SHIFT_FROM_01)) {
   if (t01 - t04 !== shift) fail(`${sel} top is ${t04}, expected piece 01's ${t01} − ${shift}`);
 }
 
-// ---- route band: piece 01's slide 7 (start state), moved into the square ---------------------------
-const s07 = readFileSync(path.join(p01, 'slide-07.html'), 'utf8');
-const m = s07.match(/<svg class="abs band"[\s\S]*?<\/svg>/);
-if (!m) fail('band not found in piece 01 slide-07.html');
+// ---- route band: piece 01's COVER band (every station at rest), moved into the square ----------------
+// Round 4: built from the cover, not slide 7, then three swaps so the route decodes in one frame (below). Every swap
+// looks for piece 01's exact markup and stops if it has changed. Numbers are piece 01's (slide coordinates, ground 1120).
+const BLUE = '#1B9CCE', NAVY = '#181943', G = 1120, SW = 12;
+const s04 = readFileSync(path.join(p01, 'slide-04.html'), 'utf8');
+const s06 = readFileSync(path.join(p01, 'slide-06.html'), 'utf8');
+const m = cover.match(/<svg class="abs band"[\s\S]*?<\/svg>/);
+if (!m) fail('band not found in piece 01 slide-01.html');
 // The week's closed door (leaf line and knob), at piece 01's numbers: station x 413, 168 wide, apex 888, ground 1120.
-if (!m[0].includes(doorSVG({ xl: 329, xr: 497, apex: 888, ground: 1120, sw: 12, state: 'closed' }))) {
-  fail("slide 7's band no longer carries the week's closed door from door.mjs");
+if (!m[0].includes(doorSVG({ xl: 329, xr: 497, apex: 888, ground: G, sw: SW, state: 'closed' }))) {
+  fail("the cover's band no longer carries the week's closed door from door.mjs");
 }
-const SHIFT = 144; // ground line 1120 → 976 (18 units); the disc (r 22 + stroke) then ends at 1004, inside the 72 px margin
-const band = m[0].replace('width="1080" height="1350" viewBox="0 0 1080 1350"',
-  `width="1080" height="1080" viewBox="0 ${SHIFT} 1080 1080"`);
-if (band === m[0]) fail('band svg header changed in piece 01');
+const swap = (svg, re, to, what) => {
+  const hits = svg.match(new RegExp(re.source, 'g')) || [];
+  if (hits.length !== 1) fail(`the cover's band: expected one ${what}, found ${hits.length}`);
+  return svg.replace(re, typeof to === 'function' ? to(hits[0]) : to);
+};
+// The series' grammar (piece 01): a station at rest is a navy outline with its meaning in blue; the lit station is filled
+// blue with its meaning in navy. Round 4 gives every resting station its meaning, using piece 01's own glyphs:
+//   your message (start)  three dots              lit: filled blue, navy dots, at the COVER's 1.0× (critic note: mass)
+//   the appointment       slide 4's tick          at rest: navy disc, 12 px blue ring, the tick in 12 px blue
+//   the door              the week's door         unchanged
+//   our call (end)        slide 6's handset       at rest: blue handset in the outlined bubble (was three dots)
+// (a) Your message, lit at 1.0×: the cover's own bubble path, filled. Slide 7 draws it at 1.15×; in one still frame the
+//     fill alone says "this step", and 1.0× takes about a fifth off the solid blue so «رسالة؟» stays the heavier pull.
+let band = swap(m[0],
+  /<path d="M868 944 [^"]*" fill="#181943" stroke="#1B9CCE" stroke-width="12" stroke-linejoin="round"\/>(<circle cx="(884|920|956)" cy="1008" r="8" fill="#1B9CCE"\/>){3}/,
+  (s) => s.replace(`fill="${NAVY}" stroke`, `fill="${BLUE}" stroke`).replaceAll(`r="8" fill="${BLUE}"`, `r="8" fill="${NAVY}"`),
+  'resting start bubble');
+// (b) The appointment: slide 4's tick (its lit disc carries it at 1.15×, stroke 16 × 1.15) drawn at 1× in the 12 px line,
+//     inside a ring of the cover's construction (navy fill, 12 px blue stroke). A tick needs a ring of r 56 (ink r 62, the
+//     disc's 1× size in piece 01); centred on the road that would cross the 72 px bottom margin of the square (ink to 1040),
+//     so the ring STANDS on the road like the other three stations: its stroke meets the ground line at x 667, no dot moves.
+const TICK = (cx, cy, k) => `M${+(cx - 26 * k).toFixed(2)} ${+(cy + 2 * k).toFixed(2)} L${+(cx - 8 * k).toFixed(2)} ${+(cy + 20 * k).toFixed(2)} L${+(cx + 28 * k).toFixed(2)} ${+(cy - 18 * k).toFixed(2)}`;
+if (!s04.includes(`<path d="${TICK(667, G, 1.15)}" fill="none" stroke="${NAVY}" stroke-width="18.4" stroke-linecap="round" stroke-linejoin="round"/>`)) {
+  fail("piece 01's slide 4 no longer carries the appointment tick this ring borrows");
+}
+const RING_R = 56, RING_CY = G - RING_R;
+band = swap(band, /<circle cx="667" cy="1120" r="22" fill="#181943" stroke="#1B9CCE" stroke-width="12"\/>/,
+  `<circle cx="667" cy="${RING_CY}" r="${RING_R}" fill="${NAVY}" stroke="${BLUE}" stroke-width="${SW}"/>` +
+  `<path d="${TICK(667, RING_CY, 1)}" fill="none" stroke="${BLUE}" stroke-width="${SW}" stroke-linecap="round" stroke-linejoin="round"/>`,
+  'resting appointment ring');
+// (c) Our call: slide 6's handset (its lit bubble carries it in navy at scale 1.72), here at the bubble's 1× (scale 1.5) in
+//     blue, centred where the three dots were (160, 1008). Not mirrored: a phone is not a direction (design-studio).
+const HANDSET_D = 'M-30 -14 Q-30 -22 -22 -22 L-12 -22 Q-6 -22 -6 -16 L-6 -6 Q-6 -2 -10 -2 L-14 -2 Q-14 10 -6 18 Q-2 14 2 14 L12 14 Q18 14 18 20 L18 28 Q18 36 10 36 L4 36 Q-30 30 -30 -14 Z';
+if (!s06.includes(`fill="${NAVY}" d="${HANDSET_D}"`)) fail("piece 01's slide 6 no longer carries the handset this bubble borrows");
+band = swap(band, /(<circle cx="(124|160|196)" cy="1008" r="8" fill="#1B9CCE"\/>){3}/,
+  `<path transform="translate(160 1008) scale(1.5) translate(2 -1) translate(4 -6)" fill="${BLUE}" d="${HANDSET_D}"/>`,
+  'resting end bubble');
+const SHIFT = 144; // ground line 1120 → 976 (18 units); ink bottom 1004 (the road's dots and the bubbles' tails), inside the margin
+const svgHead = 'width="1080" height="1350" viewBox="0 0 1080 1350"';
+if (!band.includes(svgHead)) fail('band svg header changed in piece 01');
+band = band.replace(svgHead, `width="1080" height="1080" viewBox="0 ${SHIFT} 1080 1080"`);
 
 const head = (title, rel, css) => `<!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8">
@@ -106,29 +147,36 @@ ${band}
 `);
 
 // ---- phone check: the message as received, with this image ----------------------------------------
-// The message text is read from piece 04's ## Copy: one paragraph per frame, one line per keyed line.
-// Left: the message as the copy stands. Right: the Design Critic's fix 3a as a PROPOSAL for the Copywriter (the `ask`
-// line left out, no other change). It is not approved copy and is not sent; it only shows the Copywriter the effect.
+// Round 4: the Copywriter applied the critic's fixes 1 and 2 (no `ask` line; the `cta` line in WhatsApp *bold*), so both
+// phones show the copy as it stands (51 words). They differ only in the caption size the receiver's phone uses:
+// right, about 15 sp (44 px on a 1080 px screen, as in rounds 1–3); left, about 17 sp (50 px), a larger phone font.
+// The message is read from piece 04's ## Copy: one paragraph per `### Frame`, one line per keyed line. The image's own three
+// strings sit above `### Frame 1` (series, hook, small) and are checked here against WORDS, so the copy file, this image and
+// piece 01's cover can't drift apart; they never enter the message.
 const md = readFileSync(piece04, 'utf8');
 const copy = md.split('\n## Copy')[1].split('\n## ')[0];
-const paras = copy.split(/^### /m).slice(1).map((f) =>
+const [imageLines, ...frames] = copy.split(/^### /m);
+const onImage = Object.fromEntries([...imageLines.matchAll(/^(series|hook|small): (.+)$/gm)].map((x) => [x[1], x[2].trim()]));
+const asCopy = { series: WORDS.series, hook: WORDS.hook.replace('<br>', ' / ').replace(/<span class="accent">(.+?)<\/span>/, '*$1*'), small: WORDS.sub };
+for (const k of ['series', 'hook', 'small']) {
+  if (onImage[k] !== asCopy[k]) fail(`piece 04's ## Copy lists the image's ${k} line as «${onImage[k]}», the image sets «${asCopy[k]}»`);
+}
+const paras = frames.map((f) =>
   f.split('\n').map((l) => l.match(/^([a-z]+): (.+)$/)).filter(Boolean).map((x) => ({ key: x[1], text: x[2] })));
 if (paras.length !== 5) fail(`expected 5 paragraphs in piece 04's copy, found ${paras.length}`);
-if (!paras[0].some((l) => l.key === 'ask')) console.warn('note: piece 04 has no `ask` line any more (critic fix 1 applied)');
-if (paras.flat().some((l) => l.key === 'cta' && /^\*.*\*$/.test(l.text))) console.warn('note: the `cta` line is already bold (critic fix 3 applied)');
+if (paras.flat().some((l) => l.key === 'ask')) console.warn('note: piece 04 has an `ask` line again (the image asks the question; the critic asked for it once)');
+if (!paras.flat().some((l) => l.key === 'cta' && /^\*[^*]+\*$/.test(l.text))) console.warn('note: the `cta` line is not WhatsApp bold');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 // WhatsApp formatting: *text* shows as bold on the phone, so the mock shows it bold too.
 const wa = (s) => esc(s).replace(/\*([^*\n]+)\*/g, '<b>$1</b>');
-const msg = (drop = [], bold = []) => paras.map((p) => p.filter((l) => !drop.includes(l.key))
-  .map((l) => (bold.includes(l.key) && !/^\*.*\*$/.test(l.text) ? { ...l, text: `*${l.text}*` } : l)))
-  .filter((p) => p.length).map((p) => `<p>${p.map((l) => wa(l.text)).join('<br>')}</p>`).join('\n');
-const words = (html) => html.replace(/<[^>]+>/g, ' ').split(/\s+/).filter((w) => /[\u0600-\u06FFA-Za-z]/.test(w)).length;
+const msg = paras.map((p) => `<p>${p.map((l) => wa(l.text)).join('<br>')}</p>`).join('\n');
+const words = (html) => html.replace(/<[^>]+>/g, ' ').split(/\s+/).filter((w) => /[؀-ۿA-Za-z]/.test(w)).length;
 
-const phone = (body, label) => `<section>
+const phone = (cls, label) => `<section class="${cls}">
   <div class="label">${label}</div>
   <div class="phone">
     <div class="bar">TabeebX</div>
-    <div class="chat"><div class="bubble"><img src="../whatsapp-image.png"><div class="text">${body}</div></div></div>
+    <div class="chat"><div class="bubble"><img src="../whatsapp-image.png"><div class="text">${msg}</div></div></div>
     <div class="input"><div class="field"></div></div>
     <div class="fold"></div>
   </div>
@@ -139,12 +187,13 @@ writeFileSync(path.join(here, 'checks/phone-preview.html'), `<!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="../${assets}/fonts/fonts.css">
 <style>
   /* Neutral chat mock at a 1080×2340 phone (360 dp × 3). Not WhatsApp's UI or colours: grey only.
-     Bubble 800 px wide (≈ 267 dp), image 784 px (≈ 261 dp), caption 44 px (≈ 15 sp). The caption is set in Cairo
-     because it is the only Arabic font here; the phone uses its system Arabic font, so its line breaks will differ. */
-  html, body { margin: 0; width: 2400px; height: 2700px; background: #FFFFFF; font-family: Cairo, sans-serif; }
+     Bubble 800 px wide (≈ 267 dp), image 784 px (≈ 261 dp). Caption 44 px (≈ 15 sp) or 50 px (≈ 17 sp, a larger phone
+     font). The caption is set in Cairo because it is the only Arabic font here; the phone uses its system Arabic font, so
+     its line breaks will differ. WhatsApp shows a square image whole (uncropped) in the bubble; the script checks the mock. */
+  html, body { margin: 0; width: 2400px; height: 2780px; background: #FFFFFF; font-family: Cairo, sans-serif; }
   .wrap { display: flex; flex-direction: row-reverse; gap: 120px; padding: 40px 60px; }
   .label { font-size: 40px; font-weight: 800; color: #222; height: 110px; width: 1080px; line-height: 1.35; }
-  .note  { font-size: 32px; font-weight: 500; color: #222; margin-top: 16px; width: 1080px; line-height: 1.4; }
+  .note  { font-size: 32px; font-weight: 500; color: #222; margin-top: 16px; width: 1080px; line-height: 1.4; white-space: pre-line; }
   .phone { position: relative; width: 1080px; height: 2340px; background: #E4E4E4; overflow: hidden; outline: 4px solid #999; }
   .bar   { position: absolute; top: 0; left: 0; right: 0; height: 200px; background: #6B6B6B; color: #fff;
            font-size: 48px; font-weight: 800; display: flex; align-items: flex-end; padding: 0 48px 40px; direction: rtl; }
@@ -152,30 +201,39 @@ writeFileSync(path.join(here, 'checks/phone-preview.html'), `<!doctype html>
   .bubble { width: 800px; background: #fff; border-radius: 24px; padding: 8px; box-sizing: border-box; }
   .bubble img { width: 784px; aspect-ratio: 1 / 1; display: block; border-radius: 18px; }
   .text  { direction: rtl; text-align: right; font-size: 44px; line-height: 1.45; color: #111; font-weight: 500; padding: 12px 24px 20px; }
+  .large .text { font-size: 50px; }
   .text p { margin: 0 0 1.45em; } .text p:last-child { margin: 0; }
   .text b { font-weight: 800; }
   .input { position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: #F4F4F4; }
   .field { position: absolute; left: 32px; right: 32px; top: 36px; height: 108px; border-radius: 54px; background: #fff; }
   .fold  { position: absolute; left: 0; right: 0; bottom: 180px; border-top: 6px dashed #444; }
 </style></head><body><div class="wrap">
-${phone(msg(), `As the copy stands in piece 04, ${words(msg())} words`)}
-${phone(msg(['ask'], ['cta']), `NOT approved copy, a proposal: r2 fixes 1 + 3 (no \`ask\` line, \`cta\` bold), ${words(msg(['ask'], ['cta']))} words`)}
+${phone('default', `The copy as it stands (${words(msg)} words), caption about 15 sp`)}
+${phone('large', `The same message, caption about 17 sp (a larger phone font)`)}
 </div>
 <script>
-document.fonts.ready.then(() => {
+document.fonts.ready.then(() => Promise.all([...document.images].map((i) => i.decode()))).then(() => {
   for (const s of document.querySelectorAll('section')) {
     const phone = s.querySelector('.phone').getBoundingClientRect();
+    const img = s.querySelector('.bubble img'), r = img.getBoundingClientRect();
     const b = s.querySelector('.bubble').getBoundingClientRect();
     const end = Math.round(b.bottom - phone.top), visible = 2340 - 180;
     const ps = [...s.querySelectorAll('.text p')];
     const cut = ps.findIndex((p) => p.getBoundingClientRect().bottom - phone.top > visible);
-    s.querySelector('.note').textContent = end <= visible
-      ? 'Whole message on one screen: the bubble ends at y ' + end + ', ' + (visible - end) + ' px above the input bar (dashed line).'
-      : 'The bubble runs ' + (end - visible) + ' px past the input bar (dashed line): paragraph ' + (cut + 1) + ' of ' + ps.length +
-        ' and anything after it need a scroll.';
+    // Whole image: the file's own ratio is kept (no crop) and the shown box lies inside the screen, under the top bar.
+    const ratio = (img.naturalWidth / img.naturalHeight) / (r.width / r.height);
+    const top = Math.round(r.top - phone.top), bottom = Math.round(r.bottom - phone.top);
+    const whole = Math.abs(ratio - 1) < 0.001 && top >= 200 && bottom <= visible;
+    s.querySelector('.note').textContent =
+      (whole ? 'Image shown whole: ' : 'IMAGE NOT WHOLE: ') + img.naturalWidth + '×' + img.naturalHeight + ' file in a ' +
+      Math.round(r.width) + '×' + Math.round(r.height) + ' box (ratio kept), y ' + top + '–' + bottom + ', below the top bar (200).\\n' +
+      (end <= visible
+        ? 'Whole message on one screen: the bubble ends at y ' + end + ', ' + (visible - end) + ' px above the input bar (dashed line).'
+        : 'The bubble runs ' + (end - visible) + ' px past the input bar (dashed line): paragraph ' + (cut + 1) + ' of ' + ps.length +
+          ' and anything after it need a scroll.');
   }
 });
 </script>
 </body></html>
 `);
-console.log('built: whatsapp-image.html, checks/phone-preview.html');
+console.log(`built: whatsapp-image.html, checks/phone-preview.html (message: ${words(msg)} words)`);
