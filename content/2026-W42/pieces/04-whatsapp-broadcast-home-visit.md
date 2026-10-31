@@ -12,15 +12,23 @@ Psychology: Hick's law. One idea, then one action with four one-word replies, so
 
 ## Copy (Iraqi dialect)
 
-> One WhatsApp message, sent by Yaqoob by hand from WhatsApp Business to the opted-in broadcast list only (decision #54), as the caption of piece 01's cover image. The frames below are the message's paragraphs, in order: leave one blank line between them. Each keyed line is one line of the message; the keys are labels, not text to send. 59 words in total (brief: under about 60).
+> One WhatsApp message, sent by Yaqoob by hand from WhatsApp Business to the opted-in broadcast list only (decision #54), as the caption of piece 01's cover image. The frames below are the message's paragraphs, in order: leave one blank line between them. Each keyed line is one line of the message; the keys are labels, not text to send. 51 words in total (brief: under about 60).
 >
 > Changes from the first draft: the name-and-photo line is gone (decisions #59, #63); the reply line no longer depends on who answers; the call within ٢٤ ساعة (#52 b) and male and female nurses (#52 c) are in; Guard's dialect notes are applied («وتريد زيارة للبيت», «ممرض، ممرضة», STOP beside «توقف»); the campaign sign-off bridges to the reply (#53).
+>
+> Changes in round 3 (Design Critic, `design-review/2026-W42-04-r3.md`, fixes 1 and 2): the `ask` line is cut, so the image asks the question once and paragraph 2 answers it; the `cta` line is WhatsApp bold. The image's own words are now listed here, before the message.
+>
+> **On the image, not in the message.** The three lines below are the words on `whatsapp-image.png`: piece 01's approved `### Frame 1` (`series`, `hook`, `small`), word for word as `build.mjs` renders them. Never type them into the caption. On these three lines `*stars*` mark the image's one pink word and ` / ` the hook's line break; in the paragraphs after them, `*stars*` are WhatsApp bold and are typed as they stand. The hook's break after «شنو يصير» is as rendered and is still piece 01's open Copywriter item; if it changes there, it changes here.
 
-### Frame 1 · paragraph 1: greeting and question
+series: شوف بعينك
+
+hook: شنو يصير / من تدزلنا *رسالة؟*
+
+small: زيارة لبيتك ببغداد، خطوة بخطوة.
+
+### Frame 1 · paragraph 1: greeting
 
 greet: هلا بيك، وياك TabeebX.
-
-ask: شنو يصير من تدزلنا رسالة وتريد زيارة للبيت؟
 
 ### Frame 2 · paragraph 2: the steps
 
@@ -34,7 +42,7 @@ closing: لا تصدگنا. شوف بعينك.
 
 ### Frame 4 · paragraph 4: the one action
 
-cta: تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:
+cta: *تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:*
 
 options: دكتور، ممرض، ممرضة، أو تحليل.
 
@@ -48,9 +56,26 @@ None separate: the message above is the caption of the cover image (one message,
 
 ## Copy check
 
-Checker's last line (2026-10-18): `Copy check passed: 8 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders in the copy. The one pending item (who handles opt-outs) is in the Needs Yaqoob line because it is about sending, not wording. No warnings to justify.
+Checker's last line (2026-10-31): `Copy check passed: 10 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders in the copy. The one pending item (who handles opt-outs) is in the Needs Yaqoob line because it is about sending, not wording. No warnings to justify.
 
-Per paragraph, with the checker's tokenizer: 12, 13, 13, 12, 9 = 59 words. No pink in a text message; the image's pink is on piece 01's cover.
+Round 3 copy changes (Design Critic round 3, top fixes 1 and 2, which are the Designer's open item 1):
+- **(a) Option A: the `ask` line is cut** («شنو يصير من تدزلنا رسالة وتريد زيارة للبيت؟», 8 words). Why A and not B: in Baghdadi the greeting «هلا بيك، وياك TabeebX.» followed straight by «تگولنا شنو تحتاج…» already sounds like someone answering the picture's question out loud, while any reworded opener (for example «من تدزلنا رسالة، هيچ يصير:») would bring the image's words back a second time, so the cut reads better, is shorter and adds no new Arabic to check. Nothing is lost: «زيارة لبيتك ببغداد» is on the image and «ونجيك لحد البيت ببغداد» is in paragraph 2.
+- **(b) The one action has an anchor.** The `cta` line is WhatsApp bold, with the stars touching the text: `*تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:*`. It is formatting only, with no word changed, and the message's only bold. The checker counts the stars as the frame's one pink group; in WhatsApp they show as bold, not colour.
+- **The image's three strings** are listed at the top of `## Copy`, so this file now holds every word the receiver sees and the trace no longer runs through piece 01. A scratch script compared them with `build.mjs`'s `WORDS` (which `build.mjs` checks against piece 01's `slide-01.html`): identical, apart from the house notation (` / ` for `<br>`, stars for the accent span).
+
+| Paragraph | Lines | Words |
+|---|---|---|
+| 1 · greeting | `greet` | 4 |
+| 2 · the steps | `steps` | 13 |
+| 3 · after the visit, sign-off | `call` 9, `closing` 4 | 13 |
+| 4 · the one action | `cta` 7 (bold), `options` 5 | 12 |
+| 5 · opt-out | `optout` | 9 |
+| **Message** | 7 lines | **51** (was 59; brief: under about 60) |
+| Image, not typed | `series` 2, `hook` 5, `small` 5 | 12; the hook is 5 words (limit 5) |
+
+Words counted with the checker's tokenizer. No pink in the message; the image's one pink word is «رسالة؟».
+
+For the Designer: rebuild the phone check before any further critic look (steps under `## Design`). A scratch run of `build.mjs`'s own parser on this file still finds 5 paragraphs. The image lines sit above `### Frame 1`, outside what it reads, so they don't enter the message mock. Both phones will now show the same 51-word message, so the "proposal" phone is no longer needed.
 
 Facts, each against its source:
 - Opted-in list, sent by Yaqoob: decision #54.

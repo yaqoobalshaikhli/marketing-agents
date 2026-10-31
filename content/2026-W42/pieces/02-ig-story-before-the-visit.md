@@ -15,6 +15,8 @@ Psychology: Commitment and consistency. Frame 1 asks for a small, easy first ste
 > Two story frames. Line keys follow the trust campaign's morning questions (`label`, `question`). ` / ` is a line break on screen; `*stars*` mark the one pink group per frame. The question is about the service, never about the viewer's health (brief, piece 02). `sticker:` and `link:` are typed into Instagram's native stickers at posting, not rendered.
 >
 > Changes from the first draft: «تحب تعرفه» → «تريد تعرفه» and the `small` line rewritten in spoken Baghdadi (Guard's dialect notes); frame 2 now closes with the campaign sign-off (decision #53).
+>
+> Round 3: frame 1's Question-sticker prompt is written (`sticker:`, the Designer's open item 2). Frame 2's link-sticker label was already written and is unchanged.
 
 ### Frame 1 · question box
 
@@ -23,6 +25,8 @@ label: سؤال
 question: شنو أكثر شي تريد تعرفه / قبل لا يجيك دكتور *للبيت؟*
 
 small: لا تكتب اسمك ولا شي عن صحتك.
+
+sticker: اكتبه هنا
 
 logo: LOGO SLOT, official file needed
 
@@ -44,9 +48,20 @@ None: Instagram stories have no caption.
 
 ## Copy check
 
-Checker's last line (2026-10-18): `Copy check passed: 6 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders; the wa.me link is `[AT POSTING]`. No warnings to justify.
+Checker's last line (2026-10-31): `Copy check passed: 7 Arabic line(s), 0 warning(s), 0 correction(s) loaded.` No open placeholders; the wa.me link is `[AT POSTING]`. No warnings to justify.
 
-Per frame, with the checker's tokenizer: 18 and 14 words (limit 20), counting the sticker text; one pink group each.
+| Frame | Lines (words) | Words (limit 20) | Pink group | Hold (0.45 s a word + 0.5 s) |
+|---|---|---|---|---|
+| 1 · question box | `label` 1, `question` 10, `small` 7, `sticker` 2 | 20 | «للبيت؟» | 9.5 s, inside `frame-01.mp4`'s 10 s |
+| 2 · WhatsApp link | `text` 8, `sticker` 2, `closing` 4 | 14 | «دزلنا رسالة واتساب.» | 6.8 s, inside `frame-02.mp4`'s 8 s (unchanged) |
+
+Counted with the checker's tokenizer, sticker text included.
+
+Sticker text, typed into Instagram's own stickers at posting (white variant, never pink):
+- **Frame 1, Question-sticker prompt: «اكتبه هنا»** (new, 2 words). It follows the approved pattern «عندك سؤال…؟ / اكتبه بالتعليقات»: «اكتبه» points back to the «سؤال» sign hung right above the sticker and to the headline's «شنو أكثر شي تريد تعرفه». So it asks for one thing, about the visit, without repeating «سؤال». It promises no reply and no reply time, and gives no advice. Two words is the most this frame takes: a third would put it at 21 words, over the 20-word limit and past the 10 s hold. If Guard or Yaqoob reads «اكتبه» as pointing at the privacy line above it, the fallback is «اكتب سؤالك» (also 2 words).
+- **Frame 2, link-sticker label: «احجز بالواتساب»** (2 words, unchanged). It was already in `## Copy` and in the guide, not an empty slot, and it matches «دزلنا رسالة واتساب.» on the same frame, so I left it.
+
+For the Designer: put the real text, at real size as Instagram sets it, in both placement guides. «اكتبه هنا» replaces the mock prompt on `frame-01-guide.png` (it still reads "prompt: the Copywriter's wording (open item)"). «احجز بالواتساب» stays on `frame-02-guide.png`'s link sticker. Re-check the 24 px clearance in both zones. The posted frames don't change, because sticker text isn't rendered.
 
 Facts: a doctor's home visit (`tabeebx-brand`) and booking by WhatsApp message (decision #13). Nothing from decisions #52 or #59 is stated, and nothing about the viewer's health is asked. The sign-off is the campaign's approved closing line.
 
