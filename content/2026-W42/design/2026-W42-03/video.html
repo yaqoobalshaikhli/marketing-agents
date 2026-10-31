@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<title>2026-W42-03 · تحليل بالبيت (video, 20.0 s)</title>
+<link rel="stylesheet" href="../../../../.claude/skills/design-studio/assets/fonts/fonts.css">
+<link rel="stylesheet" href="../../../../.claude/skills/design-studio/assets/tabeebx.css">
+<style>
+html, body { width: 1080px; height: 1920px; overflow: hidden; }
+body { position: relative; background: var(--navy); }
+.abs { position: absolute; }
+svg.abs { left: 0; top: 0; }
+/* Type: per frame, one key size and the 54 px lead (plus the 44 px tag label on F3–F6).
+   Key (pink, Cairo Bold) is 200 px when its widest line fits the 720 px band, otherwise 140 px. */
+.ln { right: 186px; white-space: nowrap; text-align: right; }
+.key { font-weight: 800; line-height: 1.25; color: var(--pink); }
+.k200 { font-size: 200px; top: 483px; }
+.k140 { font-size: 140px; top: 501px; }
+.lead { font-weight: 500; font-size: 54px; line-height: 1.5; color: var(--white); }
+.rowA { top: 398px; }      /* lead above the key: its baseline is the wordmark's (y 457) */
+/* Header row: series tag right, logo left */
+.tag { top: 236px; right: 186px; height: 80px; padding: 0 32px; border-radius: 40px; background: var(--blue); color: var(--navy);
+  display: flex; align-items: center; font-weight: 800; font-size: 44px; line-height: 1; }
+.tag span { position: relative; top: -3px; }
+.logo { left:170.30px; top:221.02px; width:243.40px; height: auto; }
+/* F4's key drops from under the lead: a fixed mask whose top edge sits between the lead (ink to 474) and the key (540) */
+.mask4 { left: 0; top: 490px; width: 1080px; height: 560px; overflow: hidden; }
+.mask4 .k200 { top: -7px; }
+@keyframes f1{0%{opacity:1;transform:translate(0px,0px)}12%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}12.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f1{animation:f1 20s linear 0s 1 both}
+@keyframes f2a{0%{opacity:0;transform:translate(48px,0px)}12.75%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.25%{opacity:1;transform:translate(0px,0px)}24.75%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f2a{animation:f2a 20s linear 0s 1 both}
+@keyframes f2k{0%{opacity:0;transform:translate(120px,0px)}12.75%{opacity:0;transform:translate(120px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.25%{opacity:1;transform:translate(0px,0px)}24.75%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f2k{animation:f2k 20s linear 0s 1 both}
+@keyframes f3a{0%{opacity:0;transform:translate(48px,0px)}25.5%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27%{opacity:1;transform:translate(0px,0px)}39%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}39.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f3a{animation:f3a 20s linear 0s 1 both}
+@keyframes f3k{0%{opacity:0;transform:translate(0px,0px)}25.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27%{opacity:1;transform:translate(0px,0px)}39%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}39.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f3k{animation:f3k 20s linear 0s 1 both}
+@keyframes f4a{0%{opacity:0;transform:translate(48px,0px)}39.75%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}41.25%{opacity:1;transform:translate(0px,0px)}51.25%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}52%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f4a{animation:f4a 20s linear 0s 1 both}
+@keyframes f4k{0%{opacity:0;transform:translate(0px,-160px)}39.75%{opacity:0;transform:translate(0px,-160px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}41.25%{opacity:1;transform:translate(0px,0px)}51.25%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}52%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f4k{animation:f4k 20s linear 0s 1 both}
+@keyframes f5a{0%{opacity:0;transform:translate(48px,0px)}52%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53.5%{opacity:1;transform:translate(0px,0px)}64%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}64.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f5a{animation:f5a 20s linear 0s 1 both}
+@keyframes f5k{0%{opacity:0;transform:translate(0px,160px)}52%{opacity:0;transform:translate(0px,160px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53.5%{opacity:1;transform:translate(0px,0px)}64%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}64.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f5k{animation:f5k 20s linear 0s 1 both}
+@keyframes f6a{0%{opacity:0;transform:translate(32px,0px)}64.75%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}66.75%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f6a{animation:f6a 20s linear 0s 1 both}
+@keyframes f6k{0%{opacity:0;transform:translate(32px,0px)}64.75%{opacity:0;transform:translate(32px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}66.75%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.f6k{animation:f6k 20s linear 0s 1 both}
+@keyframes f7k{0%{opacity:0;transform:translate(48px,0px)}79.75%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}81.25%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.f7k{animation:f7k 20s linear 0s 1 both}
+@keyframes f7b{0%{opacity:0;transform:translate(48px,0px)}79.75%{opacity:0;transform:translate(48px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}81.25%{opacity:1;transform:translate(0px,0px)}100%{opacity:1;transform:translate(0px,0px)}}
+.f7b{animation:f7b 20s linear 0s 1 both}
+@keyframes tag{0%{opacity:0;transform:translate(0px,0px)}25.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.75%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
+.tag{animation:tag 20s linear 0s 1 both}
+@keyframes bubOut{0%{opacity:0;transform:translate(64px,0px)}12.75%{opacity:0;transform:translate(64px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}14.25%{opacity:1;transform:translate(0px,0px)}24.75%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}25.5%{opacity:0;transform:translate(0px,-40px)}100%{opacity:0;transform:translate(0px,-40px)}}
+.bubOut{animation:bubOut 20s linear 0s 1 both}
+@keyframes cal{0%{opacity:0;transform:translate(0px,0px)}25.5%{opacity:0;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}27%{opacity:1;transform:translate(0px,0px)}39%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}39.75%{opacity:0;transform:translate(0px,0px)}100%{opacity:0;transform:translate(0px,0px)}}
+.cal{animation:cal 20s linear 0s 1 both}
+@keyframes tick{0%{stroke-dashoffset:1;opacity:0}26.25%{stroke-dashoffset:1;opacity:1;animation-timing-function:cubic-bezier(.16,.84,.3,1)}27.75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+.tick{animation:tick 20s linear 0s 1 both}
+@keyframes route{0%{stroke-dashoffset:1;opacity:0}41.5%{stroke-dashoffset:1;opacity:1;animation-timing-function:cubic-bezier(.45,0,.2,1)}43.25%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+.route{animation:route 20s linear 0s 1 both}
+@keyframes res{0%{opacity:0;transform:translate(0px,72px)}52%{opacity:0;transform:translate(0px,72px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}53.5%{opacity:1;transform:translate(0px,0px)}64%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}64.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.res{animation:res 20s linear 0s 1 both}
+@keyframes talk{0%{opacity:0;transform:translate(0px,40px)}64.75%{opacity:0;transform:translate(0px,40px);animation-timing-function:cubic-bezier(.16,.84,.3,1)}66.75%{opacity:1;transform:translate(0px,0px)}79%{opacity:1;transform:translate(0px,0px);animation-timing-function:cubic-bezier(.55,0,.85,.4)}79.75%{opacity:0;transform:translate(-32px,0px)}100%{opacity:0;transform:translate(-32px,0px)}}
+.talk{animation:talk 20s linear 0s 1 both}
+</style></head><body>
+
+<!-- the door: the week's drawing (door.mjs) with a Baghdadi shanasheel-barred head; closed to 8.65 s, swinging
+     8.65–9.10 s (the light reveals the figure), open to the end; the figure's arms rise 9.15–9.50 s -->
+<svg id="door" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true"></svg>
+
+<!-- the route to the door: piece 01's dots, filled solid right → left at the turn, ending at the threshold -->
+<svg class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <g fill="#1B9CCE"><circle cx="894" cy="1404" r="6"/><circle cx="858" cy="1404" r="6"/><circle cx="822" cy="1404" r="6"/><circle cx="786" cy="1404" r="6"/><circle cx="750" cy="1404" r="6"/><circle cx="714" cy="1404" r="6"/><circle cx="678" cy="1404" r="6"/><circle cx="642" cy="1404" r="6"/><circle cx="606" cy="1404" r="6"/><circle cx="570" cy="1404" r="6"/><circle cx="534" cy="1404" r="6"/></g>
+  <line class="route" x1="894" y1="1404" x2="497.2" y2="1404" stroke="#1B9CCE" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1"/>
+</svg>
+
+<!-- F2: your message (outgoing bubble; in an Arabic chat, sent messages sit left with the tail left) -->
+<svg class="abs bubOut" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <path d="M720 1180 H844 A40 40 0 0 1 884 1220 V1276 A40 40 0 0 1 844 1316 H712 L672 1346 L680 1300 V1220 A40 40 0 0 1 720 1180 Z" fill="#181943" stroke="#1B9CCE" stroke-width="10" stroke-linejoin="round"/>
+  <g stroke="#FFFEFF" stroke-width="10" stroke-linecap="round"><line x1="852" y1="1218" x2="712" y2="1218"/><line x1="852" y1="1248" x2="738" y2="1248"/><line x1="852" y1="1278" x2="790" y2="1278"/></g>
+</svg>
+
+<!-- F3: the appointment (calendar, tick drawn in) -->
+<svg class="abs cal" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <rect x="694" y="1164" width="192" height="176" rx="24" fill="#181943" stroke="#1B9CCE" stroke-width="10"/>
+  <line x1="694" y1="1216" x2="886" y2="1216" stroke="#1B9CCE" stroke-width="10"/>
+  <g stroke="#1B9CCE" stroke-width="12" stroke-linecap="round"><line x1="744" y1="1140" x2="744" y2="1180"/><line x1="836" y1="1140" x2="836" y2="1180"/></g>
+  <path class="tick" d="M748 1280 L776 1308 L834 1246" fill="none" stroke="#FFFEFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1"/>
+</svg>
+
+<!-- F5: the result arrives (incoming file bubble; incoming sits right with the tail right). Nothing legible on it. -->
+<svg class="abs res" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <path d="M704 1200 H858 L890 1174 L884 1222 V1300 A36 36 0 0 1 848 1336 H700 A36 36 0 0 1 664 1300 V1240 A40 40 0 0 1 704 1200 Z" fill="#FFFEFF"/>
+  <path d="M818 1224 H840 A10 10 0 0 1 850 1234 V1302 A10 10 0 0 1 840 1312 H806 A10 10 0 0 1 796 1302 V1246 Z" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M818 1224 V1246 H796" fill="none" stroke="#181943" stroke-width="8" stroke-linejoin="round"/>
+  <g stroke="#181943" stroke-width="12" stroke-linecap="round"><line x1="766" y1="1254" x2="696" y2="1254"/><line x1="766" y1="1284" x2="724" y2="1284"/></g>
+</svg>
+
+<!-- F6: a doctor explains it (one speech balloon on the same row, its tail toward the house) -->
+<svg class="abs talk" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true">
+  <rect x="672" y="1196" width="212" height="104" rx="52" fill="#FFFEFF"/>
+  <path d="M712 1286 L670 1340 L756 1296 Z" fill="#FFFEFF" stroke="#FFFEFF" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#181943"><circle cx="736" cy="1248" r="12"/><circle cx="778" cy="1248" r="12"/><circle cx="820" cy="1248" r="12"/></g>
+</svg>
+
+<!-- header: the official logo, unaltered, from 0.0 s to the end, in one place; the series tag on F3–F6 -->
+<img class="abs logo" src="../../../../.claude/skills/design-studio/assets/brand/tabeebx-logo-stacked-on-navy.png" alt="TabeebX">
+<div class="abs tag"><span>شوف بعينك</span></div>
+
+<!-- words, exactly as in the piece file (line breaks inside a key: Copywriter to confirm; no word changed) -->
+<div class="f1">
+  <p class="abs ln key k200">تحليل<br>بالبيت؟</p>
+  <p class="abs ln lead" style="top:990px">هيچ يصير.</p>
+</div>
+<p class="abs ln lead rowA f2a">تدزلنا</p>
+<p class="abs ln key k140 f2k">رسالة<br>واتساب،</p>
+<p class="abs ln lead rowA f3a">ونثبّتلك</p>
+<p class="abs ln key k200 f3k">الموعد.</p>
+<p class="abs ln lead rowA f4a">ونجيك</p>
+<div class="abs mask4"><p class="abs ln key k200 f4k">لحد<br>البيت.</p></div>
+<p class="abs ln lead rowA f5a">والنتيجة توصلك</p>
+<p class="abs ln key k140 f5k">بالواتساب.</p>
+<p class="abs ln lead rowA f6a">ودكتور</p>
+<p class="abs ln key k200 f6k">يشرحها<br>إلك.</p>
+<p class="abs ln key k140 f7k">دزها لكروب<br>العائلة.</p>
+<p class="abs ln lead f7b" style="top:882px">لا تصدگنا. شوف بعينك.</p>
+
+<script>
+// The door, drawn per frame: closed (door.mjs + the barred head), the swing (8.65–9.10 s), open (door.mjs + head),
+// and the figure, whose arms rise 9.15–9.50 s. door.mjs's own output is embedded as built; only the swing and the
+// figure are drawn here, from the same construction constants.
+const DG = {"xl":216,"xr":469.2,"apex":1050,"ground":1404,"sw":12}, FIG = {"cx":372,"foot":1398}, SWING = [8.65,9.1], ARMS = [9.15,9.5];
+const CLOSED = "<path d=\"M453.2 1398 L453.2 1176.6 A110.6 110.6 0 0 0 232 1176.6 L232 1398\" fill=\"none\" stroke=\"#1B9CCE\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"431.95\" cy=\"1267.19\" r=\"9\" fill=\"#1B9CCE\"/><path d=\"M469.2 1404 L469.2 1176.6 A126.6 126.6 0 0 0 216 1176.6 L216 1404\" fill=\"none\" stroke=\"#1B9CCE\" stroke-width=\"12\" stroke-linejoin=\"round\"/><line x1=\"188\" y1=\"1404\" x2=\"497.2\" y2=\"1404\" stroke=\"#1B9CCE\" stroke-width=\"12\" stroke-linecap=\"round\"/><path d=\"M222 1187.6 L222 1176.6 A120.6 120.6 0 0 1 463.2 1176.6 L463.2 1187.6 Z\" fill=\"#181943\"/><g stroke=\"#1B9CCE\" stroke-width=\"10\" stroke-linecap=\"butt\"><line x1=\"262.6\" y1=\"1176.6\" x2=\"262.6\" y2=\"1078.48\"/><line x1=\"302.6\" y1=\"1176.6\" x2=\"302.6\" y2=\"1056.49\"/><line x1=\"342.6\" y1=\"1176.6\" x2=\"342.6\" y2=\"1050\"/><line x1=\"382.6\" y1=\"1176.6\" x2=\"382.6\" y2=\"1056.49\"/><line x1=\"422.6\" y1=\"1176.6\" x2=\"422.6\" y2=\"1078.48\"/></g><line x1=\"216\" y1=\"1176.6\" x2=\"469.2\" y2=\"1176.6\" stroke=\"#1B9CCE\" stroke-width=\"10\"/>", OPEN = "<path d=\"M457.2 1398 L457.2 1176.6 A114.6 114.6 0 0 0 228 1176.6 L228 1398 Z\" fill=\"#1B9CCE\"/><path d=\"M209.52 1398 L209.52 1037.99 L268.66 1037.99 C284.37 1074.95 287.14 1130.4 287.14 1192.31 L287.14 1390.14 Z\" fill=\"#181943\"/><circle cx=\"273.28\" cy=\"1259.8\" r=\"7\" fill=\"#1B9CCE\"/><path d=\"M469.2 1404 L469.2 1176.6 A126.6 126.6 0 0 0 216 1176.6 L216 1404\" fill=\"none\" stroke=\"#1B9CCE\" stroke-width=\"12\" stroke-linejoin=\"round\"/><line x1=\"188\" y1=\"1404\" x2=\"497.2\" y2=\"1404\" stroke=\"#1B9CCE\" stroke-width=\"12\" stroke-linecap=\"round\"/><path d=\"M222 1187.6 L222 1176.6 A120.6 120.6 0 0 1 463.2 1176.6 L463.2 1187.6 Z\" fill=\"#181943\"/><g stroke=\"#1B9CCE\" stroke-width=\"10\" stroke-linecap=\"butt\"><line x1=\"262.6\" y1=\"1176.6\" x2=\"262.6\" y2=\"1078.48\"/><line x1=\"302.6\" y1=\"1176.6\" x2=\"302.6\" y2=\"1056.49\"/><line x1=\"342.6\" y1=\"1176.6\" x2=\"342.6\" y2=\"1050\"/><line x1=\"382.6\" y1=\"1176.6\" x2=\"382.6\" y2=\"1056.49\"/><line x1=\"422.6\" y1=\"1176.6\" x2=\"422.6\" y2=\"1078.48\"/></g><line x1=\"216\" y1=\"1176.6\" x2=\"469.2\" y2=\"1176.6\" stroke=\"#1B9CCE\" stroke-width=\"10\"/>", HEAD = "<path d=\"M222 1187.6 L222 1176.6 A120.6 120.6 0 0 1 463.2 1176.6 L463.2 1187.6 Z\" fill=\"#181943\"/><g stroke=\"#1B9CCE\" stroke-width=\"10\" stroke-linecap=\"butt\"><line x1=\"262.6\" y1=\"1176.6\" x2=\"262.6\" y2=\"1078.48\"/><line x1=\"302.6\" y1=\"1176.6\" x2=\"302.6\" y2=\"1056.49\"/><line x1=\"342.6\" y1=\"1176.6\" x2=\"342.6\" y2=\"1050\"/><line x1=\"382.6\" y1=\"1176.6\" x2=\"382.6\" y2=\"1056.49\"/><line x1=\"422.6\" y1=\"1176.6\" x2=\"422.6\" y2=\"1078.48\"/></g><line x1=\"216\" y1=\"1176.6\" x2=\"469.2\" y2=\"1176.6\" stroke=\"#1B9CCE\" stroke-width=\"10\"/>";
+function swingSVG(p, DG, inside) {
+  const BLUE = '#1B9CCE', NAVY = '#181943';
+  const f = (n) => +n.toFixed(2), lerp = (a, b, q) => a + (b - a) * q;
+  const { xl, xr, apex, ground: G, sw } = DG;
+  const s = (xr - xl) / 548, R = (xr - xl) / 2, YS = apex + R, H = G - YS;
+  const LT = Math.max(24 * s, sw / 2 + 6), HX = xl + LT, FX = HX + 128 * s, X0 = xr - LT + 2;
+  const LI = Math.max(30 * s, sw / 2 + 10), lw = Math.max(6 * s, 4);
+  const fx = lerp(X0, FX, p), foot = lerp(G - sw / 2, G - 30 * s, p);
+  const light = `M${f(xr - LT)} ${G - sw / 2} L${f(xr - LT)} ${f(YS)} A${f(R - LT)} ${f(R - LT)} 0 0 0 ${f(xl + LT)} ${f(YS)} L${f(xl + LT)} ${G - sw / 2} Z`;
+  const leaf = `M${f(HX - 40 * s)} ${G - sw / 2} L${f(HX - 40 * s)} ${f(YS - 300 * s)} L${f(fx - 40 * s * p)} ${f(YS - 300 * s)} ` +
+    `C${f(fx - 6 * s * p)} ${f(YS - 220 * s)} ${f(fx)} ${f(YS - 100 * s)} ${f(fx)} ${f(YS + 34 * s)} L${f(fx)} ${f(foot)} Z`;
+  const line = `M${f(xr - LI)} ${G - sw / 2} L${f(xr - LI)} ${f(YS)} A${f(R - LI)} ${f(R - LI)} 0 0 0 ${f(xl + LI)} ${f(YS)} L${f(xl + LI)} ${G - sw / 2}`;
+  const kc = { dx: (xr - LT) - (xr - LI - Math.max(46 * s, 18)), y: YS + (196 / 492) * H, r: Math.max(16 * s, 9) };
+  const ko = { dx: FX - (FX - Math.max(30 * s, 12)), y: YS + (180 / 492) * H, r: Math.max(13 * s, 7) };
+  const kx = fx - lerp(kc.dx, ko.dx, p), ky = lerp(kc.y, ko.y, p), kr = lerp(kc.r, ko.r, p);
+  const frame = `<path d="M${xr} ${G} L${xr} ${YS} A${R} ${R} 0 0 0 ${xl} ${YS} L${xl} ${G}" fill="none" stroke="${BLUE}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  const threshold = `<line x1="${xl - 34 + sw / 2}" y1="${G}" x2="${xr + 34 - sw / 2}" y2="${G}" stroke="${BLUE}" stroke-width="${sw}" stroke-linecap="round"/>`;
+  return `<path d="${light}" fill="${BLUE}"/>${inside}<path d="${leaf}" fill="${NAVY}"/>` +
+    `<path d="${line}" fill="none" stroke="${BLUE}" stroke-width="${f(lw)}" stroke-linejoin="round" opacity="${f(Math.max(0, 1 - p / 0.2))}"/>` +
+    `<circle cx="${f(kx)}" cy="${f(ky)}" r="${f(kr)}" fill="${BLUE}"/>${frame}${threshold}`;
+}
+function figureSVG(a, FIG) {
+  const NAVY = '#181943', f = (n) => +n.toFixed(2), { cx, foot } = FIG;
+  const sh = foot - 86;                                     // shoulder line
+  const arm = (side) => {
+    const ang = side * (1 - a) * 133;                       // lowered: rotated 133° down from the raised pose
+    const d = `M${f(cx + side * 12)} ${f(sh)} Q${f(cx + side * 52)} ${f(sh - 2)} ${f(cx + side * 58)} ${f(sh - 72)}`;
+    return `<path d="${d}" transform="rotate(${f(ang)} ${f(cx + side * 12)} ${f(sh)})" fill="none" stroke="${NAVY}" stroke-width="20" stroke-linecap="round"/>`;
+  };
+  return `<g><rect x="${cx - 17}" y="${f(sh - 12)}" width="34" height="${f(foot - sh + 12)}" rx="17" fill="${NAVY}"/>` +
+    `<rect x="${cx - 17}" y="${f(foot - 20)}" width="34" height="20" fill="${NAVY}"/>` +
+    `<circle cx="${cx}" cy="${f(sh - 50)}" r="21" fill="${NAVY}"/>${arm(1)}${arm(-1)}</g>`;
+}
+// Sine ease-in-out on the leaf's projected width (the light opens from the first frames, speeds up, then settles);
+// ease-out on the arms (they lift quickly, then settle into the raised pose).
+const ease = (u) => (1 - Math.cos(Math.PI * u)) / 2;
+const easeOut = (u) => 1 - Math.pow(1 - u, 3);
+const clamp = (u) => Math.max(0, Math.min(1, u));
+const door = document.getElementById('door');
+window.__seek = (ms) => {
+  const t = ms / 1000, u = (t - SWING[0]) / (SWING[1] - SWING[0]), a = easeOut(clamp((t - ARMS[0]) / (ARMS[1] - ARMS[0])));
+  if (u <= 0) door.innerHTML = CLOSED;
+  else if (u < 1) door.innerHTML = swingSVG(ease(u), DG, figureSVG(0, FIG)) + HEAD;
+  else door.innerHTML = OPEN + figureSVG(a, FIG);
+};
+window.__seek(0);
+</script>
+</body></html>
