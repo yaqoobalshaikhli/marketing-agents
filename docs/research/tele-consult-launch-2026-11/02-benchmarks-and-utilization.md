@@ -104,7 +104,7 @@ I found no study measuring abuse of unlimited telemedicine plans. What follows a
 | F7 | One app-store review dated 2023-06-13 complains about a consultation limit in a subscription that was not stated. The summary was ambiguous. | Altibbi iOS listing (2.8K ratings, 4.5 average) https://apps.apple.com/us/app/altibbi-online-doctors-24-7/id1065353019 | app_store_page | 30% as evidence that "unlimited" has hidden limits; 90% that the listing shows 2.8K ratings |
 | F8 | One patient per account / one WhatsApp number per family / repeat-consult windows: no company rule found for any of these. | n/a | not found | n/a |
 
-Pattern across F1 to F6: published unlimited plans are either capped (30 a month, 30 a year, 4 shared, or counted tiers) or carry a "fair use" clause without numbers. A truly uncapped flat-fee family plan was not found among the sources, with one exception to check: Altibbi's site and Twilio case study call it "unlimited" at USD 5 a month, but Altibbi's own newer plan has a 30-a-month cap, so I cannot say whether the USD 5 plan is uncapped in practice.
+Pattern across F1 to F6: published unlimited plans are either capped (30 a month, 30 a year, 4 shared, or counted tiers) or carry a "fair use" clause without numbers. A truly uncapped flat-fee family plan was not found among the sources, with one exception to check: Altibbi's site and Twilio case study call it "unlimited" at USD 5 a month, but Altibbi's later Weqaya plan carries a 30-a-month cap, so I cannot say whether the USD 5 plan is uncapped in practice.
 
 ---
 
@@ -131,7 +131,7 @@ Currency as shown. Not converted. Date seen 2026-11-08 unless noted. These are p
 | B15 | Practo Plus (India), comparison outside MENA | Launched March 2020 as a monthly subscription for unlimited online consultations across 20+ specialities; the BioSpectrum article dated 13 March 2020 does not state a price. | https://biospectrumindia.com/news/98/15950/practo-launches-health-plan-for-unlimited-consultations.html | page_read | 80% for the plan existing; price not verified |
 | B16 | Iraq, in-person private clinic visit (not teleconsultation) | 10,000 to 40,000 IQD (Iraqi Medical Association circular); typical 15,000 to 25,000 IQD in provinces | KirkukNow, 7 June 2022 (see 2.2) | page_read | 85% |
 | B17 | Teladoc (US) | Average monthly revenue per U.S. Integrated Care member | USD 1.29 in FY2025 | Teladoc results release (U2) | page_read | 85% |
-| B18 | "Doctorly" with Middle East Hospital, 100,000 IQD per family per year (Yaqoob's claim) | not verified. I did not search for it in this task; see the other research files. | n/a | n/a | n/a |
+| B18 | "Doctorly" with Middle East Hospital | 100,000 IQD per family per year is Yaqoob's claim, unverified. I did not search for it in this task; see the other research files. | n/a | not searched here | n/a | n/a |
 
 ---
 
