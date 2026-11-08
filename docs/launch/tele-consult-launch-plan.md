@@ -14,8 +14,8 @@ Sources, all in this repo: decisions #73 to #80 (`docs/decisions.md`), the model
 | Lab tests | 15% off all lab tests | #77 |
 | Home draw | free (already free for everyone today) | #80 |
 | Card | one printed card per family, about 500 IQD each | #75 |
-| Delivery at launch | WhatsApp, no app yet (#73). Later answers conflict: "WhatsApp for booking only" (#81, first answer), then consultations "through WhatsApp calls as we are doing now" with a possible Google Meet link (#81, last answer). **Unresolved, see section 4** | #73, #81 |
-| Doctors | 5, salaried, 500,000 IQD per month each, about 160 hours a month each (#74, #75). Then: "3 GPs around the clock 24h ... they are all present in the 24-hour period and would pump their salaries to 750K" (#81). **Whether the 3 replace the 5, and how the shifts work, is unconfirmed.** The doctors will also do other company work (#81) | #74, #75, #81 |
+| Delivery at launch | **WhatsApp calls now, move later** to a Google Meet link or the app (#83). WhatsApp's telemedicine rule applies to calls too; see section 4 | #73, #81, #83 |
+| Doctors | **3 doctors, each available 24/7, at 750,000 IQD a month each** (#83); earlier 5 doctors at 500,000 (#74, #75). Whether the 3 replace the 5 is not stated. The doctors also do other company work, and the share that belongs to this plan is not decided (#83) | #74, #75, #81, #83 |
 | Other costs | advertising and acquisition only | #75 |
 | Launch date | none yet | #74 |
 | Price in public content | undecided ("decide later"); rule 6 of `health-ad-policy` blocks prices today | #73 |
@@ -36,7 +36,15 @@ Sources, all in this repo: decisions #73 to #80 (`docs/decisions.md`), the model
 From your inputs only (decisions #73 to #75):
 - Payroll: 30,000,000 IQD a year. Each family brings 49,500 IQD after the card. **Break-even: 607 families** on payroll and cards alone.
 - Each additional doctor (6,000,000 IQD a year) needs **122 more families**.
-- **Staffing readings** (you have not yet said which is right): 5 doctors at 500,000 IQD = 30,000,000 a year, break-even **607 families**; 3 doctors at 750,000 = 27,000,000, break-even **546**; 5 doctors at 750,000 = 45,000,000, break-even **910**. All three assume the whole payroll belongs to the plan; the doctors will also do other company work, so the plan's share is lower and not yet known.
+- **Staffing readings and the plan's share of payroll** (families needed to break even; the doctors also do other work, share not decided):
+
+| Reading | Annual payroll | 100% to the plan | 50% | 25% | 10% |
+|---|---|---|---|---|---|
+| 5 doctors x 500,000 (#75) | 30,000,000 | 607 | 304 | 152 | 61 |
+| **3 doctors x 750,000 (#83)** | **27,000,000** | **546** | **273** | **137** | **55** |
+| 5 doctors x 750,000 (a combination I computed; you did not state it) | 45,000,000 | 910 | 455 | 228 | 91 |
+
+  At 300 families the plan brings 14,850,000 IQD after cards, which covers about 55% of the 3 x 750,000 payroll.
 - With a placeholder acquisition cost of 15,000 IQD per family, break-even is **870 families**. It is 1,539 at 30,000 and 3,158 at 40,000. Your real acquisition cost is the single biggest unknown.
 
 Capacity (placeholders: 15-minute consultations, 60% of doctor time in consultations):
@@ -57,7 +65,7 @@ You chose WhatsApp at launch. WhatsApp's Business policy (whatsappbusiness.com/p
 - Section 4 lists "Medical and healthcare products" as restricted at WhatsApp's sole discretion. No Iraq exception is listed.
 - Regulated-vertical messaging is banned on the Business App. Card and ID numbers cannot be asked for in chat, so payments need a hosted link. Broadcasts need recipient opt-in.
 
-**Your latest answer makes this sharper.** You first chose "WhatsApp for booking only", then said consultations will go "through WhatsApp calls as we are doing now" with a possible Google Meet link. WhatsApp calls are WhatsApp use for telemedicine, which section 3 of the policy names, so the two answers conflict and the risk above applies to the calls. A Google Meet link or an ordinary phone call keeps the consultation off WhatsApp; Google Meet's own terms for health information in Iraq were not researched.
+**Your answers:** you chose "WhatsApp calls now, move later" (#83). WhatsApp calls are WhatsApp use for telemedicine, which section 3 of the policy names, so the risk above applies to the calls from day one. A Google Meet link or an ordinary phone call would keep the consultation off WhatsApp; Google Meet's own terms for health information in Iraq were not researched. A written answer from Meta or the Business API provider is still the safest step before launch.
 
 Why it matters: your bookings already arrive on WhatsApp (decision #13) and home-lab results go to families on WhatsApp (decision #60). If WhatsApp restricts the number, bookings stop as well, not only this plan. I cannot tell from public pages whether a consultation subscription counts as a restricted product. **Get the answer in writing from Meta or your Business API provider before launch.**
 
@@ -118,4 +126,4 @@ The Doctorly price and its Middle East Hospital link; any Iraqi usage or doctor-
 
 ## 12. Decisions for you
 
-Open: (1) staffing: 3 doctors on 8-hour shifts, 5 doctors, or another pattern, and how much of their time belongs to this plan; (2) the consultation channel: WhatsApp calls, Google Meet link or phone call, given the policy risk; (3) who may buy the plan (decided: "decide later"); (4) rule 6 on prices in content ("decide later"); (5) the launch date (none yet). Settled: the simulation replaces a live pilot, then straight to launch (#81).
+Answered: the simulation replaces a live pilot (#81); staffing is 3 doctors available 24/7 at 750,000 (#83); consultations start on WhatsApp calls (#83). **Open:** (1) the share of the doctors' time that belongs to this plan; (2) whether the 3 doctors replace the earlier 5; (3) who may buy the plan ("decide later"); (4) rule 6 on prices in content ("decide later"); (5) the launch date (none yet); (6) the Doctorly price evidence (the post or a WhatsApp reply from their numbers).
