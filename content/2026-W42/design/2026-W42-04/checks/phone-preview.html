@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../../../.claude/skills/design-studio/assets/fonts/fonts.css">
+<style>
+  /* Neutral chat mock at a 1080×2340 phone (360 dp × 3). Not WhatsApp's UI or colours: grey only.
+     Bubble 800 px wide (≈ 267 dp), image 784 px (≈ 261 dp). Caption 44 px (≈ 15 sp) or 50 px (≈ 17 sp, a larger phone
+     font). The caption is set in Cairo because it is the only Arabic font here; the phone uses its system Arabic font, so
+     its line breaks will differ. WhatsApp shows a square image whole (uncropped) in the bubble; the script checks the mock. */
+  html, body { margin: 0; width: 2400px; height: 2780px; background: #FFFFFF; font-family: Cairo, sans-serif; }
+  .wrap { display: flex; flex-direction: row-reverse; gap: 120px; padding: 40px 60px; }
+  .label { font-size: 40px; font-weight: 800; color: #222; height: 110px; width: 1080px; line-height: 1.35; }
+  .note  { font-size: 32px; font-weight: 500; color: #222; margin-top: 16px; width: 1080px; line-height: 1.4; white-space: pre-line; }
+  .phone { position: relative; width: 1080px; height: 2340px; background: #E4E4E4; overflow: hidden; outline: 4px solid #999; }
+  .bar   { position: absolute; top: 0; left: 0; right: 0; height: 200px; background: #6B6B6B; color: #fff;
+           font-size: 48px; font-weight: 800; display: flex; align-items: flex-end; padding: 0 48px 40px; direction: rtl; }
+  .chat  { position: absolute; top: 236px; right: 36px; direction: rtl; }
+  .bubble { width: 800px; background: #fff; border-radius: 24px; padding: 8px; box-sizing: border-box; }
+  .bubble img { width: 784px; aspect-ratio: 1 / 1; display: block; border-radius: 18px; }
+  .text  { direction: rtl; text-align: right; font-size: 44px; line-height: 1.45; color: #111; font-weight: 500; padding: 12px 24px 20px; }
+  .large .text { font-size: 50px; }
+  .text p { margin: 0 0 1.45em; } .text p:last-child { margin: 0; }
+  .text b { font-weight: 800; }
+  .input { position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: #F4F4F4; }
+  .field { position: absolute; left: 32px; right: 32px; top: 36px; height: 108px; border-radius: 54px; background: #fff; }
+  .fold  { position: absolute; left: 0; right: 0; bottom: 180px; border-top: 6px dashed #444; }
+</style></head><body><div class="wrap">
+<section class="default">
+  <div class="label">The copy as it stands (51 words), caption about 15 sp</div>
+  <div class="phone">
+    <div class="bar">TabeebX</div>
+    <div class="chat"><div class="bubble"><img src="../whatsapp-image.png"><div class="text"><p>هلا بيك، وياك TabeebX.</p>
+<p>تگولنا شنو تحتاج، ونثبّتلك الموعد، ونجيك لحد البيت ببغداد، بلا سرة ولا طريق.</p>
+<p>وبعد الزيارة، نتصل بيك خلال ٢٤ ساعة نتطمن عليك.<br>لا تصدگنا. شوف بعينك.</p>
+<p><b>تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:</b><br>دكتور، ممرض، ممرضة، أو تحليل.</p>
+<p>وإذا ما تريد توصلك رسائلنا، اكتبلنا «توقف» أو STOP.</p></div></div></div>
+    <div class="input"><div class="field"></div></div>
+    <div class="fold"></div>
+  </div>
+  <div class="note"></div>
+</section>
+<section class="large">
+  <div class="label">The same message, caption about 17 sp (a larger phone font)</div>
+  <div class="phone">
+    <div class="bar">TabeebX</div>
+    <div class="chat"><div class="bubble"><img src="../whatsapp-image.png"><div class="text"><p>هلا بيك، وياك TabeebX.</p>
+<p>تگولنا شنو تحتاج، ونثبّتلك الموعد، ونجيك لحد البيت ببغداد، بلا سرة ولا طريق.</p>
+<p>وبعد الزيارة، نتصل بيك خلال ٢٤ ساعة نتطمن عليك.<br>لا تصدگنا. شوف بعينك.</p>
+<p><b>تحتاج زيارة؟ رد على هالرسالة بكلمة وحدة:</b><br>دكتور، ممرض، ممرضة، أو تحليل.</p>
+<p>وإذا ما تريد توصلك رسائلنا، اكتبلنا «توقف» أو STOP.</p></div></div></div>
+    <div class="input"><div class="field"></div></div>
+    <div class="fold"></div>
+  </div>
+  <div class="note"></div>
+</section>
+</div>
+<script>
+document.fonts.ready.then(() => Promise.all([...document.images].map((i) => i.decode()))).then(() => {
+  for (const s of document.querySelectorAll('section')) {
+    const phone = s.querySelector('.phone').getBoundingClientRect();
+    const img = s.querySelector('.bubble img'), r = img.getBoundingClientRect();
+    const b = s.querySelector('.bubble').getBoundingClientRect();
+    const end = Math.round(b.bottom - phone.top), visible = 2340 - 180;
+    const ps = [...s.querySelectorAll('.text p')];
+    const cut = ps.findIndex((p) => p.getBoundingClientRect().bottom - phone.top > visible);
+    // Whole image: the file's own ratio is kept (no crop) and the shown box lies inside the screen, under the top bar.
+    const ratio = (img.naturalWidth / img.naturalHeight) / (r.width / r.height);
+    const top = Math.round(r.top - phone.top), bottom = Math.round(r.bottom - phone.top);
+    const whole = Math.abs(ratio - 1) < 0.001 && top >= 200 && bottom <= visible;
+    s.querySelector('.note').textContent =
+      (whole ? 'Image shown whole: ' : 'IMAGE NOT WHOLE: ') + img.naturalWidth + '×' + img.naturalHeight + ' file in a ' +
+      Math.round(r.width) + '×' + Math.round(r.height) + ' box (ratio kept), y ' + top + '–' + bottom + ', below the top bar (200).\n' +
+      (end <= visible
+        ? 'Whole message on one screen: the bubble ends at y ' + end + ', ' + (visible - end) + ' px above the input bar (dashed line).'
+        : 'The bubble runs ' + (end - visible) + ' px past the input bar (dashed line): paragraph ' + (cut + 1) + ' of ' + ps.length +
+          ' and anything after it need a scroll.');
+  }
+});
+</script>
+</body></html>
